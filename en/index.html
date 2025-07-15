@@ -205,14 +205,14 @@
             animation: rotate 20s linear infinite;
         }
 
-        /* Tankkarte Animation - Groß und prominent, kein Parallax */
+        /* Tankkarte Animation - New positioning below CTA button */
         .fuel-card {
             position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateY(-50%);
-            width: 160px;
-            height: 100px;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 125px;
             background: linear-gradient(135deg, var(--primary-yellow), #FFE033);
             border-radius: 15px;
             box-shadow: 0 12px 40px rgba(0,0,0,0.4);
@@ -223,34 +223,34 @@
         .fuel-card::before {
             content: '';
             position: absolute;
-            top: 25px;
-            left: 25px;
-            width: 35px;
-            height: 25px;
+            top: 30px;
+            left: 30px;
+            width: 40px;
+            height: 30px;
             background: var(--primary-green);
             border-radius: 4px;
         }
 
         .fuel-card::after {
-            content: 'TANKKARTE\AEUROPA';
+            content: var(--card-text, 'TANKKARTE\AEUROPA');
             position: absolute;
-            bottom: 20px;
-            left: 20px;
-            font-size: 10px;
+            bottom: 25px;
+            left: 25px;
+            font-size: 11px;
             color: var(--primary-green);
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: 0.8px;
         }
 
-        /* Kontaktlos-Wellen - Größer und prominenter */
+        /* Kontaktlos-Wellen - Same position as card */
         .contactless-waves {
             position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateY(-50%);
-            width: 160px;
-            height: 100px;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 125px;
             animation: wavesAppear 6s ease-in-out infinite;
             z-index: 18;
             pointer-events: none;
@@ -264,12 +264,11 @@
             border: 2px solid rgba(255, 214, 0, 0.9);
             border-radius: 50%;
             opacity: 0;
-            animation: waveExpand 2s ease-out infinite;
+            animation: waveExpand 3s ease-out infinite;
         }
-
         .wave:nth-child(1) { animation-delay: 0s; }
-        .wave:nth-child(2) { animation-delay: 0.5s; }
-        .wave:nth-child(3) { animation-delay: 1s; }
+        .wave:nth-child(2) { animation-delay: 0.7s; }
+        .wave:nth-child(3) { animation-delay: 1.4s; }
 
         .hero-content {
             position: relative;
@@ -322,6 +321,10 @@
             border: none;
             cursor: pointer;
             text-align: center;
+        }
+
+        .hero .btn {
+            margin-bottom: 3rem;
         }
 
         .btn:hover {
@@ -666,33 +669,33 @@
             }
 
             .fuel-card {
-                top: 45%;
-                right: 5%;
-                width: 120px;
-                height: 75px;
-                transform: translateY(-50%);
+                bottom: 10%;
+                left: 50%;
+                width: 160px;
+                height: 100px;
+                transform: translateX(-50%);
             }
 
             .fuel-card::before {
-                top: 20px;
-                left: 20px;
-                width: 25px;
-                height: 18px;
+                top: 25px;
+                left: 25px;
+                width: 30px;
+                height: 25px;
             }
 
             .fuel-card::after {
-                font-size: 8px;
-                bottom: 12px;
-                left: 15px;
-                letter-spacing: 0.5px;
+                font-size: 9px;
+                bottom: 20px;
+                left: 20px;
+                letter-spacing: 0.6px;
             }
 
             .contactless-waves {
-                top: 45%;
-                right: 5%;
-                width: 120px;
-                height: 75px;
-                transform: translateY(-50%);
+                bottom: 10%;
+                left: 50%;
+                width: 160px;
+                height: 100px;
+                transform: translateX(-50%);
             }
         }
 
@@ -776,13 +779,13 @@
 
         @keyframes waveExpand {
             0% {
-                width: 20px;
-                height: 20px;
-                opacity: 0.9;
+                width: 40px;
+                height: 40px;
+                opacity: 0.6;
             }
             100% {
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
                 opacity: 0;
             }
         }
@@ -1104,6 +1107,7 @@
                 'hero-benefit-3': 'Attraktive Dieselpreise und Rabatte',
                 'hero-benefit-4': 'Transparente Abrechnung & volle Kostenkontrolle',
                 'hero-cta': 'Jetzt Tankkarte anfragen',
+                'card-text-de': 'TANKKARTE\AEUROPA',
                 'benefits-title': 'Warum unsere Tankkarte?',
                 'benefit-1-title': 'Europaweite Akzeptanz',
                 'benefit-1-text': 'Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.',
@@ -1168,6 +1172,7 @@
                 'hero-benefit-3': 'Attractive diesel prices and discounts',
                 'hero-benefit-4': 'Transparent billing & full cost control',
                 'hero-cta': 'Request fuel card now',
+                'card-text-en': 'FUEL CARD\AEUROPE',
                 'benefits-title': 'Why our fuel card?',
                 'benefit-1-title': 'Europe-wide acceptance',
                 'benefit-1-text': 'Over 10,000 gas stations across Europe, including independent brands for maximum flexibility.',
@@ -1232,6 +1237,7 @@
                 'hero-benefit-3': 'Cazip mazot fiyatları ve indirimler',
                 'hero-benefit-4': 'Şeffaf faturalandırma ve tam maliyet kontrolü',
                 'hero-cta': 'Şimdi yakıt kartı talep edin',
+                'card-text-tr': 'AVRUPA YAKIT\AKARTI',
                 'benefits-title': 'Neden bizim yakıt kartımız?',
                 'benefit-1-title': 'Avrupa genelinde kabul',
                 'benefit-1-text': "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil.",
@@ -1301,6 +1307,16 @@
                     el.setAttribute("alt", langData[altKey]);
                 }
             });
+
+            const cardTexts = {
+                de: 'TANKKARTE\\AEUROPA',
+                en: 'FUEL CARD\\AEUROPE',
+                tr: 'AVRUPA YAKIT\\AKARTI'
+            };
+            const cardElement = document.querySelector('.fuel-card');
+            if (cardElement) {
+                cardElement.style.setProperty('--card-text', `"${cardTexts[lang]}"`);
+            }
 
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('data-lang-code') === lang);
