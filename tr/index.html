@@ -572,16 +572,9 @@
         }
 
         .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 1.5rem;
+            padding: 0 1.5rem 1.5rem;
             color: var(--medium-gray);
             line-height: 1.6;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-answer.open {
-            padding-bottom: 1.5rem;
         }
 
         /* Footer */
@@ -1027,9 +1020,9 @@
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-lang="faq-q1">Wo kann ich mit der Tankkarte tanken?</span>
-                    <span class="faq-icon">+</span>
+                    <span>+</span>
                 </button>
-                <div class="faq-answer" data-lang="faq-a1">
+                <div class="faq-answer" style="display: none;" data-lang="faq-a1">
                     An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert.
                 </div>
             </div>
@@ -1037,9 +1030,9 @@
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-lang="faq-q2">Welche Fahrzeuge sind zugelassen?</span>
-                    <span class="faq-icon">+</span>
+                    <span>+</span>
                 </button>
-                <div class="faq-answer" data-lang="faq-a2">
+                <div class="faq-answer" style="display: none;" data-lang="faq-a2">
                     Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden.
                 </div>
             </div>
@@ -1047,9 +1040,9 @@
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-lang="faq-q3">Ist die Karte auch für kleine Unternehmen geeignet?</span>
-                    <span class="faq-icon">+</span>
+                    <span>+</span>
                 </button>
-                <div class="faq-answer" data-lang="faq-a3">
+                <div class="faq-answer" style="display: none;" data-lang="faq-a3">
                     Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an.
                 </div>
             </div>
@@ -1057,9 +1050,9 @@
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-lang="faq-q4">Wie erfolgt die Abrechnung?</span>
-                    <span class="faq-icon">+</span>
+                    <span>+</span>
                 </button>
-                <div class="faq-answer" data-lang="faq-a4">
+                <div class="faq-answer" style="display: none;" data-lang="faq-a4">
                     Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.
                 </div>
             </div>
@@ -1309,10 +1302,6 @@
                 }
             });
 
-            document.querySelectorAll('.faq-answer.open').forEach(ans => {
-                ans.style.maxHeight = ans.scrollHeight + 'px';
-            });
-
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('data-lang-code') === lang);
             });
@@ -1324,17 +1313,14 @@
         // FAQ Toggle Function
         function toggleFaq(button) {
             const answer = button.nextElementSibling;
-            const icon = button.querySelector('.faq-icon');
-            const isOpen = answer.classList.contains('open');
-
-            if (isOpen) {
-                answer.style.maxHeight = null;
-                answer.classList.remove('open');
-                icon.textContent = '+';
-            } else {
-                answer.classList.add('open');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
+            const icon = button.querySelector('span');
+            
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
                 icon.textContent = '−';
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+';
             }
         }
 
