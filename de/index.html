@@ -258,24 +258,25 @@
         }
 
         .wave {
-                border-width: 2px;
-                bottom: calc(10% + 50px);
-            bottom: calc(15% + 62.5px);  /* card bottom + half card height */
+            position: absolute;
+            bottom: calc(15% + 62.5px);
             left: 50%;
             transform: translate(-50%, 50%);
             border: 30px solid rgba(255, 214, 0, 0.3);
             border-radius: 50%;
             opacity: 0;
-            animation: waveExpand 3s ease-out infinite, waveVisibility 7s ease-in-out infinite;
             visibility: hidden;
+            animation: waveExpand 3s ease-out infinite, waveVisibility 7s ease-in-out infinite;
         }
+
         .wave:nth-child(2) {
             animation-delay: 1s, 0s;
             border-color: rgba(255, 214, 0, 0.2);
         }
+
         .wave:nth-child(3) {
-            animation-delay: 2s;
-            border-color: rgba(255, 214, 0, 0.4);
+            animation-delay: 2s, 0s;
+            border-color: rgba(255, 214, 0, 0.15);
         }
 
         .hero-content {
@@ -703,7 +704,6 @@
             }
 
             .wave {
-                border-width: 2px;
                 bottom: calc(10% + 50px);
             }
 
