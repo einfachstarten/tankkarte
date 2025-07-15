@@ -243,37 +243,26 @@
             letter-spacing: 0.8px;
         }
 
-        /* Kontaktlos-Wellen - Pulsing across entire hero section */
-        .contactless-waves {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            animation: wavesAppear 7s ease-in-out infinite;
-            z-index: 5;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
+        /* Contactless waves centered inside the fuel card */
         .wave {
             position: absolute;
-            bottom: calc(15% + 62.5px); /* Exact fuel card center */
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
             border: 30px solid rgba(255, 214, 0, 0.3);
             border-radius: 50%;
             opacity: 0;
             visibility: hidden;
             animation: waveExpand 3s ease-out infinite, waveVisibility 7s ease-in-out infinite;
+            z-index: -1;
         }
 
-        .wave:nth-child(2) {
+        .wave:nth-child(4) {
             animation-delay: 1s, 0s;
             border-color: rgba(255, 214, 0, 0.2);
         }
 
-        .wave:nth-child(3) {
+        .wave:nth-child(5) {
             animation-delay: 2s, 0s;
             border-color: rgba(255, 214, 0, 0.15);
         }
@@ -705,32 +694,7 @@
                 letter-spacing: 0.6px;
             }
 
-            .contactless-waves {
-                top: 0;
-                left: 0;
-            }
 
-            .wave {
-                bottom: calc(10% + 50px); /* Mobile fuel card center */
-                left: 50%;
-                transform: translate(-50%, 50%);
-            }
-
-            @keyframes waveExpand {
-                0% {
-                    width: 40px;
-                    height: 40px;
-                    opacity: 0.8;
-                }
-                50% {
-                    opacity: 0.3;
-                }
-                100% {
-                    width: 120vw;
-                    height: 120vw;
-                    opacity: 0;
-                }
-            }
         }
 
         /* Animations */
@@ -796,20 +760,6 @@
             }
         }
 
-        @keyframes wavesAppear {
-            0%, 40% {
-                opacity: 0;
-                transform: translateX(-50%) scale(0);
-            }
-            50%, 80% {
-                opacity: 1;
-                transform: translateX(-50%) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translateX(-50%) scale(0);
-            }
-        }
 
         @keyframes waveExpand {
             0% {
@@ -821,8 +771,8 @@
                 opacity: 0.4;
             }
             100% {
-                width: 150vw;
-                height: 150vw;
+                width: 800px;
+                height: 800px;
                 opacity: 0;
             }
         }
@@ -907,10 +857,7 @@
     <!-- Hero Section -->
     <section id="start" class="hero">
         <!-- Tankkarte - außerhalb der Parallax-Animation -->
-        <div class="fuel-card"></div>
-        
-        <!-- Kontaktlos-Wellen - außerhalb der Parallax-Animation -->
-        <div class="contactless-waves">
+        <div class="fuel-card">
             <div class="wave"></div>
             <div class="wave"></div>
             <div class="wave"></div>
