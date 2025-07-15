@@ -840,6 +840,82 @@
             transform: translateY(0);
         }
 
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .coming-soon-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-yellow);
+            color: var(--primary-green);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .maut-bg {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            position: relative;
+        }
+
+        .maut-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .country-badge {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
         .parallax-element {
             will-change: transform;
         }
@@ -864,8 +940,10 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#start" data-lang="nav-start">Start</a></li>
-                    <li><a href="#vorteile" data-lang="nav-benefits">Vorteile</a></li>
-                    <li><a href="#funktion" data-lang="nav-function">So funktioniert's</a></li>
+                    <li><a href="#services" data-lang="nav-services">Services</a></li>
+                    <li><a href="#tankkarte" data-lang="nav-fuelcard">Tankkarte</a></li>
+                    <li><a href="#maut" data-lang="nav-toll">Maut</a></li>
+                    <li><a href="#kreditkarte" data-lang="nav-creditcard">Kreditkarte</a></li>
                     <li><a href="#kontakt" data-lang="nav-contact">Kontakt</a></li>
                     <li><a href="#faq" data-lang="nav-faq">FAQ</a></li>
                 </ul>
@@ -906,10 +984,39 @@
                 <a href="#kontakt" class="btn" data-lang="hero-cta">Jetzt Tankkarte anfragen</a>
             </div>
         </div>
+</section>
+
+    <!-- Services Overview -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="services-title">Unsere Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🚛</span>
+                    <h3 data-lang="service-1-title">RMC Tankkarte</h3>
+                    <p data-lang="service-1-desc">Tankkarte Beschreibung</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💳</span>
+                    <h3 data-lang="service-2-title">RMC Kreditkarte</h3>
+                    <p data-lang="service-2-desc">Kreditkarte Beschreibung</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🛣️</span>
+                    <h3 data-lang="service-3-title">Mautlösungen</h3>
+                    <p data-lang="service-3-desc">Maut Beschreibung</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3 data-lang="service-4-title">RMC Ladekarte</h3>
+                    <p data-lang="service-4-desc">Ladekarte Beschreibung</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Vorteile Section -->
-    <section id="vorteile" class="section vorteile">
+    <section id="tankkarte" class="section vorteile">
         <div class="container">
             <h2 class="section-title" data-lang="benefits-title">Warum unsere Tankkarte?</h2>
             
@@ -981,6 +1088,30 @@
             <div class="info-box">
                 <span data-lang="info-box">💡 Auch für kleine Speditionen und Einzelunternehmer geeignet!</span>
             </div>
+        </div>
+    </section>
+
+    <!-- Kreditkarte Section -->
+    <section id="kreditkarte" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="creditcard-title">RMC Prepaid Kreditkarte</h2>
+            <p data-lang="creditcard-subtitle">Kreditkarte Infos</p>
+        </div>
+    </section>
+
+    <!-- Maut Section -->
+    <section id="maut" class="section maut-bg">
+        <div class="container">
+            <h2 class="section-title" data-lang="toll-title">Mautlösungen</h2>
+            <p data-lang="toll-subtitle">Maut Infos</p>
+        </div>
+    </section>
+
+    <!-- Ladekarte Section -->
+    <section id="ladekarte" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="charging-title">RMC Ladekarte</h2>
+            <p data-lang="charging-desc">Ladekarte Infos</p>
         </div>
     </section>
 
@@ -1086,6 +1217,20 @@
         </div>
     </section>
 
+    <!-- Zusatzservices Section -->
+    <section id="zusatzservices" class="section additional-services">
+        <div class="container">
+            <h2 class="section-title" data-lang="additional-title">Zusatzservices</h2>
+            <div class="additional-grid">
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3 data-lang="additional-vat-title">MwSt-Rückerstattung</h3>
+                    <p data-lang="additional-vat-desc">Steuervorteile nutzen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="container">
@@ -1185,17 +1330,28 @@
             en: {
                 'company-subtitle': 'A partner of RMC Service GmbH',
                 'nav-start': 'Home',
-                'nav-benefits': 'Benefits',
-                'nav-function': 'How it works',
+                'nav-services': 'Services',
+                'nav-fuelcard': 'Fuel Card',
+                'nav-toll': 'Toll',
+                'nav-creditcard': 'Credit Card',
                 'nav-contact': 'Contact',
                 'nav-faq': 'FAQ',
-                'hero-title': 'Truck Fuel Card Europe | Cashless Refueling for Transport & Logistics',
-                'hero-subtitle': 'Your fuel card for trucks – cashless refueling across Europe',
-                'hero-benefit-1': 'Fuel card for trucks in Europe',
-                'hero-benefit-2': 'Cashless refueling at over 10,000 gas stations',
-                'hero-benefit-3': 'Attractive diesel prices and discounts',
+                'hero-title': 'European Mobility Solutions | Fuel Card, Toll & Credit Card',
+                'hero-subtitle': 'Your partner for Europe-wide mobility – from fuel to tolls',
+                'hero-benefit-1': 'Fuel card for 19 European countries',
+                'hero-benefit-2': 'Toll solutions for 17 countries from one provider',
+                'hero-benefit-3': 'Prepaid credit card without credit check',
                 'hero-benefit-4': 'Transparent billing & full cost control',
                 'hero-cta': 'Request fuel card now',
+                'services-title': 'Our Mobility Solutions',
+                'service-1-title': 'RMC Fuel Card',
+                'service-1-desc': 'Refuel cheaply across Europe',
+                'service-2-title': 'RMC Credit Card',
+                'service-2-desc': 'Prepaid without credit check',
+                'service-3-title': 'Toll Solutions',
+                'service-3-desc': 'One provider for 17 countries',
+                'service-4-title': 'RMC Charging Card',
+                'service-4-desc': 'Coming soon',
                 'card-text-en': 'FUEL CARD EUROPE',
                 'benefits-title': 'Why our fuel card?',
                 'benefit-1-title': 'Europe-wide acceptance',
@@ -1245,7 +1401,10 @@
                 'footer-privacy': 'Privacy',
                 'footer-terms': 'Terms',
                 'footer-copyright': '© 2025 Özkan Gökceviran - A partner of RMC Service GmbH. All rights reserved.',
-                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.'
+                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.',
+                'additional-title': 'Additional Services',
+                'additional-vat-title': 'VAT Refund',
+                'additional-vat-desc': 'Recover VAT from abroad'
             },
             tr: {
                 'company-subtitle': 'RMC Service GmbH’nin bir ortağı',
