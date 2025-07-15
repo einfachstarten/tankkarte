@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yakıt kartımızla Avrupa genelinde nakitsiz yakıt. 17 ülke için geçiş ücreti çözümleri. Kredi kontrolü olmadan ön ödemeli kredi kartı. Tek sağlayıcıdan hepsi.">
-    <title>Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı</title>
+    <meta name="description" content="Tankkarte, Maut & Kreditkarte für Europa. Bargeldlos tanken, transparent abrechnen. Partner von RMC Service GmbH.">
     <link rel="canonical" href="https://www.filo.cards/">
-    <link rel="alternate" hreflang="de" href="https://www.filo.cards/de/">
-    <link rel="alternate" hreflang="en" href="https://www.filo.cards/en/">
+    <title>Europäische Mobilitätslösungen | filo.cards</title>
+    <link rel="alternate" hreflang="de" href="https://www.filo.cards/">
     <link rel="alternate" hreflang="tr" href="https://www.filo.cards/">
-    <link rel="alternate" hreflang="x-default" href="https://www.filo.cards/de/">
-    <meta name="keywords" content="avrupa yakıt kartı, kamyon yakıt kartı, geçiş ücreti çözümleri, ön ödemeli kredi kartı, filo yönetimi, RMC servis, avrupa mobilite, türkiye nakliye">
+    <link rel="alternate" hreflang="x-default" href="https://www.filo.cards/">
+    <meta name="keywords" content="filo cards, lkw tankkarte, dieselkarte, tankkarte europa, kraftstoffkarte, lkw kraftstoff, spedition tankkarte, guenstig tanken lkw, flottenkarte diesel, tankstelle europa, lkw sprit, dieselrabatt, tankstellenkarte, filo fleet card">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="tr_TR">
-    <meta property="og:site_name" content="Özkan Gökceviran">
-    <meta property="og:title" content="Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı">
-    <meta property="og:description" content="Yakıt kartımızla Avrupa genelinde nakitsiz yakıt. 17 ülke için geçiş ücreti çözümleri. Kredi kontrolü olmadan ön ödemeli kredi kartı.">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="filo.cards">
+    <meta property="og:title" content="LKW-Tankkarte Europa | Dieselkarte für Spedition & Fuhrpark">
+    <meta property="og:description" content="Bargeldlos Diesel tanken in ganz Europa – mit unserer Tankkarte für LKWs. Transparente Abrechnung, Rabatte & persönlicher Service.">
     <meta property="og:url" content="https://www.filo.cards/">
     <meta property="og:image" content="https://www.filo.cards/images/europa-karte.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı">
-    <meta name="twitter:description" content="Yakıt kartımızla Avrupa genelinde nakitsiz yakıt kartı.">
+    <meta name="twitter:title" content="LKW-Tankkarte Europa | Dieselkarte für Spedition & Fuhrpark">
+    <meta name="twitter:description" content="Bargeldlos Diesel tanken in ganz Europa – mit unserer Tankkarte für LKWs.">
     <meta name="twitter:image" content="https://www.filo.cards/images/europa-karte.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Özkan Gökceviran",
+      "name": "filo.cards",
       "url": "https://www.filo.cards/",
       "contactPoint": [{"@type":"ContactPoint","telephone":"+90 5530540989","contactType":"customer service","areaServed":["DE","AT","TR"],"availableLanguage":["German","English","Turkish"]}],
       "address": [{"@type":"PostalAddress","addressLocality":"Mersin","addressCountry":"TR"},{"@type":"PostalAddress","addressLocality":"Izmir","addressCountry":"TR"},{"@type":"PostalAddress","addressCountry":"AT"},{"@type":"PostalAddress","addressCountry":"DE"}]
@@ -438,8 +437,8 @@
             box-shadow: var(--shadow-hover);
         }
 
-        .benefit-icon {
-            display: none;
+        .benefit-card .benefit-icon {
+            display: none !important;
         }
 
         .benefit-card h3 {
@@ -597,18 +596,6 @@
             background: var(--light-gray);
         }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 1.5rem;
-            color: var(--medium-gray);
-            line-height: 1.6;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-answer.open {
-            padding-bottom: 1.5rem;
-        }
 
         /* Footer */
         .footer {
@@ -822,7 +809,6 @@
             }
         }
 
-
         @keyframes parallaxMove {
             0% {
                 transform: translateY(0px);
@@ -916,11 +902,17 @@
         .country-badge {
             background: var(--primary-green);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             border-radius: var(--border-radius);
             text-align: center;
             font-weight: 600;
             font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .country-badge:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
         }
 
         .austria-special {
@@ -933,6 +925,7 @@
             margin-top: 2rem;
         }
 
+        /* Target Groups */
         .target-groups {
             margin-top: 4rem;
         }
@@ -973,6 +966,7 @@
             margin-right: 0.5rem;
         }
 
+        /* Usage Cards */
         .usage-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -999,6 +993,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Advantages Grid */
         .advantages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1014,36 +1009,7 @@
             text-align: center;
         }
 
-        .advantage-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .charging-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .charging-signup {
-            margin-top: 3rem;
-        }
-
-        .signup-form {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            justify-content: center;
-        }
-
-        .signup-form input {
-            flex: 1;
-            max-width: 300px;
-            padding: 1rem;
-            border: 2px solid var(--light-gray);
-            border-radius: var(--border-radius);
-        }
-
+        /* Service Features */
         .service-features {
             display: flex;
             gap: 0.5rem;
@@ -1061,6 +1027,7 @@
             font-weight: 600;
         }
 
+        /* Additional Services Grid */
         .additional-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1068,10 +1035,18 @@
             margin-top: 2rem;
         }
 
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s forwards;
+        /* FAQ Answer fix */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.open {
+            padding-bottom: 1.5rem;
         }
 
         .parallax-element {
@@ -1091,25 +1066,24 @@
     <nav class="nav">
         <div class="nav-container">
             <div style="display: flex; flex-direction: column; align-items: flex-start;">
-                <a href="#start" class="logo">Özkan Gökceviran</a>
-                <span style="font-size: 0.7rem; color: var(--medium-gray); margin-top: -5px;" data-lang="company-subtitle">RMC Service GmbH’nin bir ortağı</span>
+                <a href="#start" class="logo">filo.cards</a>
+                <span style="font-size: 0.7rem; color: var(--medium-gray); margin-top: -5px;" data-lang="company-subtitle">Ein Partner der RMC Service GmbH</span>
             </div>
             
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#start" data-lang="nav-start">Ana Sayfa</a></li>
-                    <li><a href="#services" data-lang="nav-services">Hizmetler</a></li>
-                    <li><a href="#tankkarte" data-lang="nav-fuelcard">Yakıt Kartı</a></li>
-                    <li><a href="#maut" data-lang="nav-toll">Geçiş Ücreti</a></li>
-                    <li><a href="#kreditkarte" data-lang="nav-creditcard">Kredi Kartı</a></li>
-                    <li><a href="#kontakt" data-lang="nav-contact">İletişim</a></li>
-                    <li><a href="#faq" data-lang="nav-faq">SSS</a></li>
+                    <li><a href="#start" data-lang="nav-start">Start</a></li>
+                    <li><a href="#services" data-lang="nav-services">Services</a></li>
+                    <li><a href="#tankkarte" data-lang="nav-fuelcard">Tankkarte</a></li>
+                    <li><a href="#maut" data-lang="nav-toll">Maut</a></li>
+                    <li><a href="#kreditkarte" data-lang="nav-creditcard">Kreditkarte</a></li>
+                    <li><a href="#kontakt" data-lang="nav-contact">Kontakt</a></li>
+                    <li><a href="#faq" data-lang="nav-faq">FAQ</a></li>
                 </ul>
                 
                 <div class="language-switcher">
-                    <button class="lang-btn" data-lang-code="de" onclick="window.location.href='/de/'">DE</button>
-                    <button class="lang-btn" data-lang-code="en" onclick="window.location.href='/en/'">EN</button>
-                    <button class="lang-btn active" data-lang-code="tr" onclick="window.location.href='/'">TR</button>
+                    <button class='lang-btn active' onclick='switchLanguage("de")'>DE</button>
+                    <button class='lang-btn' onclick='switchLanguage("tr")'>TR</button>
                 </div>
                 
                 <button class="mobile-menu-btn" aria-label="Menü öffnen">☰</button>
@@ -1129,17 +1103,17 @@
         
         <div class="container">
             <div class="hero-content fade-in">
-                <h1 data-lang="hero-title">Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı</h1>
-                <p class="hero-subtitle" data-lang="hero-subtitle">Avrupa genelinde mobilite ortağınız – yakıttan geçiş ücretlerine</p>
+                <h1 data-lang="hero-title">Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte</h1>
+                <p class="hero-subtitle" data-lang="hero-subtitle">Ihr Partner für europaweite Mobilität – von Tanken bis Maut</p>
                 
                 <ul class="benefits-list">
-                    <li data-lang="hero-benefit-1">19 Avrupa ülkesinde yakıt kartı</li>
-                    <li data-lang="hero-benefit-2">Tek sağlayıcıdan 17 ülke için geçiş ücreti çözümleri</li>
-                    <li data-lang="hero-benefit-3">Kredi kontrolü olmadan ön ödemeli kredi kartı</li>
-                    <li data-lang="hero-benefit-4">Şeffaf faturalandırma ve tam maliyet kontrolü</li>
+                    <li data-lang="hero-benefit-1">Tankkarte für 19 europäische Länder</li>
+                    <li data-lang="hero-benefit-2">Mautlösungen für 17 Länder aus einer Hand</li>
+                    <li data-lang="hero-benefit-3">Prepaid-Kreditkarte ohne Bonitätsprüfung</li>
+                    <li data-lang="hero-benefit-4">Transparente Abrechnung & volle Kostenkontrolle</li>
                 </ul>
 
-                <a href="#kontakt" class="btn" data-lang="hero-cta">Şimdi yakıt kartı talep edin</a>
+                <a href="#kontakt" class="btn" data-lang="hero-cta">Jetzt Tankkarte anfragen</a>
             </div>
         </div>
 </section>
@@ -1147,125 +1121,155 @@
     <!-- Services Overview -->
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title" data-lang="services-title">Unsere Mobilitätslösungen</h2>
-            <p class="section-subtitle" data-lang="services-subtitle">Alles aus einer Hand – von der Tankkarte bis zur Mautabrechnung</p>
-            
+            <h2 class="section-title" data-lang="services-title">Unsere Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <span class="service-icon">🚛</span>
-                    <h3 data-lang="service-1-title">RMC Yakıt Kartı</h3>
-                    <p data-lang="service-1-desc">Avrupa genelinde 10.000'den fazla benzin istasyonunda ucuz yakıt. Ücretsiz, cazip fiyatlar.</p>
+                    <h3 data-lang="service-1-title">RMC Tankkarte</h3>
+                    <p data-lang="service-1-desc">Europaweit günstig tanken an über 10.000 Tankstellen. Keine Gebühren, attraktive Preise.</p>
                     <div class="service-features">
-                        <span>19 Ülke</span>
-                        <span>0€ Ücret</span>
-                        <span>Avusturya: -1,5ct/L</span>
+                        <span>19 Länder</span>
+                        <span>0€ Gebühren</span>
+                        <span>Österreich: -1,5ct/L</span>
                     </div>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">💳</span>
-                    <h3 data-lang="service-2-title">RMC Kredi Kartı</h3>
-                    <p data-lang="service-2-desc">Kredi kontrolü olmadan ön ödemeli kredi kartı. Harcamalarınızın tam kontrolü.</p>
+                    <h3 data-lang="service-2-title">RMC Kreditkarte</h3>
+                    <p data-lang="service-2-desc">Prepaid-Kreditkarte ohne Bonitätsprüfung. Volle Kontrolle über Ihre Ausgaben.</p>
                     <div class="service-features">
-                        <span>Kredi Kontrolü Yok</span>
-                        <span>Ön Ödeme Sistemi</span>
-                        <span>Tam Kontrol</span>
+                        <span>Ohne Bonitätsprüfung</span>
+                        <span>Prepaid-System</span>
+                        <span>Volle Kontrolle</span>
                     </div>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">🛣️</span>
-                    <h3 data-lang="service-3-title">Geçiş Ücreti Çözümleri</h3>
-                    <p data-lang="service-3-desc">17 ülke için tek sağlayıcı. Otomatik faturalandırma, çoklu sözleşme yok.</p>
+                    <h3 data-lang="service-3-title">Mautlösungen</h3>
+                    <p data-lang="service-3-desc">Ein Anbieter für 17 Länder. Automatische Abrechnung, keine Vielzahl an Verträgen.</p>
                     <div class="service-features">
-                        <span>17 Ülke</span>
-                        <span>EETS Sistemi</span>
-                        <span>Tek Sözleşme</span>
+                        <span>17 Länder</span>
+                        <span>EETS-System</span>
+                        <span>Ein Vertrag</span>
                     </div>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">⚡</span>
-                    <h3 data-lang="service-4-title">RMC Şarj Kartı</h3>
-                    <p data-lang="service-4-desc">Avrupa genelinde elektrikli mobilite. Yakında mevcut.</p>
-                    <div class="coming-soon-badge">Yakında</div>
+                    <h3 data-lang="service-4-title">RMC Ladekarte</h3>
+                    <p data-lang="service-4-desc">Elektromobilität europaweit. Demnächst verfügbar.</p>
+                    <div class="coming-soon-badge">Demnächst</div>
                 </div>
             </div>
 
-            <!-- Neue Zielgruppen Section -->
             <div class="target-groups">
-                <h3>Herkes için doğru çözüm</h3>
+                <h3>Für jeden die richtige Lösung</h3>
                 <div class="target-grid">
                     <div class="target-card">
                         <div class="target-icon">👤</div>
-                        <h4>Özel Müşteriler</h4>
-                        <p>Ucuz fiyatlar, nakitsiz yakıt, açık iki haftalık faturalandırma</p>
+                        <h4>Privatkunden</h4>
+                        <p>Günstige Preise, bargeldloses Tanken, übersichtliche 14-tägige Abrechnung</p>
                         <ul class="target-features">
-                            <li>Günlük piyasa fiyatları</li>
-                            <li>İki haftalık faturalandırma</li>
-                            <li>Gizli maliyet yok</li>
-                            <li>Online portal erişimi</li>
+                            <li>Tagesaktuelle Marktpreise</li>
+                            <li>14-tägige Abrechnung</li>
+                            <li>Keine versteckten Kosten</li>
+                            <li>Online-Portal Zugang</li>
                         </ul>
                     </div>
 
                     <div class="target-card">
                         <div class="target-icon">🏢</div>
-                        <h4>Şirketler</h4>
-                        <p>Filo yönetimi, sabit fiyatlar, merkezi faturalandırma, vergi avantajları</p>
+                        <h4>Unternehmen</h4>
+                        <p>Flottenmanagement, Fixpreise, zentrale Abrechnung, Steuervorteile</p>
                         <ul class="target-features">
-                            <li>Avrupa genelinde sabit fiyatlar</li>
-                            <li>Aylık toplu faturalandırma</li>
-                            <li>Bireysel kart limitleri</li>
-                            <li>KDV ve yakıt vergisi iadeleri</li>
+                            <li>Europaweite Fixpreise</li>
+                            <li>Monatliche Sammelabrechnung</li>
+                            <li>Individuelle Kartenlimits</li>
+                            <li>MwSt- & Mineralölsteuer-Rückerstattung</li>
                         </ul>
                     </div>
 
                     <div class="target-card">
                         <div class="target-icon">🚚</div>
-                        <h4>Büyük Filolar</h4>
-                        <p>Telematik, genişletilmiş hizmetler, Avrupa genelinde tüm yakıtlar</p>
+                        <h4>Großflotten</h4>
+                        <p>Telematik, erweiterte Services, europaweit alle Kraftstoffe</p>
                         <ul class="target-features">
-                            <li>KITIN telematik entegrasyonu</li>
-                            <li>Tüm yakıtlar (Dizel, Benzin, AdBlue, LNG)</li>
-                            <li>Detaylı tüketim analizi</li>
-                            <li>Nakliye çözümleri</li>
+                            <li>KITIN Telematik-Integration</li>
+                            <li>Alle Kraftstoffe (Diesel, Benzin, AdBlue, LNG)</li>
+                            <li>Detaillierte Verbrauchsanalysen</li>
+                            <li>Speditionslösungen</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Länder-Abdeckung -->
             <div class="countries-section">
-                <h3>19 ülkede mevcut</h3>
+                <h3>Verfügbar in 19 Ländern</h3>
                 <div class="countries-grid">
-                    <div class="country-badge">Avusturya</div>
-                    <div class="country-badge">Almanya</div>
-                    <div class="country-badge">İspanya</div>
-                    <div class="country-badge">Fransa</div>
-                    <div class="country-badge">Belçika</div>
-                    <div class="country-badge">Bulgaristan</div>
-                    <div class="country-badge">Hırvatistan</div>
-                    <div class="country-badge">Yunanistan</div>
-                    <div class="country-badge">Macaristan</div>
-                    <div class="country-badge">İtalya</div>
-                    <div class="country-badge">Lüksemburg</div>
-                    <div class="country-badge">Hollanda</div>
-                    <div class="country-badge">Polonya</div>
-                    <div class="country-badge">Romanya</div>
-                    <div class="country-badge">Slovenya</div>
-                    <div class="country-badge">Slovakya</div>
-                    <div class="country-badge">Gürcistan</div>
-                    <div class="country-badge">Azerbaycan</div>
-                    <div class="country-badge">Kazakistan</div>
+                    <div class="country-badge">Österreich</div>
+                    <div class="country-badge">Deutschland</div>
+                    <div class="country-badge">Spanien</div>
+                    <div class="country-badge">Frankreich</div>
+                    <div class="country-badge">Belgien</div>
+                    <div class="country-badge">Bulgarien</div>
+                    <div class="country-badge">Kroatien</div>
+                    <div class="country-badge">Griechenland</div>
+                    <div class="country-badge">Ungarn</div>
+                    <div class="country-badge">Italien</div>
+                    <div class="country-badge">Luxemburg</div>
+                    <div class="country-badge">Niederlande</div>
+                    <div class="country-badge">Polen</div>
+                    <div class="country-badge">Rumänien</div>
+                    <div class="country-badge">Slowenien</div>
+                    <div class="country-badge">Slowakei</div>
+                    <div class="country-badge">Georgien</div>
+                    <div class="country-badge">Aserbaidschan</div>
+                    <div class="country-badge">Kasachstan</div>
                 </div>
                 <div class="austria-special">
-                    Avusturya: Litre başına garantili 1,5 sent tasarruf
+                    Österreich: Garantiert 1,5 Cent Ersparnis pro Liter
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- Vorteile Section -->
+    <section id="tankkarte" class="section vorteile">
+        <div class="container">
+            <h2 class="section-title" data-lang="benefits-title">Warum unsere Tankkarte?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card scroll-reveal" style="background-image: url('images/europa-karte.png');">
+                    <img src='images/europa-karte.png' class='benefit-icon' loading='lazy' alt='Europaweite Akzeptanz' data-lang-alt='benefit-1-title'>
+                    <h3 data-lang="benefit-1-title">Europaweite Akzeptanz</h3>
+                    <p data-lang="benefit-1-text">Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('images/diesel-preise.png');">
+                    <img src='images/diesel-preise.png' class='benefit-icon' loading='lazy' alt='Attraktive Dieselpreise' data-lang-alt='benefit-2-title'>
+                    <h3 data-lang="benefit-2-title">Attraktive Dieselpreise</h3>
+                    <p data-lang="benefit-2-text">Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('images/sicherheit.png');">
+                    <img src='images/sicherheit.png' class='benefit-icon' loading='lazy' alt='Bargeldlos und sicher' data-lang-alt='benefit-3-title'>
+                    <h3 data-lang="benefit-3-title">Bargeldlos und sicher</h3>
+                    <p data-lang="benefit-3-text">PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('images/abrechnung.png');">
+                    <img src='images/abrechnung.png' class='benefit-icon' loading='lazy' alt='Kein Papierkram' data-lang-alt='benefit-4-title'>
+                    <h3 data-lang="benefit-4-title">Kein Papierkram</h3>
+                    <p data-lang="benefit-4-text">Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('images/service.png');">
+                    <img src='images/service.png' class='benefit-icon' loading='lazy' alt='Persönlicher Service' data-lang-alt='benefit-5-title'>
+                    <h3 data-lang="benefit-5-title">Persönlicher Service</h3>
+                    <p data-lang="benefit-5-text">Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Funktion Section -->
     <section id="funktion" class="section">
@@ -1307,75 +1311,61 @@
     <!-- Kreditkarte Section -->
     <section id="kreditkarte" class="section">
         <div class="container">
-            <h2 class="section-title">RMC Ön Ödemeli Kredi Kartı</h2>
-            <p class="section-subtitle">Yolda maksimum esneklik – kredi kontrolü olmadan</p>
-            
+            <h2 class="section-title">RMC Prepaid Kreditkarte</h2>
+            <p class="section-subtitle">Maximale Flexibilität unterwegs – ohne Bonitätsprüfung</p>
+
             <div class="usage-section">
-                <h3>Seyahat için mükemmel</h3>
+                <h3>Perfekt für unterwegs</h3>
                 <div class="usage-grid">
                     <div class="usage-card">
                         <div class="usage-icon">🔧</div>
-                        <h4>Atölye maliyetleri ve onarımlar</h4>
-                        <p>Yurt dışında bile ani onarımları esnek şekilde ödeyin</p>
+                        <h4>Werkstattkosten & Reparaturen</h4>
+                        <p>Spontane Reparaturen auch im Ausland flexibel bezahlen</p>
                     </div>
-                    
                     <div class="usage-card">
                         <div class="usage-icon">🏨</div>
-                        <h4>Oteller ve konaklama</h4>
-                        <p>Birçok otel rezervasyon veya check-in sırasında kredi kartı ister</p>
+                        <h4>Hotels & Unterkünfte</h4>
+                        <p>Viele Hotels verlangen Kreditkarte bei Buchung oder Check-in</p>
                     </div>
-                    
                     <div class="usage-card">
                         <div class="usage-icon">🍽️</div>
-                        <h4>Restoranlar ve yemek</h4>
-                        <p>Restoranlarda, süpermarketlerde veya benzin istasyonlarında rahatça ödeyin</p>
+                        <h4>Restaurants & Verpflegung</h4>
+                        <p>Bequem in Restaurants, Supermärkten oder Raststätten zahlen</p>
                     </div>
-                    
                     <div class="usage-card">
                         <div class="usage-icon">🅿️</div>
-                        <h4>Park ücretleri ve cezalar</h4>
-                        <p>Park biletlerini ve cezaları doğrudan makinede ödeyin</p>
+                        <h4>Parkgebühren & Strafzahlungen</h4>
+                        <p>Parktickets und Bußgelder direkt am Automaten begleichen</p>
                     </div>
-                    
                     <div class="usage-card">
                         <div class="usage-icon">🎫</div>
-                        <h4>Rezervasyonlar ve online rezervasyonlar</h4>
-                        <p>Feribotları, ücretli yolları veya park yerlerini güvenle önceden rezerve edin</p>
+                        <h4>Reservierungen & Online-Buchungen</h4>
+                        <p>Fähren, Mautstrecken oder Stellplätze sicher vorab buchen</p>
                     </div>
-                    
                     <div class="usage-card">
                         <div class="usage-icon">🚨</div>
-                        <h4>Acil durumlar ve ani harcamalar</h4>
-                        <p>Beklenmedik durumlar için finansal rezerv</p>
+                        <h4>Notfälle & spontane Ausgaben</h4>
+                        <p>Finanzielle Reserve für unerwartete Situationen</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="benefits-section">
-                <h3>Avantajlarınız</h3>
+                <h3>Ihre Vorteile</h3>
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <div class="benefit-icon">✅</div>
-                        <h4>Kredi kontrolü olmadan</h4>
-                        <p>Sadece yüklenen kredi kullanılabilir – borçlanma mümkün değil</p>
+                        <h4>Ohne Bonitätsprüfung</h4>
+                        <p>Nur aufgeladenes Guthaben verwendbar – keine Verschuldung möglich</p>
                     </div>
-                    
                     <div class="benefit-card">
-                        <div class="benefit-icon">💰</div>
-                        <h4>Maksimum maliyet kontrolü</h4>
-                        <p>Sadece mevcut kredinin üzerinde harcama yapabilirsiniz</p>
+                        <h4>Maximale Kostenkontrolle</h4>
+                        <p>Sie können nur über verfügbares Guthaben verfügen</p>
                     </div>
-                    
                     <div class="benefit-card">
-                        <div class="benefit-icon">📊</div>
-                        <h4>Tam şeffaflık</h4>
-                        <p>Tüm ödemeler her zaman portalda online görülebilir</p>
+                        <h4>Volle Transparenz</h4>
+                        <p>Alle Zahlungen jederzeit online im Portal einsehbar</p>
+                    </div>
                 </div>
-            </div>
-            </div>
-            
-            <div class="cta-section">
-                <a href="#" class="btn" data-lang="creditcard-cta">Kartenantrag herunterladen</a>
             </div>
         </div>
     </section>
@@ -1383,79 +1373,71 @@
     <!-- Maut Section -->
     <section id="maut" class="section maut-bg">
         <div class="container">
-            <h2 class="section-title">Avrupa için Geçiş Ücreti Çözümleri</h2>
-            <p class="section-subtitle">17 ülke için tek sağlayıcı – basit, güvenilir, şeffaf</p>
-            
+            <h2 class="section-title">Mautlösungen für Europa</h2>
+            <p class="section-subtitle">Ein Anbieter für 17 Länder – einfach, zuverlässig, transparent</p>
+
             <div class="advantages-section">
-                <h3>Avantajlarınız</h3>
+                <h3>Ihre Vorteile</h3>
                 <div class="advantages-grid">
                     <div class="advantage-card">
-                        <div class="advantage-icon">🎯</div>
-                        <h4>Tüm geçiş ücreti sistemleri için tek sağlayıcı</h4>
-                        <p>Artık çoklu sözleşmelere gerek yok – tek kaynaktan her şey</p>
+                        <h4>Ein Anbieter für alle Mautsysteme</h4>
+                        <p>Keine Vielzahl an Verträgen mehr notwendig – alles aus einer Hand</p>
                     </div>
-                    
                     <div class="advantage-card">
-                        <div class="advantage-icon">⚡</div>
-                        <h4>EETS entegrasyonu</h4>
-                        <p>Yeni ülkeler dakikalar içinde eklenebilir</p>
+                        <h4>EETS-Integration</h4>
+                        <p>Neue Länder können in wenigen Minuten hinzugefügt werden</p>
                     </div>
-                    
                     <div class="advantage-card">
-                        <div class="advantage-icon">📋</div>
-                        <h4>Birleşik faturalandırma</h4>
-                        <p>Maksimum verimlilik için geçiş ücreti ve yakıt tek faturada</p>
+                        <h4>Kombinierte Abrechnung</h4>
+                        <p>Maut und Tanken in einer Rechnung für maximale Effizienz</p>
                     </div>
-                    
                     <div class="advantage-card">
-                        <div class="advantage-icon">📊</div>
-                        <h4>Günlük genel bakış</h4>
-                        <p>RMC Service portalında tüm geçiş ücretleri şeffaf</p>
+                        <h4>Tägliche Übersicht</h4>
+                        <p>Alle Mautgebühren transparent im RMC Service-Portal</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="countries-section">
-                <h3>17 ülkede mevcut</h3>
+                <h3>Verfügbar in 17 Ländern</h3>
                 <div class="countries-grid">
-                    <div class="country-badge">Avusturya</div>
-                    <div class="country-badge">Almanya</div>
-                    <div class="country-badge">Belçika</div>
-                    <div class="country-badge">Fransa</div>
-                    <div class="country-badge">İspanya</div>
-                    <div class="country-badge">Portekiz</div>
-                    <div class="country-badge">İtalya</div>
-                    <div class="country-badge">Macaristan</div>
-                    <div class="country-badge">Slovakya</div>
-                    <div class="country-badge">Slovenya</div>
-                    <div class="country-badge">Hırvatistan</div>
-                    <div class="country-badge">Bulgaristan</div>
-                    <div class="country-badge">İsveç</div>
-                    <div class="country-badge">Norveç</div>
-                    <div class="country-badge">Danimarka</div>
-                    <div class="country-badge">Polonya</div>
-                    <div class="country-badge">İsviçre</div>
+                    <div class="country-badge">Österreich</div>
+                    <div class="country-badge">Deutschland</div>
+                    <div class="country-badge">Belgien</div>
+                    <div class="country-badge">Frankreich</div>
+                    <div class="country-badge">Spanien</div>
+                    <div class="country-badge">Portugal</div>
+                    <div class="country-badge">Italien</div>
+                    <div class="country-badge">Ungarn</div>
+                    <div class="country-badge">Slowakei</div>
+                    <div class="country-badge">Slowenien</div>
+                    <div class="country-badge">Kroatien</div>
+                    <div class="country-badge">Bulgarien</div>
+                    <div class="country-badge">Schweden</div>
+                    <div class="country-badge">Norwegen</div>
+                    <div class="country-badge">Dänemark</div>
+                    <div class="country-badge">Polen</div>
+                    <div class="country-badge">Schweiz</div>
                 </div>
             </div>
-            
+
             <div class="tunnel-section">
                 <div class="tunnel-card">
-                    <h4>Tünel hizmeti dahil</h4>
-                    <p>Bekleme süresi olmadan tünel ücretlerinin otomatik faturalandırması – tüm ücretler otomatik olarak kaydedilir ve şeffaf bir şekilde faturalandırılır</p>
+                    <h4>Tunnelservice inklusive</h4>
+                    <p>Automatische Abrechnung von Tunnelgebühren ohne Wartezeiten – alle Gebühren werden automatisch erfasst und transparent abgerechnet</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ladekarte Section -->
     <section id="ladekarte" class="section">
         <div class="container">
-            <h2 class="section-title">RMC Şarj Kartı</h2>
-            <p class="section-subtitle">Elektrikli mobilitenin anahtarı – yakında mevcut</p>
+            <h2 class="section-title">RMC Ladekarte</h2>
+            <p class="section-subtitle">Der Schlüssel zur Elektromobilität – demnächst verfügbar</p>
 
             <div class="charging-content">
-                <p>Avrupa genelinde çok sayıda şarj istasyonunda kolay şarj. Nakitsiz, şeffaf, geleceğe hazır.</p>
-                <p>RMC Şarj Kartı yakında mevcut olacak ve elektrikli araçların büyüyen bir şarj istasyonu ağında rahat ve kolay şarj edilmesini sağlar.</p>
+                <p>Einfaches Laden an zahlreichen Ladestationen europaweit. Bargeldlos, transparent, zukunftssicher.</p>
+                <p>Die RMC Ladekarte wird in Kürze verfügbar sein und ermöglicht es, Elektrofahrzeuge bequem und unkompliziert an einem wachsenden Netzwerk von Ladestationen zu laden.</p>
             </div>
         </div>
     </section>
@@ -1463,8 +1445,8 @@
     <!-- Kontakt Section -->
     <section id="kontakt" class="section kontakt">
         <div class="container">
-            <h2 class="section-title">Kamyon yakıt kartı başvurusu</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Kamyon filonuz için bir yakıt kartı başvurusu yapmak mı istiyorsunuz?<br>Bizimle iletişime geçin – size kişisel ve ücretsiz danışmanlık veriyoruz!</p>
+            <h2 class="section-title" data-lang="contact-title">LKW-Tankkarte beantragen</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;" data-lang="contact-subtitle">Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!</p>
             
             <div class="kontakt-content">
                 <form class="contact-form">
@@ -1493,11 +1475,11 @@
                         <textarea id="nachricht" name="nachricht" rows="4"></textarea>
                     </div>
 
-                    <button type="submit" class="btn">Şimdi ücretsiz danışmanlık alın</button>
+                    <button type="submit" class="btn" data-lang="form-submit">Jetzt kostenlos beraten lassen</button>
                 </form>
 
                 <div class="contact-info">
-                    <h3>Doğrudan iletişim</h3>
+                    <h3 data-lang="contact-direct">Direkter Kontakt</h3>
                     <div class="contact-item">
                         <span class="contact-item-icon">📞</span>
                         <a href="tel:+905530540989">+90 5530540989</a>
@@ -1506,9 +1488,9 @@
                         <span class="contact-item-icon">📧</span>
                         <a href="mailto:o.gokceviran@rmc-service.com">o.gokceviran@rmc-service.com</a>
                     </div>
-                    <p style="margin-top: 2rem; color: var(--medium-gray);">
-                        Ekibimiz kamyon yakıt kartlarıyla ilgili tüm sorularınız için hazırdır. 
-                        Size yükümlülük olmaksızın danışmanlık vermekten ve şirketiniz için en iyi çözümü bulmaktan memnuniyet duyarız.
+                    <p style="margin-top: 2rem; color: var(--medium-gray);" data-lang="contact-description">
+                        Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. 
+                        Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen.
                     </p>
                 </div>
             </div>
@@ -1518,96 +1500,76 @@
     <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
-            <h2 class="section-title">Sık sorulan sorular</h2>
+            <h2 class="section-title" data-lang="faq-title">Häufige Fragen</h2>
             
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Yakıt kartıyla nerede yakıt alabilirim?</span>
+                    <span data-lang="faq-q1">Wo kann ich mit der Tankkarte tanken?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-answer">
-                    Avrupa genelinde binlerce benzin istasyonunda. Yakıt kartımız tüm büyük benzin istasyonu zincirlerinde ve birçok bağımsız istasyonda kabul edilir.
+                <div class="faq-answer" data-lang="faq-a1">
+                    An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Hangi araçlar yetkilendirilmiştir?</span>
+                    <span data-lang="faq-q2">Welche Fahrzeuge sind zugelassen?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-answer">
-                    Kartlarımız özellikle kamyonlar, çekiciler ve ticari araçlar için tasarlanmıştır. Tüm yaygın ticari araçlar yakıt kartımızla yakıt alabilir.
+                <div class="faq-answer" data-lang="faq-a2">
+                    Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Kart küçük şirketler için de uygun mu?</span>
+                    <span data-lang="faq-q3">Ist die Karte auch für kleine Unternehmen geeignet?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-answer">
-                    Evet – ister bireysel girişimci ister büyük nakliye şirketi olun. Her boyuttaki şirket için özelleştirilmiş çözümler sunuyoruz.
+                <div class="faq-answer" data-lang="faq-a3">
+                    Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Faturalandırma nasıl çalışır?</span>
+                    <span data-lang="faq-q4">Wie erfolgt die Abrechnung?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-answer">
-                    Tüm yakıt işlemleriyle birlikte açık bir aylık ekstre alırsınız. Ödeme otomatik ödeme talimatı veya banka havalesi ile rahatlıkla yapılır.
+                <div class="faq-answer" data-lang="faq-a4">
+                    Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Ön ödemeli kredi kartı nasıl çalışır?</span>
+                    <span>Wie funktioniert die Prepaid-Kreditkarte?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    Karta kredi yüklersiniz ve sadece yüklediğiniz kadar harcayabilirsiniz. Kredi kontrolü gerekmez.
+                    Sie laden Guthaben auf die Karte und können nur über dieses verfügen. Keine Bonitätsprüfung erforderlich.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Geçiş ücreti çözümü hangi ülkelerde çalışır?</span>
+                    <span>In welchen Ländern funktioniert die Mautlösung?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    Şu anda Avusturya ve Almanya'dan İsveç ve Hırvatistan'a 17 Avrupa ülkesinde.
+                    Aktuell in 17 europäischen Ländern, von Österreich und Deutschland bis Schweden und Kroatien.
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Özel ve kurumsal müşteriler arasındaki fark nedir?</span>
+                    <span>Was ist der Unterschied zwischen Privat- und Firmenkunden?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    Özel müşteriler iki haftalık faturalandırma, kurumsal müşteriler sabit fiyatlar ve genişletilmiş hizmetlerle aylık faturalandırma alır.
+                    Privatkunden erhalten 14-tägige Abrechnung, Firmenkunden monatliche Abrechnung mit Fixpreisen und erweiterten Services.
                 </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Türkiye'de yakıt kartı kullanabiliyor muyum?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Şu anda hizmetlerimiz öncelikle Avrupa ülkelerini kapsamaktadır. Türkiye kullanılabilirliği için müşteri hizmetlerimizle iletişime geçin.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>TIR şoförleri için özel avantajlar var mı?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Evet, uluslararası nakliye şirketleri için özel fiyatlandırma ve genişletilmiş servisler sunuyoruz. Detaylar için bizimle iletişime geçin.
-                </div>
-            </div>
             </div>
         </div>
     </section>
@@ -1615,36 +1577,27 @@
     <!-- Zusatzservices Section -->
     <section id="zusatzservices" class="section additional-services">
         <div class="container">
-            <h2 class="section-title">Ek Hizmetler</h2>
+            <h2 class="section-title">Zusatzservices</h2>
             <div class="additional-grid">
                 <div class="service-card">
-                    <span class="service-icon">📊</span>
-                    <h3>KDV İadesi</h3>
-                    <p>Avrupa ülkelerinden KDV'yi geri alın. Deneyimli ortaklarımız aracılığıyla tam işlem.</p>
+                    <h3>MwSt-Rückerstattung</h3>
+                    <p>Umsatzsteuer aus dem europäischen Ausland zurückholen. Komplette Abwicklung durch unsere erfahrenen Partner.</p>
                 </div>
-                
                 <div class="service-card">
-                    <span class="service-icon">⛽</span>
-                    <h3>Akaryakıt Vergisi İadesi</h3>
-                    <p>Akaryakıt vergisi tasarruf potansiyelinden yararlanın. Birçok AB ülkesinde mümkün.</p>
+                    <h3>Mineralölsteuer-Erstattung</h3>
+                    <p>Einsparpotenziale bei der Mineralölsteuer nutzen. In vielen EU-Ländern möglich.</p>
                 </div>
-                
                 <div class="service-card">
-                    <span class="service-icon">💳</span>
-                    <h3>Ön Ödeme Kredi Hesabı</h3>
-                    <p>Kredi kontrolü olmadan tam harcama kontrolü. Maksimum şeffaflık ve planlama güvenliği.</p>
+                    <h3>Prepay-Guthabenkonto</h3>
+                    <p>Volle Ausgabenkontrolle ohne Bonitätsprüfung. Maximale Transparenz und Planungssicherheit.</p>
                 </div>
-                
                 <div class="service-card">
-                    <span class="service-icon">🚗</span>
-                    <h3>24/7 Arıza Hizmeti</h3>
-                    <p>Acil durumlarda Avrupa genelinde günün her saati yardım. Hotline: +43 662 856 85990</p>
+                    <h3>24/7 Pannendienst</h3>
+                    <p>Europaweit rund um die Uhr Hilfe im Notfall. Hotline: +43 662 856 85990</p>
                 </div>
-                
                 <div class="service-card">
-                    <span class="service-icon">📡</span>
                     <h3>KITIN Telematik</h3>
-                    <p>Yeni nesil filo yönetimi. Gerçek zamanlı takip ve optimizasyon.</p>
+                    <p>Flottenmanagement der nächsten Generation. Echtzeit-Tracking und Optimierung.</p>
                 </div>
             </div>
         </div>
@@ -1655,27 +1608,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Özkan Gökceviran</h4>
-                    <p>RMC Service GmbH'nin bir ortağı</p>
-                    <p>Avrupa mobilite çözümleri için ortağınız</p>
+                    <h4>filo.cards</h4>
+                    <p data-lang="footer-subtitle">Ein Partner der RMC Service GmbH</p>
+                    <p data-lang="footer-description">Ihr Partner für LKW-Tankkarten in Europa</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>İletişim</h4>
+                    <h4 data-lang="footer-contact">Kontakt</h4>
                     <p>📞 +90 5530540989</p>
                     <p>📧 o.gokceviran@rmc-service.com</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Hukuki</h4>
-                    <a href="#impressum">Impressum</a><br>
-                    <a href="#datenschutz">Gizlilik</a><br>
-                    <a href="#agb">Şartlar</a>
+                    <h4 data-lang="footer-legal">Rechtliches</h4>
+                    <a href="#impressum" data-lang="footer-imprint">Impressum</a><br>
+                    <a href="#datenschutz" data-lang="footer-privacy">Datenschutz</a><br>
+                    <a href="#agb" data-lang="footer-terms">AGB</a>
                 </div>
             </div>
             
             <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 2rem 0;">
-            <p>&copy; 2025 Özkan Gökceviran - RMC Service GmbH'nin bir ortağı. Tüm hakları saklıdır.</p>
+            <p data-lang="footer-copyright">&copy; 2025 filo.cards - Ein Partner der RMC Service GmbH. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
@@ -1690,8 +1643,8 @@
                 'nav-creditcard': 'Kreditkarte',
                 'nav-contact': 'Kontakt',
                 'nav-faq': 'FAQ',
-                'hero-title': 'Mobilitätslösungen Europa | Tankkarte, Maut & Kreditkarte',
-                'hero-subtitle': 'Ihre Partner für europaweite Mobilität – von Tanken bis Maut',
+                'hero-title': 'Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte',
+                'hero-subtitle': 'Ihr Partner für europaweite Mobilität – von Tanken bis Maut',
                 'hero-benefit-1': 'Tankkarte für 19 europäische Länder',
                 'hero-benefit-2': 'Mautlösungen für 17 Länder aus einer Hand',
                 'hero-benefit-3': 'Prepaid-Kreditkarte ohne Bonitätsprüfung',
@@ -1699,15 +1652,15 @@
                 'hero-cta': 'Jetzt Tankkarte anfragen',
                 'services-title': 'Unsere Mobilitätslösungen',
                 'service-1-title': 'RMC Tankkarte',
-                'service-1-desc': 'Europaweit günstig tanken',
+                'service-1-desc': 'Europaweit günstig tanken an über 10.000 Tankstellen. Keine Gebühren, attraktive Preise.',
                 'service-2-title': 'RMC Kreditkarte',
-                'service-2-desc': 'Prepaid ohne Bonitätsprüfung',
+                'service-2-desc': 'Prepaid-Kreditkarte ohne Bonitätsprüfung. Volle Kontrolle über Ihre Ausgaben.',
                 'service-3-title': 'Mautlösungen',
-                'service-3-desc': 'Ein Anbieter für 17 Länder',
+                'service-3-desc': 'Ein Anbieter für 17 Länder. Automatische Abrechnung, keine Vielzahl an Verträgen.',
                 'service-4-title': 'RMC Ladekarte',
-                'service-4-desc': 'Demnächst verfügbar',
+                'service-4-desc': 'Elektromobilität europaweit. Demnächst verfügbar.',
                 'card-text-de': 'TANKKARTE EUROPA',
-                'benefits-title': 'RMC Tankkarte',
+                'benefits-title': 'Warum unsere Tankkarte?',
                 'benefit-1-title': 'Europaweite Akzeptanz',
                 'benefit-1-text': 'Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.',
                 'benefit-2-title': 'Attraktive Dieselpreise',
@@ -1754,116 +1707,28 @@
                 'footer-imprint': 'Impressum',
                 'footer-privacy': 'Datenschutz',
                 'footer-terms': 'AGB',
-                'footer-copyright': '© 2025 Özkan Gökceviran - Ein Partner der RMC Service GmbH. Alle Rechte vorbehalten.',
+                'footer-copyright': '© 2025 filo.cards - Ein Partner der RMC Service GmbH. Alle Rechte vorbehalten.',
                 'form-alert': 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.',
-                'coming-soon': 'Demnächst',
-                'services-subtitle': 'Alles aus einer Hand – von der Tankkarte bis zur Mautabrechnung'
-            },
-            en: {
-                'company-subtitle': 'A partner of RMC Service GmbH',
-                'nav-start': 'Home',
-                'nav-services': 'Services',
-                'nav-fuelcard': 'Fuel Card',
-                'nav-toll': 'Toll',
-                'nav-creditcard': 'Credit Card',
-                'nav-contact': 'Contact',
-                'nav-faq': 'FAQ',
-                'hero-title': 'European Mobility Solutions | Fuel Card, Toll & Credit Card',
-                'hero-subtitle': 'Your partner for Europe-wide mobility – from fuel to tolls',
-                'hero-benefit-1': 'Fuel card for 19 European countries',
-                'hero-benefit-2': 'Toll solutions for 17 countries from one provider',
-                'hero-benefit-3': 'Prepaid credit card without credit check',
-                'hero-benefit-4': 'Transparent billing & full cost control',
-                'hero-cta': 'Request fuel card now',
-                'services-title': 'Our Mobility Solutions',
-                'service-1-title': 'RMC Fuel Card',
-                'service-1-desc': 'Refuel cheaply across Europe',
-                'service-2-title': 'RMC Credit Card',
-                'service-2-desc': 'Prepaid without credit check',
-                'service-3-title': 'Toll Solutions',
-                'service-3-desc': 'One provider for 17 countries',
-                'service-4-title': 'RMC Charging Card',
-                'service-4-desc': 'Coming soon',
-                'card-text-en': 'FUEL CARD EUROPE',
-                'benefits-title': 'RMC Fuel Card',
-                'benefit-1-title': 'Europe-wide acceptance',
-                'benefit-1-text': 'Over 10,000 gas stations across Europe, including independent brands for maximum flexibility.',
-                'benefit-2-title': 'Attractive diesel prices',
-                'benefit-2-text': 'Benefit from exclusive fleet discounts and favorable diesel prices for your company.',
-                'benefit-3-title': 'Cashless and secure',
-                'benefit-3-text': 'PIN protection and central billing ensure maximum security and control.',
-                'benefit-4-title': 'No paperwork',
-                'benefit-4-text': 'Simple monthly billing with transparent listing of all refueling transactions.',
-                'benefit-5-title': 'Personal service',
-                'benefit-5-text': 'Direct contacts and personal support, also for individual entrepreneurs.',
-                'function-title': 'How your truck fuel card works',
-                'step-1-title': 'Submit request & register',
-                'step-1-text': 'Contact us via our form or by phone for free consultation.',
-                'step-2-title': 'Receive fuel card',
-                'step-2-text': 'After registration, you will receive your personalized fuel card by mail.',
-                'step-3-title': 'Refuel across Europe',
-                'step-3-text': 'Refuel cashlessly at thousands of gas stations across Europe with your new card.',
-                'step-4-title': 'Pay monthly',
-                'step-4-text': 'Receive transparent monthly billing and maintain full cost control.',
-                'info-box': '💡 Also suitable for small transport companies and individual entrepreneurs!',
-                'contact-title': 'Apply for truck fuel card',
-                'contact-subtitle': 'Would you like to apply for a diesel card for your truck fleet?<br>Contact us – we advise you personally and free of charge!',
-                'form-name': 'Name *',
-                'form-company': 'Company *',
-                'form-email': 'E-Mail *',
-                'form-phone': 'Phone number *',
-                'form-message': 'Message (optional)',
-                'form-submit': 'Get free consultation now',
-                'contact-direct': 'Direct contact',
-                'contact-description': 'Our team is available for all questions regarding truck fuel cards. We are happy to advise you without obligation and find the best solution for your company.',
-                'faq-title': 'Frequently asked questions',
-                'faq-q1': 'Where can I refuel with the fuel card?',
-                'faq-a1': 'At thousands of gas stations across Europe. Our fuel card is accepted at all major gas station chains as well as many independent stations.',
-                'faq-q2': 'Which vehicles are authorized?',
-                'faq-a2': 'Our cards are specifically designed for trucks, tractors and commercial vehicles. All common commercial vehicles can be refueled with our fuel card.',
-                'faq-q3': 'Is the card also suitable for small companies?',
-                'faq-a3': 'Yes – whether individual entrepreneur or large transport company. We offer customized solutions for companies of all sizes.',
-                'faq-q4': 'How does billing work?',
-                'faq-a4': 'You receive a clear monthly statement with all refueling transactions. Payment is conveniently made by direct debit or bank transfer.',
-                'footer-subtitle': 'A partner of RMC Service GmbH',
-                'footer-description': 'Your partner for truck fuel cards in Europe',
-                'footer-contact': 'Contact',
-                'footer-legal': 'Legal',
-                'footer-imprint': 'Imprint',
-                'footer-privacy': 'Privacy',
-                'footer-terms': 'Terms',
-                'footer-copyright': '© 2025 Özkan Gökceviran - A partner of RMC Service GmbH. All rights reserved.',
-                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.',
-                'coming-soon': 'Coming soon',
-                'services-subtitle': 'Everything from one source – from the fuel card to toll billing'
+                'additional-title': 'Zusatzservices',
+                'additional-vat-title': 'MwSt-Rückerstattung',
+                'additional-vat-desc': 'Steuervorteile nutzen'
             },
             tr: {
                 'company-subtitle': 'RMC Service GmbH’nin bir ortağı',
                 'nav-start': 'Ana Sayfa',
-                'nav-services': 'Hizmetler',
-                'nav-fuelcard': 'Yakıt Kartı',
-                'nav-toll': 'Geçiş Ücreti',
-                'nav-creditcard': 'Kredi Kartı',
+                'nav-benefits': 'Avantajlar',
+                'nav-function': 'Nasıl çalışır',
                 'nav-contact': 'İletişim',
                 'nav-faq': 'SSS',
-                'hero-title': 'Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı',
-                'hero-subtitle': 'Avrupa genelinde mobilite ortağınız – yakıttan geçiş ücretlerine',
-                'hero-benefit-1': '19 Avrupa ülkesinde yakıt kartı',
-                'hero-benefit-2': 'Tek sağlayıcıdan 17 ülke için geçiş ücreti çözümleri',
-                'hero-benefit-3': 'Kredi kontrolü olmadan ön ödemeli kredi kartı',
+                'hero-title': 'Avrupa Kamyon Yakıt Kartı | Nakliye ve Lojistik için Nakitsiz Yakıt',
+                'hero-subtitle': 'Kamyonlarınız için yakıt kartı – Avrupa genelinde nakitsiz yakıt',
+                'hero-benefit-1': "Avrupa'da kamyonlar için yakıt kartı",
+                'hero-benefit-2': "10.000'den fazla benzin istasyonunda nakitsiz yakıt",
+                'hero-benefit-3': 'Cazip mazot fiyatları ve indirimler',
                 'hero-benefit-4': 'Şeffaf faturalandırma ve tam maliyet kontrolü',
                 'hero-cta': 'Şimdi yakıt kartı talep edin',
-                'services-title': 'Mobilite Çözümlerimiz',
-                'service-1-title': 'RMC Yakıt Kartı',
-                'service-1-desc': "Avrupa genelinde 10.000'den fazla benzin istasyonunda ucuz yakıt. Ücretsiz, cazip fiyatlar.",
-                'service-2-title': 'RMC Kredi Kartı',
-                'service-2-desc': 'Kredi kontrolü olmadan ön ödemeli kredi kartı. Harcamalarınızın tam kontrolü.',
-                'service-3-title': 'Geçiş Ücreti Çözümleri',
-                'service-3-desc': '17 ülke için tek sağlayıcı. Otomatik faturalandırma, çoklu sözleşme yok.',
-                'service-4-title': 'RMC Şarj Kartı',
-                'service-4-desc': 'Avrupa genelinde elektrikli mobilite. Yakında mevcut',
                 'card-text-tr': 'YAKIT KARTI AVRUPA',
-                'benefits-title': 'RMC Yakıt Kartı',
+                'benefits-title': 'Neden bizim yakıt kartımız?',
                 'benefit-1-title': 'Avrupa genelinde kabul',
                 'benefit-1-text': "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil.",
                 'benefit-2-title': 'Cazip mazot fiyatları',
@@ -1904,34 +1769,22 @@
                 'faq-q4': 'Faturalandırma nasıl çalışır?',
                 'faq-a4': 'Tüm yakıt işlemleriyle birlikte açık bir aylık ekstre alırsınız. Ödeme otomatik ödeme talimatı veya banka havalesi ile rahatlıkla yapılır.',
                 'footer-subtitle': 'RMC Service GmbH’nin bir ortağı',
-                'footer-description': 'Avrupa mobilite çözümleri için ortağınız',
+                'footer-description': "Avrupa'da kamyon yakıt kartları için ortağınız",
                 'footer-contact': 'İletişim',
                 'footer-legal': 'Hukuki',
                 'footer-imprint': 'Künye',
                 'footer-privacy': 'Gizlilik',
                 'footer-terms': 'Şartlar',
-                'footer-copyright': '© 2025 Özkan Gökceviran - RMC Service GmbH’nin bir ortağı. Tüm hakları saklıdır.',
-                'form-alert': 'İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.',
-                'coming-soon': 'Yakında',
-                'services-subtitle': 'Tek elden her şey – yakıt kartından geçiş ücretine',
-                'additional-title': 'Ek Hizmetler',
-                'additional-vat-title': 'KDV İadesi',
-                'additional-vat-desc': 'Vergi avantajlarından yararlanın',
-                'additional-fuel-tax-title': 'Akaryakıt Vergisi İadesi',
-                'additional-fuel-tax-desc': 'Akaryakıt vergisi tasarruf potansiyelinden yararlanın. Birçok AB ülkesinde mümkün.',
-                'additional-prepay-title': 'Ön Ödeme Kredi Hesabı',
-                'additional-prepay-desc': 'Kredi kontrolü olmadan tam harcama kontrolü. Maksimum şeffaflık ve planlama güvenliği.',
-                'additional-breakdown-title': '24/7 Arıza Hizmeti',
-                'additional-breakdown-desc': 'Acil durumlarda Avrupa genelinde günün her saati yardım. Hotline: +43 662 856 85990',
-                'additional-telematics-title': 'KITIN Telematik',
-                'additional-telematics-desc': 'Yeni nesil filo yönetimi. Gerçek zamanlı takip ve optimizasyon'
+                'footer-copyright': '© 2025 filo.cards - RMC Service GmbH’nin bir ortağı. Tüm hakları saklıdır.',
+                'form-alert': 'İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.'
             }
         };
 
-        let currentLanguage = 'tr';
+        let currentLanguage = 'de';
 
         function switchLanguage(lang) {
             currentLanguage = lang;
+    document.documentElement.lang = lang;
             const langData = translations[lang] || {};
             document.querySelectorAll('[data-lang]').forEach(el => {
                 const key = el.getAttribute('data-lang');
@@ -1946,13 +1799,8 @@
                 }
             });
 
-            document.querySelectorAll('.faq-answer.open').forEach(ans => {
-                ans.style.maxHeight = ans.scrollHeight + 'px';
-            });
-
             const cardTexts = {
                 de: 'TANKKARTE EUROPA',
-                en: 'FUEL CARD EUROPE',
                 tr: 'YAKIT KARTI AVRUPA'
             };
             const cardElement = document.querySelector('.fuel-card');
@@ -1966,7 +1814,9 @@
         }
 
         window.switchLanguage = switchLanguage;
-        switchLanguage(currentLanguage);
+        document.addEventListener("DOMContentLoaded", function() {
+            switchLanguage("de");
+        });
 
         // FAQ Toggle Function
         function toggleFaq(button) {
@@ -2065,34 +1915,6 @@
             benefitCards.forEach((card, index) => {
                 card.style.animationDelay = `${index * 0.1}s`;
             });
-        });
-
-        // Charging card email signup
-        document.querySelector('.signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            if (!email || !email.includes('@')) {
-                alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-                return;
-            }
-            alert('Vielen Dank! Sie werden informiert, sobald die RMC Ladekarte verfügbar ist.');
-            this.reset();
-        });
-
-        // Service card hover effects
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Country badge animation
-        document.querySelectorAll('.country-badge').forEach((badge, index) => {
-            badge.style.animationDelay = `${index * 0.1}s`;
-            badge.classList.add('fade-in-up');
         });
     </script>
 </body>
