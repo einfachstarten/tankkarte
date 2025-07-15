@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bargeldlos Diesel tanken in ganz Europa – mit unserer Tankkarte für LKWs. Transparente Abrechnung, Rabatte & persönlicher Service. Jetzt unverbindlich anfragen!">
+    <title>LKW-Tankkarte Europa | Dieselkarte für Spedition & Fuhrpark</title>
+    <link rel="canonical" href="https://example.com/de/">
+    <link rel="alternate" hreflang="de" href="https://example.com/de/">
+    <link rel="alternate" hreflang="en" href="https://example.com/en/">
+    <link rel="alternate" hreflang="tr" href="https://example.com/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://example.com/de/">
+    <meta name="keywords" content="lkw tankkarte, dieselkarte, tankkarte europa, kraftstoffkarte, lkw kraftstoff, spedition tankkarte, guenstig tanken lkw">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Özkan Gökceviran">
+    <meta property="og:title" content="LKW-Tankkarte Europa | Dieselkarte für Spedition & Fuhrpark">
+    <meta property="og:description" content="Bargeldlos Diesel tanken in ganz Europa – mit unserer Tankkarte für LKWs. Transparente Abrechnung, Rabatte & persönlicher Service.">
+    <meta property="og:url" content="https://example.com/de/">
+    <meta property="og:image" content="https://example.com/images/europa-karte.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LKW-Tankkarte Europa | Dieselkarte für Spedition & Fuhrpark">
+    <meta name="twitter:description" content="Bargeldlos Diesel tanken in ganz Europa – mit unserer Tankkarte für LKWs.">
+    <meta name="twitter:image" content="https://example.com/images/europa-karte.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Özkan Gökceviran",
+      "url": "https://example.com/",
+      "contactPoint": [{"@type":"ContactPoint","telephone":"+90 5530540989","contactType":"customer service","areaServed":["DE","AT","TR"],"availableLanguage":["German","English","Turkish"]}],
+      "address": [{"@type":"PostalAddress","addressLocality":"Mersin","addressCountry":"TR"},{"@type":"PostalAddress","addressLocality":"Izmir","addressCountry":"TR"},{"@type":"PostalAddress","addressCountry":"AT"},{"@type":"PostalAddress","addressCountry":"DE"}]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-green: #1B5E20;
+            --primary-yellow: #FFD600;
+            --light-green: #4CAF50;
+            --dark-green: #0D2F0F;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #2C3E50;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(27, 94, 32, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .logo {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-yellow);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: var(--primary-yellow);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            opacity: 0.2;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 214, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        /* Tankkarte Animation - Groß und prominent, kein Parallax */
+        .fuel-card {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-yellow), #FFE033);
+            border-radius: 15px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+            animation: cardAppear 6s ease-in-out infinite;
+            z-index: 15;
+        }
+
+        .fuel-card::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 35px;
+            height: 25px;
+            background: var(--primary-green);
+            border-radius: 4px;
+        }
+
+        .fuel-card::after {
+            content: 'TANKKARTE\AEUROPA';
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 10px;
+            color: var(--primary-green);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.8px;
+        }
+
+        /* Kontaktlos-Wellen - Größer und prominenter */
+        .contactless-waves {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 100px;
+            animation: wavesAppear 6s ease-in-out infinite;
+            z-index: 18;
+            pointer-events: none;
+        }
+
+        .wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid rgba(255, 214, 0, 0.9);
+            border-radius: 50%;
+            opacity: 0;
+            animation: waveExpand 2s ease-out infinite;
+        }
+
+        .wave:nth-child(1) { animation-delay: 0s; }
+        .wave:nth-child(2) { animation-delay: 0.5s; }
+        .wave:nth-child(3) { animation-delay: 1s; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li::before {
+            content: '✅';
+            font-size: 1.2rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-yellow);
+            color: var(--dark-green);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            background: #FFE033;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        /* Vorteile Section */
+        .vorteile {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(27, 94, 32, 0.7) 0%, 
+                rgba(76, 175, 80, 0.6) 50%, 
+                rgba(255, 214, 0, 0.3) 100%
+            );
+            z-index: 1;
+        }
+
+        .benefit-card:hover::before {
+            background: linear-gradient(135deg, 
+                rgba(27, 94, 32, 0.8) 0%, 
+                rgba(76, 175, 80, 0.7) 50%, 
+                rgba(255, 214, 0, 0.4) 100%
+            );
+        }
+
+        .benefit-card > * {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+            display: none;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Funktion Section */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-green);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        .info-box {
+            background: var(--primary-yellow);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Kontakt Section */
+        .kontakt {
+            background: var(--light-gray);
+        }
+
+        .kontakt-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E9ECEF;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+        }
+
+        .contact-info h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: var(--dark-green);
+        }
+
+        .contact-item-icon {
+            font-size: 1.8rem;
+            color: var(--primary-yellow);
+        }
+
+        .contact-item a {
+            color: var(--primary-green);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: var(--dark-green);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-yellow);
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-yellow);
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-right {
+                gap: 1rem;
+            }
+
+            .language-switcher {
+                gap: 0.3rem;
+            }
+
+            .lang-btn {
+                padding: 0.2rem 0.6rem;
+                font-size: 0.8rem;
+            }
+
+            .kontakt-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero::after {
+                display: none;
+            }
+
+            .floating-shape {
+                display: none;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .fuel-card {
+                top: 45%;
+                right: 5%;
+                width: 120px;
+                height: 75px;
+                transform: translateY(-50%);
+            }
+
+            .fuel-card::before {
+                top: 20px;
+                left: 20px;
+                width: 25px;
+                height: 18px;
+            }
+
+            .fuel-card::after {
+                font-size: 8px;
+                bottom: 12px;
+                left: 15px;
+                letter-spacing: 0.5px;
+            }
+
+            .contactless-waves {
+                top: 45%;
+                right: 5%;
+                width: 120px;
+                height: 75px;
+                transform: translateY(-50%);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes roadMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 40px 0;
+            }
+        }
+
+        @keyframes cardAppear {
+            0%, 30% {
+                opacity: 0;
+                transform: rotateY(90deg) scale(0.8);
+            }
+            50%, 90% {
+                opacity: 1;
+                transform: rotateY(0deg) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateY(-90deg) scale(0.8);
+            }
+        }
+
+        @keyframes wavesAppear {
+            0%, 40% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50%, 80% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
+        @keyframes waveExpand {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 0.9;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes parallaxMove {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-50px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax-element {
+            will-change: transform;
+        }
+
+        /* Smooth scrolling enhancement */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                <a href="#start" class="logo">Özkan Gökceviran</a>
+                <span style="font-size: 0.7rem; color: var(--medium-gray); margin-top: -5px;" data-lang="company-subtitle">eine Partnerfirma der RMC Service GmbH</span>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#start" data-lang="nav-start">Start</a></li>
+                    <li><a href="#vorteile" data-lang="nav-benefits">Vorteile</a></li>
+                    <li><a href="#funktion" data-lang="nav-function">So funktioniert's</a></li>
+                    <li><a href="#kontakt" data-lang="nav-contact">Kontakt</a></li>
+                    <li><a href="#faq" data-lang="nav-faq">FAQ</a></li>
+                </ul>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang-code="de" onclick="switchLanguage('de')">DE</button>
+                    <button class="lang-btn" data-lang-code="en" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" data-lang-code="tr" onclick="switchLanguage('tr')">TR</button>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Menü öffnen">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="start" class="hero">
+        <!-- Tankkarte - außerhalb der Parallax-Animation -->
+        <div class="fuel-card"></div>
+        
+        <!-- Kontaktlos-Wellen - außerhalb der Parallax-Animation -->
+        <div class="contactless-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 data-lang="hero-title">LKW-Tankkarte Europa | Bargeldlos Tanken für Spedition & Logistik</h1>
+                <p class="hero-subtitle" data-lang="hero-subtitle">Ihre Tankkarte für LKWs – europaweit bargeldlos tanken</p>
+                
+                <ul class="benefits-list">
+                    <li data-lang="hero-benefit-1">Tankkarte für LKWs in Europa</li>
+                    <li data-lang="hero-benefit-2">Bargeldlos tanken an über 10.000 Tankstellen</li>
+                    <li data-lang="hero-benefit-3">Attraktive Dieselpreise und Rabatte</li>
+                    <li data-lang="hero-benefit-4">Transparente Abrechnung & volle Kostenkontrolle</li>
+                </ul>
+
+                <a href="#kontakt" class="btn" data-lang="hero-cta">Jetzt Tankkarte anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vorteile Section -->
+    <section id="vorteile" class="section vorteile">
+        <div class="container">
+            <h2 class="section-title" data-lang="benefits-title">Warum unsere Tankkarte?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card scroll-reveal" style="background-image: url('./images/europa-karte.png');">
+                    <img src='./images/europa-karte.png' class='benefit-icon' loading='lazy' alt='Europaweite Akzeptanz' data-lang-alt='benefit-1-title'>
+                    <h3 data-lang="benefit-1-title">Europaweite Akzeptanz</h3>
+                    <p data-lang="benefit-1-text">Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('./images/diesel-preise.png');">
+                    <img src='./images/diesel-preise.png' class='benefit-icon' loading='lazy' alt='Attraktive Dieselpreise' data-lang-alt='benefit-2-title'>
+                    <h3 data-lang="benefit-2-title">Attraktive Dieselpreise</h3>
+                    <p data-lang="benefit-2-text">Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('./images/sicherheit.png');">
+                    <img src='./images/sicherheit.png' class='benefit-icon' loading='lazy' alt='Bargeldlos und sicher' data-lang-alt='benefit-3-title'>
+                    <h3 data-lang="benefit-3-title">Bargeldlos und sicher</h3>
+                    <p data-lang="benefit-3-text">PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('./images/abrechnung.png');">
+                    <img src='./images/abrechnung.png' class='benefit-icon' loading='lazy' alt='Kein Papierkram' data-lang-alt='benefit-4-title'>
+                    <h3 data-lang="benefit-4-title">Kein Papierkram</h3>
+                    <p data-lang="benefit-4-text">Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.</p>
+                </div>
+
+                <div class="benefit-card scroll-reveal" style="background-image: url('./images/service.png');">
+                    <img src='./images/service.png' class='benefit-icon' loading='lazy' alt='Persönlicher Service' data-lang-alt='benefit-5-title'>
+                    <h3 data-lang="benefit-5-title">Persönlicher Service</h3>
+                    <p data-lang="benefit-5-text">Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funktion Section -->
+    <section id="funktion" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="function-title">So funktioniert Ihre LKW-Tankkarte</h2>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-lang="step-1-title">Anfrage stellen & registrieren</h3>
+                    <p data-lang="step-1-text">Kontaktieren Sie uns über unser Formular oder telefonisch für eine kostenlose Beratung.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-lang="step-2-title">Tankkarte erhalten</h3>
+                    <p data-lang="step-2-text">Nach der Registrierung erhalten Sie Ihre personalisierte Tankkarte per Post.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-lang="step-3-title">Europaweit tanken</h3>
+                    <p data-lang="step-3-text">Tanken Sie bargeldlos an tausenden Tankstellen in ganz Europa mit Ihrer neuen Karte.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 data-lang="step-4-title">Monatlich zahlen</h3>
+                    <p data-lang="step-4-text">Erhalten Sie eine transparente Monatsabrechnung und behalten Sie die volle Kostenkontrolle.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <span data-lang="info-box">💡 Auch für kleine Speditionen und Einzelunternehmer geeignet!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="section kontakt">
+        <div class="container">
+            <h2 class="section-title" data-lang="contact-title">LKW-Tankkarte beantragen</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;" data-lang="contact-subtitle">Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!</p>
+            
+            <div class="kontakt-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-lang="form-name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firma" data-lang="form-company">Firma *</label>
+                        <input type="text" id="firma" name="firma" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-lang="form-email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefon" data-lang="form-phone">Telefonnummer *</label>
+                        <input type="tel" id="telefon" name="telefon" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nachricht" data-lang="form-message">Nachricht (optional)</label>
+                        <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" data-lang="form-submit">Jetzt kostenlos beraten lassen</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3 data-lang="contact-direct">Direkter Kontakt</h3>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📞</span>
+                        <a href="tel:+905530540989">+90 5530540989</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📧</span>
+                        <a href="mailto:o.gokceviran@rmc-service.com">o.gokceviran@rmc-service.com</a>
+                    </div>
+                    <p style="margin-top: 2rem; color: var(--medium-gray);" data-lang="contact-description">
+                        Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. 
+                        Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="faq-title">Häufige Fragen</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-q1">Wo kann ich mit der Tankkarte tanken?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer" style="display: none;" data-lang="faq-a1">
+                    An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-q2">Welche Fahrzeuge sind zugelassen?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer" style="display: none;" data-lang="faq-a2">
+                    Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-q3">Ist die Karte auch für kleine Unternehmen geeignet?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer" style="display: none;" data-lang="faq-a3">
+                    Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-q4">Wie erfolgt die Abrechnung?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer" style="display: none;" data-lang="faq-a4">
+                    Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Özkan Gökceviran</h4>
+                    <p data-lang="footer-subtitle">eine Partnerfirma der RMC Service GmbH</p>
+                    <p data-lang="footer-description">Ihr Partner für LKW-Tankkarten in Europa</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-lang="footer-contact">Kontakt</h4>
+                    <p>📞 +90 5530540989</p>
+                    <p>📧 o.gokceviran@rmc-service.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-lang="footer-legal">Rechtliches</h4>
+                    <a href="#impressum" data-lang="footer-imprint">Impressum</a><br>
+                    <a href="#datenschutz" data-lang="footer-privacy">Datenschutz</a><br>
+                    <a href="#agb" data-lang="footer-terms">AGB</a>
+                </div>
+            </div>
+            
+            <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 2rem 0;">
+            <p data-lang="footer-copyright">&copy; 2025 Özkan Gökceviran - eine Partnerfirma der RMC Service GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            de: {
+                'company-subtitle': 'eine Partnerfirma der RMC Service GmbH',
+                'nav-start': 'Start',
+                'nav-benefits': 'Vorteile',
+                'nav-function': "So funktioniert's",
+                'nav-contact': 'Kontakt',
+                'nav-faq': 'FAQ',
+                'hero-title': 'LKW-Tankkarte Europa | Bargeldlos Tanken für Spedition & Logistik',
+                'hero-subtitle': 'Ihre Tankkarte für LKWs – europaweit bargeldlos tanken',
+                'hero-benefit-1': 'Tankkarte für LKWs in Europa',
+                'hero-benefit-2': 'Bargeldlos tanken an über 10.000 Tankstellen',
+                'hero-benefit-3': 'Attraktive Dieselpreise und Rabatte',
+                'hero-benefit-4': 'Transparente Abrechnung & volle Kostenkontrolle',
+                'hero-cta': 'Jetzt Tankkarte anfragen',
+                'benefits-title': 'Warum unsere Tankkarte?',
+                'benefit-1-title': 'Europaweite Akzeptanz',
+                'benefit-1-text': 'Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.',
+                'benefit-2-title': 'Attraktive Dieselpreise',
+                'benefit-2-text': 'Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.',
+                'benefit-3-title': 'Bargeldlos und sicher',
+                'benefit-3-text': 'PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.',
+                'benefit-4-title': 'Kein Papierkram',
+                'benefit-4-text': 'Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.',
+                'benefit-5-title': 'Persönlicher Service',
+                'benefit-5-text': 'Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.',
+                'function-title': 'So funktioniert Ihre LKW-Tankkarte',
+                'step-1-title': 'Anfrage stellen & registrieren',
+                'step-1-text': 'Kontaktieren Sie uns über unser Formular oder telefonisch für eine kostenlose Beratung.',
+                'step-2-title': 'Tankkarte erhalten',
+                'step-2-text': 'Nach der Registrierung erhalten Sie Ihre personalisierte Tankkarte per Post.',
+                'step-3-title': 'Europaweit tanken',
+                'step-3-text': 'Tanken Sie bargeldlos an tausenden Tankstellen in ganz Europa mit Ihrer neuen Karte.',
+                'step-4-title': 'Monatlich zahlen',
+                'step-4-text': 'Erhalten Sie eine transparente Monatsabrechnung und behalten Sie die volle Kostenkontrolle.',
+                'info-box': '💡 Auch für kleine Speditionen und Einzelunternehmer geeignet!',
+                'contact-title': 'LKW-Tankkarte beantragen',
+                'contact-subtitle': 'Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!',
+                'form-name': 'Name *',
+                'form-company': 'Firma *',
+                'form-email': 'E-Mail *',
+                'form-phone': 'Telefonnummer *',
+                'form-message': 'Nachricht (optional)',
+                'form-submit': 'Jetzt kostenlos beraten lassen',
+                'contact-direct': 'Direkter Kontakt',
+                'contact-description': 'Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen.',
+                'faq-title': 'Häufige Fragen',
+                'faq-q1': 'Wo kann ich mit der Tankkarte tanken?',
+                'faq-a1': 'An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert.',
+                'faq-q2': 'Welche Fahrzeuge sind zugelassen?',
+                'faq-a2': 'Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden.',
+                'faq-q3': 'Ist die Karte auch für kleine Unternehmen geeignet?',
+                'faq-a3': 'Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an.',
+                'faq-q4': 'Wie erfolgt die Abrechnung?',
+                'faq-a4': 'Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.',
+                'footer-subtitle': 'eine Partnerfirma der RMC Service GmbH',
+                'footer-description': 'Ihr Partner für LKW-Tankkarten in Europa',
+                'footer-contact': 'Kontakt',
+                'footer-legal': 'Rechtliches',
+                'footer-imprint': 'Impressum',
+                'footer-privacy': 'Datenschutz',
+                'footer-terms': 'AGB',
+                'footer-copyright': '© 2025 Özkan Gökceviran - eine Partnerfirma der RMC Service GmbH. Alle Rechte vorbehalten.',
+                'form-alert': 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.'
+            },
+            en: {
+                'company-subtitle': 'a partner company of RMC Service GmbH',
+                'nav-start': 'Home',
+                'nav-benefits': 'Benefits',
+                'nav-function': 'How it works',
+                'nav-contact': 'Contact',
+                'nav-faq': 'FAQ',
+                'hero-title': 'Truck Fuel Card Europe | Cashless Refueling for Transport & Logistics',
+                'hero-subtitle': 'Your fuel card for trucks – cashless refueling across Europe',
+                'hero-benefit-1': 'Fuel card for trucks in Europe',
+                'hero-benefit-2': 'Cashless refueling at over 10,000 gas stations',
+                'hero-benefit-3': 'Attractive diesel prices and discounts',
+                'hero-benefit-4': 'Transparent billing & full cost control',
+                'hero-cta': 'Request fuel card now',
+                'benefits-title': 'Why our fuel card?',
+                'benefit-1-title': 'Europe-wide acceptance',
+                'benefit-1-text': 'Over 10,000 gas stations across Europe, including independent brands for maximum flexibility.',
+                'benefit-2-title': 'Attractive diesel prices',
+                'benefit-2-text': 'Benefit from exclusive fleet discounts and favorable diesel prices for your company.',
+                'benefit-3-title': 'Cashless and secure',
+                'benefit-3-text': 'PIN protection and central billing ensure maximum security and control.',
+                'benefit-4-title': 'No paperwork',
+                'benefit-4-text': 'Simple monthly billing with transparent listing of all refueling transactions.',
+                'benefit-5-title': 'Personal service',
+                'benefit-5-text': 'Direct contacts and personal support, also for individual entrepreneurs.',
+                'function-title': 'How your truck fuel card works',
+                'step-1-title': 'Submit request & register',
+                'step-1-text': 'Contact us via our form or by phone for free consultation.',
+                'step-2-title': 'Receive fuel card',
+                'step-2-text': 'After registration, you will receive your personalized fuel card by mail.',
+                'step-3-title': 'Refuel across Europe',
+                'step-3-text': 'Refuel cashlessly at thousands of gas stations across Europe with your new card.',
+                'step-4-title': 'Pay monthly',
+                'step-4-text': 'Receive transparent monthly billing and maintain full cost control.',
+                'info-box': '💡 Also suitable for small transport companies and individual entrepreneurs!',
+                'contact-title': 'Apply for truck fuel card',
+                'contact-subtitle': 'Would you like to apply for a diesel card for your truck fleet?<br>Contact us – we advise you personally and free of charge!',
+                'form-name': 'Name *',
+                'form-company': 'Company *',
+                'form-email': 'E-Mail *',
+                'form-phone': 'Phone number *',
+                'form-message': 'Message (optional)',
+                'form-submit': 'Get free consultation now',
+                'contact-direct': 'Direct contact',
+                'contact-description': 'Our team is available for all questions regarding truck fuel cards. We are happy to advise you without obligation and find the best solution for your company.',
+                'faq-title': 'Frequently asked questions',
+                'faq-q1': 'Where can I refuel with the fuel card?',
+                'faq-a1': 'At thousands of gas stations across Europe. Our fuel card is accepted at all major gas station chains as well as many independent stations.',
+                'faq-q2': 'Which vehicles are authorized?',
+                'faq-a2': 'Our cards are specifically designed for trucks, tractors and commercial vehicles. All common commercial vehicles can be refueled with our fuel card.',
+                'faq-q3': 'Is the card also suitable for small companies?',
+                'faq-a3': 'Yes – whether individual entrepreneur or large transport company. We offer customized solutions for companies of all sizes.',
+                'faq-q4': 'How does billing work?',
+                'faq-a4': 'You receive a clear monthly statement with all refueling transactions. Payment is conveniently made by direct debit or bank transfer.',
+                'footer-subtitle': 'a partner company of RMC Service GmbH',
+                'footer-description': 'Your partner for truck fuel cards in Europe',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-imprint': 'Imprint',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Terms',
+                'footer-copyright': '© 2025 Özkan Gökceviran - a partner company of RMC Service GmbH. All rights reserved.',
+                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.'
+            },
+            tr: {
+                'company-subtitle': 'RMC Service GmbH partner şirketi',
+                'nav-start': 'Ana Sayfa',
+                'nav-benefits': 'Avantajlar',
+                'nav-function': 'Nasıl çalışır',
+                'nav-contact': 'İletişim',
+                'nav-faq': 'SSS',
+                'hero-title': 'Avrupa Kamyon Yakıt Kartı | Nakliye ve Lojistik için Nakitsiz Yakıt',
+                'hero-subtitle': 'Kamyonlarınız için yakıt kartı – Avrupa genelinde nakitsiz yakıt',
+                'hero-benefit-1': "Avrupa'da kamyonlar için yakıt kartı",
+                'hero-benefit-2': "10.000'den fazla benzin istasyonunda nakitsiz yakıt",
+                'hero-benefit-3': 'Cazip mazot fiyatları ve indirimler',
+                'hero-benefit-4': 'Şeffaf faturalandırma ve tam maliyet kontrolü',
+                'hero-cta': 'Şimdi yakıt kartı talep edin',
+                'benefits-title': 'Neden bizim yakıt kartımız?',
+                'benefit-1-title': 'Avrupa genelinde kabul',
+                'benefit-1-text': "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil.",
+                'benefit-2-title': 'Cazip mazot fiyatları',
+                'benefit-2-text': 'Şirketiniz için özel filo indirimlerinden ve uygun mazot fiyatlarından yararlanın.',
+                'benefit-3-title': 'Nakitsiz ve güvenli',
+                'benefit-3-text': 'PIN koruması ve merkezi faturalandırma maksimum güvenlik ve kontrol sağlar.',
+                'benefit-4-title': 'Evrak işi yok',
+                'benefit-4-text': 'Tüm yakıt işlemlerinin şeffaf listesiyle basit aylık faturalandırma.',
+                'benefit-5-title': 'Kişisel hizmet',
+                'benefit-5-text': 'Bireysel girişimciler için de doğrudan iletişim ve kişisel destek.',
+                'function-title': 'Kamyon yakıt kartınız nasıl çalışır',
+                'step-1-title': 'Başvuru yapın ve kayıt olun',
+                'step-1-text': 'Ücretsiz danışmanlık için formumuz aracılığıyla veya telefonla bizimle iletişime geçin.',
+                'step-2-title': 'Yakıt kartını alın',
+                'step-2-text': 'Kayıt olduktan sonra kişiselleştirilmiş yakıt kartınızı posta ile alacaksınız.',
+                'step-3-title': 'Avrupa genelinde yakıt alın',
+                'step-3-text': 'Yeni kartınızla Avrupa genelindeki binlerce benzin istasyonunda nakitsiz yakıt alın.',
+                'step-4-title': 'Aylık ödeme',
+                'step-4-text': 'Şeffaf aylık faturalandırma alın ve tam maliyet kontrolünü koruyun.',
+                'info-box': '💡 Küçük nakliye şirketleri ve bireysel girişimciler için de uygundur!',
+                'contact-title': 'Kamyon yakıt kartı başvurusu',
+                'contact-subtitle': 'Kamyon filonuz için bir mazot kartı başvurusu yapmak mı istiyorsunuz?<br>Bizimle iletişime geçin – size kişisel ve ücretsiz danışmanlık veriyoruz!',
+                'form-name': 'İsim *',
+                'form-company': 'Şirket *',
+                'form-email': 'E-posta *',
+                'form-phone': 'Telefon numarası *',
+                'form-message': 'Mesaj (isteğe bağlı)',
+                'form-submit': 'Şimdi ücretsiz danışmanlık alın',
+                'contact-direct': 'Doğrudan iletişim',
+                'contact-description': 'Ekibimiz kamyon yakıt kartlarıyla ilgili tüm sorularınız için hazırdır. Size yükümlülük olmaksızın danışmanlık vermekten ve şirketiniz için en iyi çözümü bulmaktan memnuniyet duyarız.',
+                'faq-title': 'Sık sorulan sorular',
+                'faq-q1': 'Yakıt kartıyla nerede yakıt alabilirim?',
+                'faq-a1': 'Avrupa genelinde binlerce benzin istasyonunda. Yakıt kartımız tüm büyük benzin istasyonu zincirlerinde ve birçok bağımsız istasyonda kabul edilir.',
+                'faq-q2': 'Hangi araçlar yetkilendirilmiştir?',
+                'faq-a2': 'Kartlarımız özellikle kamyonlar, çekiciler ve ticari araçlar için tasarlanmıştır. Tüm yaygın ticari araçlar yakıt kartımızla yakıt alabilir.',
+                'faq-q3': 'Kart küçük şirketler için de uygun mu?',
+                'faq-a3': 'Evet – ister bireysel girişimci ister büyük nakliye şirketi olun. Her boyuttaki şirket için özelleştirilmiş çözümler sunuyoruz.',
+                'faq-q4': 'Faturalandırma nasıl çalışır?',
+                'faq-a4': 'Tüm yakıt işlemleriyle birlikte açık bir aylık ekstre alırsınız. Ödeme otomatik ödeme talimatı veya banka havalesi ile rahatlıkla yapılır.',
+                'footer-subtitle': 'RMC Service GmbH partner şirketi',
+                'footer-description': "Avrupa'da kamyon yakıt kartları için ortağınız",
+                'footer-contact': 'İletişim',
+                'footer-legal': 'Hukuki',
+                'footer-imprint': 'Künye',
+                'footer-privacy': 'Gizlilik',
+                'footer-terms': 'Şartlar',
+                'footer-copyright': '© 2025 Özkan Gökceviran - RMC Service GmbH partner şirketi. Tüm hakları saklıdır.',
+                'form-alert': 'İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.'
+            }
+        };
+
+        let currentLanguage = 'de';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            const langData = translations[lang] || {};
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (langData[key]) {
+                    el.innerHTML = langData[key];
+                }
+            });
+            document.querySelectorAll("[data-lang-alt]").forEach(el => {
+                const altKey = el.getAttribute("data-lang-alt");
+                if (langData[altKey]) {
+                    el.setAttribute("alt", langData[altKey]);
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang-code') === lang);
+            });
+        }
+
+        window.switchLanguage = switchLanguage;
+        switchLanguage(currentLanguage);
+
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('span');
+            
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                icon.textContent = '−';
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
+
+        // Form Submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            const subject = 'Kontaktformular';
+            const bodyLines = [
+                `Name: ${data.get('name')}`,
+                `Firma: ${data.get('firma')}`,
+                `E-Mail: ${data.get('email')}`,
+                `Telefon: ${data.get('telefon')}`,
+                `Nachricht: ${data.get('nachricht') || ''}`
+            ];
+            const mailtoLink = `mailto:o.gokceviran@rmc-service.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+            window.location.href = mailtoLink;
+
+            const msg = translations[currentLanguage]['form-alert'];
+            alert(msg);
+            form.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+                    // Enhanced scroll effects
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            const scrolled = window.scrollY;
+            
+            // Navigation background effect
+            if (scrolled > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+
+            // Reveal animations for scroll elements
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('revealed');
+                }
+            });
+        });
+
+        // Initialize scroll reveal elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll-reveal class to sections
+            const sections = document.querySelectorAll('.section-title, .step, .faq-item');
+            sections.forEach(section => {
+                section.classList.add('scroll-reveal');
+            });
+
+            // Trigger initial scroll event
+            window.dispatchEvent(new Event('scroll'));
+        });
+
+        // Staggered animation for benefit cards
+        window.addEventListener('load', function() {
+            const benefitCards = document.querySelectorAll('.benefit-card.scroll-reveal');
+            benefitCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
