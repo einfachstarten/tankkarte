@@ -251,17 +251,18 @@
             transform: translateX(-50%);
             width: 100vw;
             height: 100vh;
-            animation: wavesAppear 6s ease-in-out infinite;
+            animation: wavesAppear 7s ease-in-out infinite;
             z-index: 5;
             pointer-events: none;
             overflow: hidden;
+            will-change: auto;
         }
 
         .wave {
             position: absolute;
-            bottom: calc(15% + 62.5px);  /* 15% (card bottom) + 62.5px (half of 125px card height) */
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
             border: 30px solid rgba(255, 214, 0, 0.3);
             border-radius: 50%;
             opacity: 0;
@@ -704,7 +705,7 @@
             }
 
             .wave {
-                bottom: calc(10% + 50px);  /* 10% (mobile card bottom) + 50px (half of 100px mobile card height) */
+                top: 50%;
             }
 
             @keyframes waveExpand {
