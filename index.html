@@ -909,7 +909,7 @@
 
         .countries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
@@ -922,6 +922,157 @@
             text-align: center;
             font-weight: 600;
             font-size: 0.9rem;
+        }
+
+        .austria-special {
+            background: var(--primary-yellow);
+            color: var(--primary-green);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+
+        .target-groups {
+            margin-top: 4rem;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .target-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .target-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .target-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .target-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .target-features li:before {
+            content: "✓";
+            color: var(--primary-green);
+            margin-right: 0.5rem;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .usage-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .usage-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .usage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .advantage-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .advantage-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .charging-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .charging-signup {
+            margin-top: 3rem;
+        }
+
+        .signup-form {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .signup-form input {
+            flex: 1;
+            max-width: 300px;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+
+        .service-features {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-features span {
+            background: var(--primary-yellow);
+            color: var(--primary-green);
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
         }
 
         .parallax-element {
@@ -983,9 +1134,9 @@
                 <p class="hero-subtitle" data-lang="hero-subtitle">Ihre Tankkarte für LKWs – europaweit bargeldlos tanken</p>
                 
                 <ul class="benefits-list">
-                    <li data-lang="hero-benefit-1">Tankkarte für LKWs in Europa</li>
-                    <li data-lang="hero-benefit-2">Bargeldlos tanken an über 10.000 Tankstellen</li>
-                    <li data-lang="hero-benefit-3">Attraktive Dieselpreise und Rabatte</li>
+                    <li data-lang="hero-benefit-1">Tankkarte für 19 europäische Länder</li>
+                    <li data-lang="hero-benefit-2">Mautlösungen für 17 Länder aus einer Hand</li>
+                    <li data-lang="hero-benefit-3">Prepaid-Kreditkarte ohne Bonitätsprüfung</li>
                     <li data-lang="hero-benefit-4">Transparente Abrechnung & volle Kostenkontrolle</li>
                 </ul>
 
@@ -997,70 +1148,125 @@
     <!-- Services Overview -->
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title" data-lang="services-title">Unsere Services</h2>
+            <h2 class="section-title" data-lang="services-title">Unsere Mobilitätslösungen</h2>
+            <p class="section-subtitle" data-lang="services-subtitle">Alles aus einer Hand – von der Tankkarte bis zur Mautabrechnung</p>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <span class="service-icon">🚛</span>
                     <h3 data-lang="service-1-title">RMC Tankkarte</h3>
-                    <p data-lang="service-1-desc">Tankkarte Beschreibung</p>
+                    <p data-lang="service-1-desc">Europaweit günstig tanken an über 10.000 Tankstellen. Keine Gebühren, attraktive Preise.</p>
+                    <div class="service-features">
+                        <span data-lang="service-1-feature-1">19 Länder</span>
+                        <span data-lang="service-1-feature-2">0€ Gebühren</span>
+                        <span data-lang="service-1-feature-3">Österreich: -1,5ct/L</span>
+                    </div>
                 </div>
+                
                 <div class="service-card">
                     <span class="service-icon">💳</span>
                     <h3 data-lang="service-2-title">RMC Kreditkarte</h3>
-                    <p data-lang="service-2-desc">Kreditkarte Beschreibung</p>
+                    <p data-lang="service-2-desc">Prepaid-Kreditkarte ohne Bonitätsprüfung. Volle Kontrolle über Ihre Ausgaben.</p>
+                    <div class="service-features">
+                        <span data-lang="service-2-feature-1">Ohne Bonitätsprüfung</span>
+                        <span data-lang="service-2-feature-2">Prepaid-System</span>
+                        <span data-lang="service-2-feature-3">Volle Kontrolle</span>
+                    </div>
                 </div>
+                
                 <div class="service-card">
                     <span class="service-icon">🛣️</span>
                     <h3 data-lang="service-3-title">Mautlösungen</h3>
-                    <p data-lang="service-3-desc">Maut Beschreibung</p>
+                    <p data-lang="service-3-desc">Ein Anbieter für 17 Länder. Automatische Abrechnung, keine Vielzahl an Verträgen.</p>
+                    <div class="service-features">
+                        <span data-lang="service-3-feature-1">17 Länder</span>
+                        <span data-lang="service-3-feature-2">EETS-System</span>
+                        <span data-lang="service-3-feature-3">Ein Vertrag</span>
+                    </div>
                 </div>
+                
                 <div class="service-card">
                     <span class="service-icon">⚡</span>
                     <h3 data-lang="service-4-title">RMC Ladekarte</h3>
-                    <p data-lang="service-4-desc">Ladekarte Beschreibung</p>
+                    <p data-lang="service-4-desc">Elektromobilität europaweit. Demnächst verfügbar – jetzt vorregistrieren.</p>
+                    <div class="coming-soon-badge" data-lang="coming-soon">Demnächst</div>
                 </div>
             </div>
+
+            <!-- Neue Zielgruppen Section -->
+            <div class="target-groups">
+                <h3 data-lang="target-groups-title">Für jeden die richtige Lösung</h3>
+                <div class="target-grid">
+                    <div class="target-card">
+                        <div class="target-icon">👤</div>
+                        <h4 data-lang="fuelcard-target-private">Privatkunden</h4>
+                        <p data-lang="fuelcard-target-private-desc">Günstige Preise, bargeldloses Tanken, übersichtliche 14-tägige Abrechnung</p>
+                        <ul class="target-features">
+                            <li data-lang="private-feature-1">Tagesaktuelle Marktpreise</li>
+                            <li data-lang="private-feature-2">14-tägige Abrechnung</li>
+                            <li data-lang="private-feature-3">Keine versteckten Kosten</li>
+                            <li data-lang="private-feature-4">Online-Portal Zugang</li>
+                        </ul>
+                    </div>
+
+                    <div class="target-card">
+                        <div class="target-icon">🏢</div>
+                        <h4 data-lang="fuelcard-target-business">Unternehmen</h4>
+                        <p data-lang="fuelcard-target-business-desc">Flottenmanagement, Fixpreise, zentrale Abrechnung, Steuervorteile</p>
+                        <ul class="target-features">
+                            <li data-lang="business-feature-1">Europaweite Fixpreise</li>
+                            <li data-lang="business-feature-2">Monatliche Sammelabrechnung</li>
+                            <li data-lang="business-feature-3">Individuelle Kartenlimits</li>
+                            <li data-lang="business-feature-4">MwSt- & Mineralölsteuer-Rückerstattung</li>
+                        </ul>
+                    </div>
+
+                    <div class="target-card">
+                        <div class="target-icon">🚚</div>
+                        <h4 data-lang="fuelcard-target-fleet">Großflotten</h4>
+                        <p data-lang="fuelcard-target-fleet-desc">Telematik, erweiterte Services, europaweit alle Kraftstoffe</p>
+                        <ul class="target-features">
+                            <li data-lang="fleet-feature-1">KITIN Telematik-Integration</li>
+                            <li data-lang="fleet-feature-2">Alle Kraftstoffe (Diesel, Benzin, AdBlue, LNG)</li>
+                            <li data-lang="fleet-feature-3">Detaillierte Verbrauchsanalysen</li>
+                            <li data-lang="fleet-feature-4">Speditionslösungen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Länder-Abdeckung -->
+            <div class="countries-section">
+                <h3 data-lang="fuelcard-countries-title">Verfügbar in 19 Ländern</h3>
+                <div class="countries-grid">
+                    <div class="country-badge" data-lang="country-austria">🇦🇹 Österreich</div>
+                    <div class="country-badge" data-lang="country-germany">🇩🇪 Deutschland</div>
+                    <div class="country-badge" data-lang="country-spain">🇪🇸 Spanien</div>
+                    <div class="country-badge" data-lang="country-france">🇫🇷 Frankreich</div>
+                    <div class="country-badge" data-lang="country-belgium">🇧🇪 Belgien</div>
+                    <div class="country-badge" data-lang="country-bulgaria">🇧🇬 Bulgarien</div>
+                    <div class="country-badge" data-lang="country-croatia">🇭🇷 Kroatien</div>
+                    <div class="country-badge" data-lang="country-greece">🇬🇷 Griechenland</div>
+                    <div class="country-badge" data-lang="country-hungary">🇭🇺 Ungarn</div>
+                    <div class="country-badge" data-lang="country-italy">🇮🇹 Italien</div>
+                    <div class="country-badge" data-lang="country-luxembourg">🇱🇺 Luxemburg</div>
+                    <div class="country-badge" data-lang="country-netherlands">🇳🇱 Niederlande</div>
+                    <div class="country-badge" data-lang="country-poland">🇵🇱 Polen</div>
+                    <div class="country-badge" data-lang="country-romania">🇷🇴 Rumänien</div>
+                    <div class="country-badge" data-lang="country-slovenia">🇸🇮 Slowenien</div>
+                    <div class="country-badge" data-lang="country-slovakia">🇸🇰 Slowakei</div>
+                    <div class="country-badge" data-lang="country-georgia">🇬🇪 Georgien</div>
+                    <div class="country-badge" data-lang="country-azerbaijan">🇦🇿 Aserbaidschan</div>
+                    <div class="country-badge" data-lang="country-kazakhstan">🇰🇿 Kasachstan</div>
+                </div>
+                <div class="austria-special">
+                    <span data-lang="fuelcard-austria-special">🇦🇹 Österreich: Garantiert 1,5 Cent Ersparnis pro Liter</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Vorteile Section -->
-    <section id="tankkarte" class="section vorteile">
-        <div class="container">
-            <h2 class="section-title" data-lang="benefits-title">Warum unsere Tankkarte?</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card scroll-reveal" style="background-image: url('./images/europa-karte.png');">
-                    <img src='./images/europa-karte.png' class='benefit-icon' loading='lazy' alt='Avrupa genelinde kabul' data-lang-alt='benefit-1-title'>
-                    <h3 data-lang="benefit-1-title">Europaweite Akzeptanz</h3>
-                    <p data-lang="benefit-1-text">Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.</p>
-                </div>
-
-                <div class="benefit-card scroll-reveal" style="background-image: url('./images/diesel-preise.png');">
-                    <img src='./images/diesel-preise.png' class='benefit-icon' loading='lazy' alt='Cazip mazot fiyatları' data-lang-alt='benefit-2-title'>
-                    <h3 data-lang="benefit-2-title">Attraktive Dieselpreise</h3>
-                    <p data-lang="benefit-2-text">Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.</p>
-                </div>
-
-                <div class="benefit-card scroll-reveal" style="background-image: url('./images/sicherheit.png');">
-                    <img src='./images/sicherheit.png' class='benefit-icon' loading='lazy' alt='Nakitsiz ve güvenli' data-lang-alt='benefit-3-title'>
-                    <h3 data-lang="benefit-3-title">Bargeldlos und sicher</h3>
-                    <p data-lang="benefit-3-text">PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.</p>
-                </div>
-
-                <div class="benefit-card scroll-reveal" style="background-image: url('./images/abrechnung.png');">
-                    <img src='./images/abrechnung.png' class='benefit-icon' loading='lazy' alt='Evraksız işlem' data-lang-alt='benefit-4-title'>
-                    <h3 data-lang="benefit-4-title">Kein Papierkram</h3>
-                    <p data-lang="benefit-4-text">Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.</p>
-                </div>
-
-                <div class="benefit-card scroll-reveal" style="background-image: url('./images/service.png');">
-                    <img src='./images/service.png' class='benefit-icon' loading='lazy' alt='Kişisel hizmet' data-lang-alt='benefit-5-title'>
-                    <h3 data-lang="benefit-5-title">Persönlicher Service</h3>
-                    <p data-lang="benefit-5-text">Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Funktion Section -->
     <section id="funktion" class="section">
@@ -1103,15 +1309,143 @@
     <section id="kreditkarte" class="section">
         <div class="container">
             <h2 class="section-title" data-lang="creditcard-title">RMC Prepaid Kreditkarte</h2>
-            <p data-lang="creditcard-subtitle">Kreditkarte Infos</p>
+            <p class="section-subtitle" data-lang="creditcard-subtitle">Maximale Flexibilität unterwegs – ohne Bonitätsprüfung</p>
+            
+            <div class="usage-section">
+                <h3 data-lang="creditcard-usage-title">Perfekt für unterwegs</h3>
+                <div class="usage-grid">
+                    <div class="usage-card">
+                        <div class="usage-icon">🔧</div>
+                        <h4 data-lang="creditcard-usage-1">Werkstattkosten & Reparaturen</h4>
+                        <p data-lang="creditcard-usage-1-desc">Spontane Reparaturen auch im Ausland flexibel bezahlen</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">🏨</div>
+                        <h4 data-lang="creditcard-usage-2">Hotels & Unterkünfte</h4>
+                        <p data-lang="creditcard-usage-2-desc">Viele Hotels verlangen Kreditkarte bei Buchung oder Check-in</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">🍽️</div>
+                        <h4 data-lang="creditcard-usage-3">Restaurants & Verpflegung</h4>
+                        <p data-lang="creditcard-usage-3-desc">Bequem in Restaurants, Supermärkten oder Raststätten zahlen</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">🅿️</div>
+                        <h4 data-lang="creditcard-usage-4">Parkgebühren & Strafzahlungen</h4>
+                        <p data-lang="creditcard-usage-4-desc">Parktickets und Bußgelder direkt am Automaten begleichen</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">🎫</div>
+                        <h4 data-lang="creditcard-usage-5">Reservierungen & Online-Buchungen</h4>
+                        <p data-lang="creditcard-usage-5-desc">Fähren, Mautstrecken oder Stellplätze sicher vorab buchen</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <div class="usage-icon">🚨</div>
+                        <h4 data-lang="creditcard-usage-6">Notfälle & spontane Ausgaben</h4>
+                        <p data-lang="creditcard-usage-6-desc">Finanzielle Reserve für unerwartete Situationen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefits-section">
+                <h3 data-lang="creditcard-benefits-title">Ihre Vorteile</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✅</div>
+                        <h4 data-lang="creditcard-benefit-1">Ohne Bonitätsprüfung</h4>
+                        <p data-lang="creditcard-benefit-1-desc">Nur aufgeladenes Guthaben verwendbar – keine Verschuldung möglich</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h4 data-lang="creditcard-benefit-2">Maximale Kostenkontrolle</h4>
+                        <p data-lang="creditcard-benefit-2-desc">Sie können nur über verfügbares Guthaben verfügen</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📊</div>
+                        <h4 data-lang="creditcard-benefit-3">Volle Transparenz</h4>
+                        <p data-lang="creditcard-benefit-3-desc">Alle Zahlungen jederzeit online im Portal einsehbar</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="#" class="btn" data-lang="creditcard-cta">Kartenantrag herunterladen</a>
+            </div>
         </div>
     </section>
 
     <!-- Maut Section -->
     <section id="maut" class="section maut-bg">
         <div class="container">
-            <h2 class="section-title" data-lang="toll-title">Mautlösungen</h2>
-            <p data-lang="toll-subtitle">Maut Infos</p>
+            <h2 class="section-title" data-lang="toll-title">Mautlösungen für Europa</h2>
+            <p class="section-subtitle" data-lang="toll-subtitle">Ein Anbieter für 17 Länder – einfach, zuverlässig, transparent</p>
+            
+            <div class="advantages-section">
+                <h3 data-lang="toll-advantages-title">Ihre Vorteile</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🎯</div>
+                        <h4 data-lang="toll-advantage-1">Ein Anbieter für alle Mautsysteme</h4>
+                        <p data-lang="toll-advantage-1-desc">Keine Vielzahl an Verträgen mehr notwendig – alles aus einer Hand</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⚡</div>
+                        <h4 data-lang="toll-advantage-2">EETS-Integration</h4>
+                        <p data-lang="toll-advantage-2-desc">Neue Länder können in wenigen Minuten hinzugefügt werden</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📋</div>
+                        <h4 data-lang="toll-advantage-3">Kombinierte Abrechnung</h4>
+                        <p data-lang="toll-advantage-3-desc">Maut und Tanken in einer Rechnung für maximale Effizienz</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📊</div>
+                        <h4 data-lang="toll-advantage-4">Tägliche Übersicht</h4>
+                        <p data-lang="toll-advantage-4-desc">Alle Mautgebühren transparent im RMC Service-Portal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="countries-section">
+                <h3 data-lang="toll-countries-title">Verfügbar in 17 Ländern</h3>
+                <div class="countries-grid">
+                    <div class="country-badge">🇦🇹 Österreich</div>
+                    <div class="country-badge">🇩🇪 Deutschland</div>
+                    <div class="country-badge">🇧🇪 Belgien</div>
+                    <div class="country-badge">🇫🇷 Frankreich</div>
+                    <div class="country-badge">🇪🇸 Spanien</div>
+                    <div class="country-badge">🇵🇹 Portugal</div>
+                    <div class="country-badge">🇮🇹 Italien</div>
+                    <div class="country-badge">🇭🇺 Ungarn</div>
+                    <div class="country-badge">🇸🇰 Slowakei</div>
+                    <div class="country-badge">🇸🇮 Slowenien</div>
+                    <div class="country-badge">🇭🇷 Kroatien</div>
+                    <div class="country-badge">🇧🇬 Bulgarien</div>
+                    <div class="country-badge">🇸🇪 Schweden</div>
+                    <div class="country-badge">🇳🇴 Norwegen</div>
+                    <div class="country-badge">🇩🇰 Dänemark</div>
+                    <div class="country-badge">🇵🇱 Polen</div>
+                    <div class="country-badge">🇨🇭 Schweiz</div>
+                </div>
+            </div>
+            
+            <div class="tunnel-section">
+                <div class="tunnel-card">
+                    <div class="tunnel-icon">🚇</div>
+                    <h4 data-lang="toll-tunnel-title">Tunnelservice inklusive</h4>
+                    <p data-lang="toll-tunnel-desc">Automatische Abrechnung von Tunnelgebühren ohne Wartezeiten – alle Gebühren werden automatisch erfasst und transparent abgerechnet</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1119,7 +1453,21 @@
     <section id="ladekarte" class="section">
         <div class="container">
             <h2 class="section-title" data-lang="charging-title">RMC Ladekarte</h2>
-            <p data-lang="charging-desc">Ladekarte Infos</p>
+            <p class="section-subtitle" data-lang="charging-subtitle">Der Schlüssel zur Elektromobilität – demnächst verfügbar</p>
+            
+            <div class="charging-content">
+                <div class="charging-description">
+                    <p data-lang="charging-desc">Einfaches Laden an zahlreichen Ladestationen europaweit. Bargeldlos, transparent, zukunftssicher.</p>
+                </div>
+                
+                <div class="charging-signup">
+                    <h3 data-lang="charging-signup">E-Mail hinterlassen und informiert werden</h3>
+                    <form class="signup-form">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" data-lang-placeholder="charging-signup-placeholder">
+                        <button type="submit" class="btn" data-lang="charging-signup-btn">Vorregistrieren</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1222,6 +1570,36 @@
                     Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-creditcard-q1">Wie funktioniert die Prepaid-Kreditkarte?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" data-lang="faq-creditcard-a1">
+                    Sie laden Guthaben auf die Karte und können nur über dieses verfügen. Keine Bonitätsprüfung erforderlich.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-toll-q1">In welchen Ländern funktioniert die Mautlösung?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" data-lang="faq-toll-a1">
+                    Aktuell in 17 europäischen Ländern, von Österreich und Deutschland bis Schweden und Kroatien.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-lang="faq-private-vs-business">Was ist der Unterschied zwischen Privat- und Firmenkunden?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" data-lang="faq-private-vs-business-answer">
+                    Privatkunden erhalten 14-tägige Abrechnung, Firmenkunden monatliche Abrechnung mit Fixpreisen und erweiterten Services.
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1233,7 +1611,31 @@
                 <div class="service-card">
                     <span class="service-icon">📊</span>
                     <h3 data-lang="additional-vat-title">MwSt-Rückerstattung</h3>
-                    <p data-lang="additional-vat-desc">Steuervorteile nutzen</p>
+                    <p data-lang="additional-vat-desc">Umsatzsteuer aus dem europäischen Ausland zurückholen. Komplette Abwicklung durch unsere Partner.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">⛽</span>
+                    <h3 data-lang="additional-fuel-tax-title">Mineralölsteuer-Erstattung</h3>
+                    <p data-lang="additional-fuel-tax-desc">Einsparpotenziale bei der Mineralölsteuer nutzen. In vielen EU-Ländern möglich.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">💳</span>
+                    <h3 data-lang="additional-prepay-title">Prepay-Guthabenkonto</h3>
+                    <p data-lang="additional-prepay-desc">Volle Ausgabenkontrolle ohne Bonitätsprüfung. Maximale Transparenz und Planungssicherheit.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">🚗</span>
+                    <h3 data-lang="additional-breakdown-title">24/7 Pannendienst</h3>
+                    <p data-lang="additional-breakdown-desc">Europaweit rund um die Uhr Hilfe im Notfall. Hotline: +43 662 856 85990</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📡</span>
+                    <h3 data-lang="additional-telematics-title">KITIN Telematik</h3>
+                    <p data-lang="additional-telematics-desc">Flottenmanagement der nächsten Generation. Echtzeit-Tracking und Optimierung.</p>
                 </div>
             </div>
         </div>
@@ -1296,7 +1698,7 @@
                 'service-4-title': 'RMC Ladekarte',
                 'service-4-desc': 'Demnächst verfügbar',
                 'card-text-de': 'TANKKARTE EUROPA',
-                'benefits-title': 'Warum unsere Tankkarte?',
+                'benefits-title': 'RMC Tankkarte',
                 'benefit-1-title': 'Europaweite Akzeptanz',
                 'benefit-1-text': 'Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.',
                 'benefit-2-title': 'Attraktive Dieselpreise',
@@ -1344,7 +1746,9 @@
                 'footer-privacy': 'Datenschutz',
                 'footer-terms': 'AGB',
                 'footer-copyright': '© 2025 Özkan Gökceviran - Ein Partner der RMC Service GmbH. Alle Rechte vorbehalten.',
-                'form-alert': 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.'
+                'form-alert': 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.',
+                'coming-soon': 'Demnächst',
+                'services-subtitle': 'Alles aus einer Hand – von der Tankkarte bis zur Mautabrechnung'
             },
             en: {
                 'company-subtitle': 'A partner of RMC Service GmbH',
@@ -1372,7 +1776,7 @@
                 'service-4-title': 'RMC Charging Card',
                 'service-4-desc': 'Coming soon',
                 'card-text-en': 'FUEL CARD EUROPE',
-                'benefits-title': 'Why our fuel card?',
+                'benefits-title': 'RMC Fuel Card',
                 'benefit-1-title': 'Europe-wide acceptance',
                 'benefit-1-text': 'Over 10,000 gas stations across Europe, including independent brands for maximum flexibility.',
                 'benefit-2-title': 'Attractive diesel prices',
@@ -1420,7 +1824,9 @@
                 'footer-privacy': 'Privacy',
                 'footer-terms': 'Terms',
                 'footer-copyright': '© 2025 Özkan Gökceviran - A partner of RMC Service GmbH. All rights reserved.',
-                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.'
+                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.',
+                'coming-soon': 'Coming soon',
+                'services-subtitle': 'Everything from one source – from the fuel card to toll billing'
             },
             tr: {
                 'company-subtitle': 'RMC Service GmbH’nin bir ortağı',
@@ -1448,7 +1854,7 @@
                 'service-4-title': 'RMC Şarj Kartı',
                 'service-4-desc': 'Yakında mevcut',
                 'card-text-tr': 'YAKIT KARTI AVRUPA',
-                'benefits-title': 'Neden bizim yakıt kartımız?',
+                'benefits-title': 'RMC Yakıt Kartı',
                 'benefit-1-title': 'Avrupa genelinde kabul',
                 'benefit-1-text': "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil.",
                 'benefit-2-title': 'Cazip mazot fiyatları',
@@ -1497,6 +1903,8 @@
                 'footer-terms': 'Şartlar',
                 'footer-copyright': '© 2025 Özkan Gökceviran - RMC Service GmbH’nin bir ortağı. Tüm hakları saklıdır.',
                 'form-alert': 'İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.',
+                'coming-soon': 'Yakında',
+                'services-subtitle': 'Tek elden her şey – yakıt kartından geçiş ücretine',
                 'additional-title': 'Ek Hizmetler',
                 'additional-vat-title': 'KDV İadesi',
                 'additional-vat-desc': 'Vergi avantajlarından yararlanın'
@@ -1640,6 +2048,34 @@
             benefitCards.forEach((card, index) => {
                 card.style.animationDelay = `${index * 0.1}s`;
             });
+        });
+
+        // Charging card email signup
+        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (!email || !email.includes('@')) {
+                alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+                return;
+            }
+            alert('Vielen Dank! Sie werden informiert, sobald die RMC Ladekarte verfügbar ist.');
+            this.reset();
+        });
+
+        // Service card hover effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Country badge animation
+        document.querySelectorAll('.country-badge').forEach((badge, index) => {
+            badge.style.animationDelay = `${index * 0.1}s`;
+            badge.classList.add('fade-in-up');
         });
     </script>
 </body>
