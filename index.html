@@ -246,23 +246,21 @@
         /* Kontaktlos-Wellen - Pulsing across entire hero section */
         .contactless-waves {
             position: absolute;
-            bottom: 15%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
             animation: wavesAppear 7s ease-in-out infinite;
             z-index: 5;
             pointer-events: none;
             overflow: hidden;
-            will-change: auto;
         }
 
         .wave {
             position: absolute;
-            top: 50%;
+            bottom: calc(15% + 62.5px); /* Exact fuel card center */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 50%);
             border: 30px solid rgba(255, 214, 0, 0.3);
             border-radius: 50%;
             opacity: 0;
@@ -708,11 +706,12 @@
             }
 
             .contactless-waves {
-                bottom: 10%;
+                top: 0;
+                left: 0;
             }
 
             .wave {
-                top: 50%;
+                bottom: calc(10% + 50px); /* Mobile fuel card center */
             }
 
             @keyframes waveExpand {
