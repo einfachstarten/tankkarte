@@ -1043,6 +1043,221 @@
     </footer>
 
     <script>
+        const translations = {
+            de: {
+                'company-subtitle': 'eine Partnerfirma der RMC Service GmbH',
+                'nav-start': 'Start',
+                'nav-benefits': 'Vorteile',
+                'nav-function': "So funktioniert's",
+                'nav-contact': 'Kontakt',
+                'nav-faq': 'FAQ',
+                'hero-title': 'LKW-Tankkarte Europa | Bargeldlos Tanken für Spedition & Logistik',
+                'hero-subtitle': 'Ihre Tankkarte für LKWs – europaweit bargeldlos tanken',
+                'hero-benefit-1': 'Tankkarte für LKWs in Europa',
+                'hero-benefit-2': 'Bargeldlos tanken an über 10.000 Tankstellen',
+                'hero-benefit-3': 'Attraktive Dieselpreise und Rabatte',
+                'hero-benefit-4': 'Transparente Abrechnung & volle Kostenkontrolle',
+                'hero-cta': 'Jetzt Tankkarte anfragen',
+                'benefits-title': 'Warum unsere Tankkarte?',
+                'benefit-1-title': 'Europaweite Akzeptanz',
+                'benefit-1-text': 'Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.',
+                'benefit-2-title': 'Attraktive Dieselpreise',
+                'benefit-2-text': 'Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.',
+                'benefit-3-title': 'Bargeldlos und sicher',
+                'benefit-3-text': 'PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.',
+                'benefit-4-title': 'Kein Papierkram',
+                'benefit-4-text': 'Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.',
+                'benefit-5-title': 'Persönlicher Service',
+                'benefit-5-text': 'Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.',
+                'function-title': 'So funktioniert Ihre LKW-Tankkarte',
+                'step-1-title': 'Anfrage stellen & registrieren',
+                'step-1-text': 'Kontaktieren Sie uns über unser Formular oder telefonisch für eine kostenlose Beratung.',
+                'step-2-title': 'Tankkarte erhalten',
+                'step-2-text': 'Nach der Registrierung erhalten Sie Ihre personalisierte Tankkarte per Post.',
+                'step-3-title': 'Europaweit tanken',
+                'step-3-text': 'Tanken Sie bargeldlos an tausenden Tankstellen in ganz Europa mit Ihrer neuen Karte.',
+                'step-4-title': 'Monatlich zahlen',
+                'step-4-text': 'Erhalten Sie eine transparente Monatsabrechnung und behalten Sie die volle Kostenkontrolle.',
+                'info-box': '💡 Auch für kleine Speditionen und Einzelunternehmer geeignet!',
+                'contact-title': 'LKW-Tankkarte beantragen',
+                'contact-subtitle': 'Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!',
+                'form-name': 'Name *',
+                'form-company': 'Firma *',
+                'form-email': 'E-Mail *',
+                'form-phone': 'Telefonnummer *',
+                'form-message': 'Nachricht (optional)',
+                'form-submit': 'Jetzt kostenlos beraten lassen',
+                'contact-direct': 'Direkter Kontakt',
+                'contact-description': 'Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen.',
+                'faq-title': 'Häufige Fragen',
+                'faq-q1': 'Wo kann ich mit der Tankkarte tanken?',
+                'faq-a1': 'An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert.',
+                'faq-q2': 'Welche Fahrzeuge sind zugelassen?',
+                'faq-a2': 'Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden.',
+                'faq-q3': 'Ist die Karte auch für kleine Unternehmen geeignet?',
+                'faq-a3': 'Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an.',
+                'faq-q4': 'Wie erfolgt die Abrechnung?',
+                'faq-a4': 'Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung.',
+                'footer-subtitle': 'eine Partnerfirma der RMC Service GmbH',
+                'footer-description': 'Ihr Partner für LKW-Tankkarten in Europa',
+                'footer-contact': 'Kontakt',
+                'footer-legal': 'Rechtliches',
+                'footer-imprint': 'Impressum',
+                'footer-privacy': 'Datenschutz',
+                'footer-terms': 'AGB',
+                'footer-copyright': '© 2025 Özkan Gökceviran - eine Partnerfirma der RMC Service GmbH. Alle Rechte vorbehalten.',
+                'form-alert': 'Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.'
+            },
+            en: {
+                'company-subtitle': 'a partner company of RMC Service GmbH',
+                'nav-start': 'Home',
+                'nav-benefits': 'Benefits',
+                'nav-function': 'How it works',
+                'nav-contact': 'Contact',
+                'nav-faq': 'FAQ',
+                'hero-title': 'Truck Fuel Card Europe | Cashless Refueling for Transport & Logistics',
+                'hero-subtitle': 'Your fuel card for trucks – cashless refueling across Europe',
+                'hero-benefit-1': 'Fuel card for trucks in Europe',
+                'hero-benefit-2': 'Cashless refueling at over 10,000 gas stations',
+                'hero-benefit-3': 'Attractive diesel prices and discounts',
+                'hero-benefit-4': 'Transparent billing & full cost control',
+                'hero-cta': 'Request fuel card now',
+                'benefits-title': 'Why our fuel card?',
+                'benefit-1-title': 'Europe-wide acceptance',
+                'benefit-1-text': 'Over 10,000 gas stations across Europe, including independent brands for maximum flexibility.',
+                'benefit-2-title': 'Attractive diesel prices',
+                'benefit-2-text': 'Benefit from exclusive fleet discounts and favorable diesel prices for your company.',
+                'benefit-3-title': 'Cashless and secure',
+                'benefit-3-text': 'PIN protection and central billing ensure maximum security and control.',
+                'benefit-4-title': 'No paperwork',
+                'benefit-4-text': 'Simple monthly billing with transparent listing of all refueling transactions.',
+                'benefit-5-title': 'Personal service',
+                'benefit-5-text': 'Direct contacts and personal support, also for individual entrepreneurs.',
+                'function-title': 'How your truck fuel card works',
+                'step-1-title': 'Submit request & register',
+                'step-1-text': 'Contact us via our form or by phone for free consultation.',
+                'step-2-title': 'Receive fuel card',
+                'step-2-text': 'After registration, you will receive your personalized fuel card by mail.',
+                'step-3-title': 'Refuel across Europe',
+                'step-3-text': 'Refuel cashlessly at thousands of gas stations across Europe with your new card.',
+                'step-4-title': 'Pay monthly',
+                'step-4-text': 'Receive transparent monthly billing and maintain full cost control.',
+                'info-box': '💡 Also suitable for small transport companies and individual entrepreneurs!',
+                'contact-title': 'Apply for truck fuel card',
+                'contact-subtitle': 'Would you like to apply for a diesel card for your truck fleet?<br>Contact us – we advise you personally and free of charge!',
+                'form-name': 'Name *',
+                'form-company': 'Company *',
+                'form-email': 'E-Mail *',
+                'form-phone': 'Phone number *',
+                'form-message': 'Message (optional)',
+                'form-submit': 'Get free consultation now',
+                'contact-direct': 'Direct contact',
+                'contact-description': 'Our team is available for all questions regarding truck fuel cards. We are happy to advise you without obligation and find the best solution for your company.',
+                'faq-title': 'Frequently asked questions',
+                'faq-q1': 'Where can I refuel with the fuel card?',
+                'faq-a1': 'At thousands of gas stations across Europe. Our fuel card is accepted at all major gas station chains as well as many independent stations.',
+                'faq-q2': 'Which vehicles are authorized?',
+                'faq-a2': 'Our cards are specifically designed for trucks, tractors and commercial vehicles. All common commercial vehicles can be refueled with our fuel card.',
+                'faq-q3': 'Is the card also suitable for small companies?',
+                'faq-a3': 'Yes – whether individual entrepreneur or large transport company. We offer customized solutions for companies of all sizes.',
+                'faq-q4': 'How does billing work?',
+                'faq-a4': 'You receive a clear monthly statement with all refueling transactions. Payment is conveniently made by direct debit or bank transfer.',
+                'footer-subtitle': 'a partner company of RMC Service GmbH',
+                'footer-description': 'Your partner for truck fuel cards in Europe',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-imprint': 'Imprint',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Terms',
+                'footer-copyright': '© 2025 Özkan Gökceviran - a partner company of RMC Service GmbH. All rights reserved.',
+                'form-alert': 'Thank you for your inquiry! We will get back to you as soon as possible.'
+            },
+            tr: {
+                'company-subtitle': 'RMC Service GmbH partner şirketi',
+                'nav-start': 'Ana Sayfa',
+                'nav-benefits': 'Avantajlar',
+                'nav-function': 'Nasıl çalışır',
+                'nav-contact': 'İletişim',
+                'nav-faq': 'SSS',
+                'hero-title': 'Avrupa Kamyon Yakıt Kartı | Nakliye ve Lojistik için Nakitsiz Yakıt',
+                'hero-subtitle': 'Kamyonlarınız için yakıt kartı – Avrupa genelinde nakitsiz yakıt',
+                'hero-benefit-1': "Avrupa'da kamyonlar için yakıt kartı",
+                'hero-benefit-2': "10.000'den fazla benzin istasyonunda nakitsiz yakıt",
+                'hero-benefit-3': 'Cazip mazot fiyatları ve indirimler',
+                'hero-benefit-4': 'Şeffaf faturalandırma ve tam maliyet kontrolü',
+                'hero-cta': 'Şimdi yakıt kartı talep edin',
+                'benefits-title': 'Neden bizim yakıt kartımız?',
+                'benefit-1-title': 'Avrupa genelinde kabul',
+                'benefit-1-text': "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil.",
+                'benefit-2-title': 'Cazip mazot fiyatları',
+                'benefit-2-text': 'Şirketiniz için özel filo indirimlerinden ve uygun mazot fiyatlarından yararlanın.',
+                'benefit-3-title': 'Nakitsiz ve güvenli',
+                'benefit-3-text': 'PIN koruması ve merkezi faturalandırma maksimum güvenlik ve kontrol sağlar.',
+                'benefit-4-title': 'Evrak işi yok',
+                'benefit-4-text': 'Tüm yakıt işlemlerinin şeffaf listesiyle basit aylık faturalandırma.',
+                'benefit-5-title': 'Kişisel hizmet',
+                'benefit-5-text': 'Bireysel girişimciler için de doğrudan iletişim ve kişisel destek.',
+                'function-title': 'Kamyon yakıt kartınız nasıl çalışır',
+                'step-1-title': 'Başvuru yapın ve kayıt olun',
+                'step-1-text': 'Ücretsiz danışmanlık için formumuz aracılığıyla veya telefonla bizimle iletişime geçin.',
+                'step-2-title': 'Yakıt kartını alın',
+                'step-2-text': 'Kayıt olduktan sonra kişiselleştirilmiş yakıt kartınızı posta ile alacaksınız.',
+                'step-3-title': 'Avrupa genelinde yakıt alın',
+                'step-3-text': 'Yeni kartınızla Avrupa genelindeki binlerce benzin istasyonunda nakitsiz yakıt alın.',
+                'step-4-title': 'Aylık ödeme',
+                'step-4-text': 'Şeffaf aylık faturalandırma alın ve tam maliyet kontrolünü koruyun.',
+                'info-box': '💡 Küçük nakliye şirketleri ve bireysel girişimciler için de uygundur!',
+                'contact-title': 'Kamyon yakıt kartı başvurusu',
+                'contact-subtitle': 'Kamyon filonuz için bir mazot kartı başvurusu yapmak mı istiyorsunuz?<br>Bizimle iletişime geçin – size kişisel ve ücretsiz danışmanlık veriyoruz!',
+                'form-name': 'İsim *',
+                'form-company': 'Şirket *',
+                'form-email': 'E-posta *',
+                'form-phone': 'Telefon numarası *',
+                'form-message': 'Mesaj (isteğe bağlı)',
+                'form-submit': 'Şimdi ücretsiz danışmanlık alın',
+                'contact-direct': 'Doğrudan iletişim',
+                'contact-description': 'Ekibimiz kamyon yakıt kartlarıyla ilgili tüm sorularınız için hazırdır. Size yükümlülük olmaksızın danışmanlık vermekten ve şirketiniz için en iyi çözümü bulmaktan memnuniyet duyarız.',
+                'faq-title': 'Sık sorulan sorular',
+                'faq-q1': 'Yakıt kartıyla nerede yakıt alabilirim?',
+                'faq-a1': 'Avrupa genelinde binlerce benzin istasyonunda. Yakıt kartımız tüm büyük benzin istasyonu zincirlerinde ve birçok bağımsız istasyonda kabul edilir.',
+                'faq-q2': 'Hangi araçlar yetkilendirilmiştir?',
+                'faq-a2': 'Kartlarımız özellikle kamyonlar, çekiciler ve ticari araçlar için tasarlanmıştır. Tüm yaygın ticari araçlar yakıt kartımızla yakıt alabilir.',
+                'faq-q3': 'Kart küçük şirketler için de uygun mu?',
+                'faq-a3': 'Evet – ister bireysel girişimci ister büyük nakliye şirketi olun. Her boyuttaki şirket için özelleştirilmiş çözümler sunuyoruz.',
+                'faq-q4': 'Faturalandırma nasıl çalışır?',
+                'faq-a4': 'Tüm yakıt işlemleriyle birlikte açık bir aylık ekstre alırsınız. Ödeme otomatik ödeme talimatı veya banka havalesi ile rahatlıkla yapılır.',
+                'footer-subtitle': 'RMC Service GmbH partner şirketi',
+                'footer-description': "Avrupa'da kamyon yakıt kartları için ortağınız",
+                'footer-contact': 'İletişim',
+                'footer-legal': 'Hukuki',
+                'footer-imprint': 'Künye',
+                'footer-privacy': 'Gizlilik',
+                'footer-terms': 'Şartlar',
+                'footer-copyright': '© 2025 Özkan Gökceviran - RMC Service GmbH partner şirketi. Tüm hakları saklıdır.',
+                'form-alert': 'İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.'
+            }
+        };
+
+        let currentLanguage = 'de';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            const langData = translations[lang] || {};
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (langData[key]) {
+                    el.innerHTML = langData[key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang-code') === lang);
+            });
+        }
+
+        window.switchLanguage = switchLanguage;
+        switchLanguage(currentLanguage);
+
         // FAQ Toggle Function
         function toggleFaq(button) {
             const answer = button.nextElementSibling;
@@ -1060,7 +1275,8 @@
         // Form Submission
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.');
+            const msg = translations[currentLanguage]['form-alert'];
+            alert(msg);
         });
 
         // Smooth scroll for navigation links
@@ -1117,19 +1333,6 @@
 
         // Staggered animation for benefit cards
         window.addEventListener('load', function() {
-            // Re-register language switcher after everything is loaded
-            setTimeout(function() {
-                const langButtons = document.querySelectorAll('.lang-btn');
-                console.log('Re-registering language buttons after load:', langButtons.length);
-                
-                langButtons.forEach(btn => {
-                    // Remove any existing listeners
-                    btn.removeEventListener('click', handleLanguageSwitch);
-                    // Add fresh listener
-                    btn.addEventListener('click', handleLanguageSwitch);
-                });
-            }, 100);
-            
             const benefitCards = document.querySelectorAll('.benefit-card.scroll-reveal');
             benefitCards.forEach((card, index) => {
                 card.style.animationDelay = `${index * 0.1}s`;
