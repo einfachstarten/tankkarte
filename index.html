@@ -494,11 +494,25 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: var(--dark-green);
         }
 
         .contact-item-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary-yellow);
+        }
+
+        .contact-item a {
+            color: var(--primary-green);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: var(--dark-green);
         }
 
         /* FAQ Section */
@@ -1275,8 +1289,23 @@
         // Form Submission
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            const subject = 'Kontaktformular';
+            const bodyLines = [
+                `Name: ${data.get('name')}`,
+                `Firma: ${data.get('firma')}`,
+                `E-Mail: ${data.get('email')}`,
+                `Telefon: ${data.get('telefon')}`,
+                `Nachricht: ${data.get('nachricht') || ''}`
+            ];
+            const mailtoLink = `mailto:o.gokceviran@rmc-service.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+            window.location.href = mailtoLink;
+
             const msg = translations[currentLanguage]['form-alert'];
             alert(msg);
+            form.reset();
         });
 
         // Smooth scroll for navigation links
