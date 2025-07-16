@@ -253,27 +253,42 @@ function toggleFaq(button) {
 
 // Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form');
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const form = e.target;
-            const data = new FormData(form);
-            const subject = 'Kontaktformular';
-            const bodyLines = [
-                `Name: ${data.get('name')}`,
-                `Firma: ${data.get('firma')}`,
-                `E-Mail: ${data.get('email')}`,
-                `Telefon: ${data.get('telefon')}`,
-                `Nachricht: ${data.get('nachricht') || ''}`
-            ];
-            const mailtoLink = `mailto:o.gokceviran@rmc-service.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-            window.location.href = mailtoLink;
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
 
-            const alertMessage = window.translationLoader.getTranslation('contact.alert');
-            alert(alertMessage);
-            form.reset();
+            document.getElementById('formLanguage').value = currentLanguage;
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch('contact.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    const successMsg = window.translationLoader.getTranslation('contact.success') || result.message;
+                    alert(successMsg);
+                    contactForm.reset();
+                } else {
+                    const errorMsg = result.errors ? result.errors.join('\n') : result.message;
+                    alert('Fehler: ' + errorMsg);
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('Netzwerkfehler. Bitte versuchen Sie es später erneut.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });
