@@ -1209,6 +1209,10 @@
                 min-height: 280px;
             }
         }
+.worldmap-section {
+    margin: 4rem 0;
+    text-align: center;
+}
 
         .worldmap-container {
             margin: 4rem auto;
@@ -1223,7 +1227,7 @@
             font-weight: 600;
         }
 
-        .worldmap-grid {
+        .worldmap-container {
             display: grid;
             grid-template-columns: repeat(55, 1fr);
             grid-template-rows: repeat(35, 1fr);
@@ -1298,7 +1302,7 @@
         }
 
         @media (max-width: 768px) {
-            .worldmap-grid {
+            .worldmap-container {
                 padding: 1rem;
             }
 
