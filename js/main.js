@@ -293,43 +293,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
 // CTA Button tracking and form pre-fill
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.cta-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
             // Get CTA context from translation key
             const translationKey = this.getAttribute('data-translate');
-            const ctaType = translationKey ? translationKey.split('.')[1] : 'general';
+            const ctaType = translationKey ? translationKey.split('.')[1] : 'consultation';
 
-            // Pre-fill form message based on CTA
+            // Pre-fill form message based on CTA using translation system
             setTimeout(() => {
                 const messageField = document.getElementById('message');
-                if (messageField && !messageField.value) {
-                    let preMessage = '';
-                    switch(ctaType) {
-                        case 'fuel_card':
-                            preMessage = 'Ich interessiere mich f\xC3\xBCr eine Tankkarte f\xC3\xBCr mein Unternehmen.';
-                            break;
-                        case 'credit_card':
-                            preMessage = 'Ich m\xC3\xB6chte eine Prepaid-Kreditkarte beantragen.';
-                            break;
-                        case 'toll_solution':
-                            preMessage = 'Ich ben\xC3\xB6tige eine Maut-L\xC3\xB6sung f\xC3\xBCr meine Fahrzeuge.';
-                            break;
-                        case 'consultation':
-                            preMessage = 'Ich interessiere mich f\xC3\xBCr Ihre Mobilit\xC3\xA4tsl\xC3\xB6sungen.';
-                            break;
-                    }
+                if (messageField && !messageField.value && window.translationLoader) {
+                    const prefillKey = `cta.prefill.${ctaType}`;
+                    const preMessage = window.translationLoader.getTranslation(prefillKey, currentLanguage);
 
-                    if (preMessage && currentLanguage === 'de') {
+                    // Only set if translation exists and is not the key itself
+                    if (preMessage && preMessage !== prefillKey) {
                         messageField.value = preMessage;
+
+                        // Add visual feedback
+                        messageField.style.backgroundColor = '#f0f8ff';
+                        setTimeout(() => {
+                            messageField.style.backgroundColor = '';
+                        }, 1000);
                     }
                 }
             }, 500);
         });
     });
 });
-
 // Scroll Effects
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.nav');
@@ -387,6 +381,17 @@ window.debugTranslations = function() {
     });
 };
 
+// Debug function to test pre-fill messages
+window.testPrefill = function() {
+    console.log('Testing CTA prefill messages:');
+    const types = ['fuel_card', 'credit_card', 'toll_solution', 'consultation'];
+
+    types.forEach(type => {
+        const key = `cta.prefill.${type}`;
+        const message = window.translationLoader.getTranslation(key, currentLanguage);
+        console.log(`${type}:`, message);
+    });
+};
 // Generate worldmap cells with random animation delays
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.worldmap-container');
