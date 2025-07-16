@@ -295,15 +295,6 @@
             z-index: -1;
         }
 
-        .wave:nth-child(3) {
-            animation-delay: 1s, 0s;
-            border-color: rgba(255, 214, 0, 0.2);
-        }
-
-        .wave:nth-child(4) {
-            animation-delay: 2s, 0s;
-            border-color: rgba(255, 214, 0, 0.15);
-        }
 
 
         .hero-content {
@@ -1224,7 +1215,7 @@
     margin: 0 auto;
     background: rgba(27, 94, 32, 0.05);
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 0;
     font-size: 12px;
     min-height: 200px;
 }
