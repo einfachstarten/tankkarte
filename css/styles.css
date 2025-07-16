@@ -891,7 +891,7 @@
             }
         }
 
-        @keyframes cardAppear {
+@keyframes cardAppear {
             0%, 30% {
                 opacity: 0;
                 transform: translateX(-50%) rotateY(90deg) scale(0.8);
@@ -1235,6 +1235,54 @@
     background: transparent;
 }
 
+
+/* Font Awesome Icon Styling */
+.service-icon,
+.target-icon,
+.usage-icon {
+    display: inline-block;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-icon {
+    font-size: 3rem;
+}
+
+.target-icon {
+    font-size: 3rem;
+    color: var(--primary-yellow);
+}
+
+.usage-icon {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+}
+
+/* Hover effects */
+.service-card:hover .service-icon,
+.target-card:hover .target-icon,
+.usage-card:hover .usage-icon {
+    transform: scale(1.1);
+}
+
+/* Special icon colors */
+.fa-credit-card {
+    color: var(--primary-yellow) !important;
+}
+
+.fa-road {
+    color: var(--medium-gray) !important;
+}
+
+.fa-bolt {
+    color: var(--light-green) !important;
+}
+
+.fa-exclamation-triangle {
+    color: #ff6b35 !important;
+}
 .worldmap-container {
     display: grid;
     grid-template-columns: repeat(55, 1fr);
