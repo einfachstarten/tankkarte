@@ -1209,3 +1209,100 @@
                 min-height: 280px;
             }
         }
+
+        .worldmap-container {
+            margin: 4rem auto;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .worldmap-title {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .worldmap-grid {
+            display: grid;
+            grid-template-columns: repeat(55, 1fr);
+            grid-template-rows: repeat(35, 1fr);
+            gap: 1px;
+            padding: 2rem;
+            background: rgba(27, 94, 32, 0.05);
+            border-radius: 12px;
+            max-width: 100%;
+            aspect-ratio: 55/35;
+        }
+
+        .worldmap-cell {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        /* Europa - Primary Green */
+        .worldmap-cell:nth-child(361), .worldmap-cell:nth-child(362), .worldmap-cell:nth-child(415), .worldmap-cell:nth-child(416), .worldmap-cell:nth-child(417), .worldmap-cell:nth-child(469), .worldmap-cell:nth-child(470), .worldmap-cell:nth-child(471), .worldmap-cell:nth-child(472), .worldmap-cell:nth-child(523), .worldmap-cell:nth-child(524), .worldmap-cell:nth-child(525), .worldmap-cell:nth-child(527), .worldmap-cell:nth-child(582), .worldmap-cell:nth-child(580), .worldmap-cell:nth-child(579), .worldmap-cell:nth-child(578), .worldmap-cell:nth-child(632), .worldmap-cell:nth-child(634), .worldmap-cell:nth-child(636), .worldmap-cell:nth-child(631), .worldmap-cell:nth-child(311), .worldmap-cell:nth-child(312), .worldmap-cell:nth-child(251), .worldmap-cell:nth-child(519), .worldmap-cell:nth-child(520), .worldmap-cell:nth-child(686), .worldmap-cell:nth-child(687), .worldmap-cell:nth-child(689), .worldmap-cell:nth-child(688), .worldmap-cell:nth-child(690), .worldmap-cell:nth-child(691), .worldmap-cell:nth-child(692), .worldmap-cell:nth-child(637), .worldmap-cell:nth-child(638), .worldmap-cell:nth-child(583), .worldmap-cell:nth-child(528), .worldmap-cell:nth-child(473), .worldmap-cell:nth-child(418), .worldmap-cell:nth-child(474), .worldmap-cell:nth-child(475), .worldmap-cell:nth-child(365), .worldmap-cell:nth-child(421), .worldmap-cell:nth-child(476), .worldmap-cell:nth-child(477), .worldmap-cell:nth-child(531), .worldmap-cell:nth-child(530), .worldmap-cell:nth-child(529), .worldmap-cell:nth-child(584), .worldmap-cell:nth-child(585), .worldmap-cell:nth-child(586), .worldmap-cell:nth-child(639), .worldmap-cell:nth-child(640), .worldmap-cell:nth-child(641), .worldmap-cell:nth-child(693), .worldmap-cell:nth-child(694), .worldmap-cell:nth-child(695), .worldmap-cell:nth-child(696), .worldmap-cell:nth-child(795), .worldmap-cell:nth-child(796), .worldmap-cell:nth-child(850), .worldmap-cell:nth-child(851), .worldmap-cell:nth-child(797), .worldmap-cell:nth-child(742), .worldmap-cell:nth-child(743), .worldmap-cell:nth-child(744), .worldmap-cell:nth-child(745), .worldmap-cell:nth-child(746), .worldmap-cell:nth-child(747), .worldmap-cell:nth-child(748), .worldmap-cell:nth-child(749), .worldmap-cell:nth-child(750), .worldmap-cell:nth-child(751), .worldmap-cell:nth-child(805), .worldmap-cell:nth-child(804), .worldmap-cell:nth-child(803), .worldmap-cell:nth-child(802), .worldmap-cell:nth-child(801), .worldmap-cell:nth-child(799), .worldmap-cell:nth-child(798), .worldmap-cell:nth-child(800), .worldmap-cell:nth-child(854), .worldmap-cell:nth-child(856), .worldmap-cell:nth-child(857), .worldmap-cell:nth-child(911) {
+            background-color: var(--primary-green);
+            animation: europe-pulse 3s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 50ms);
+        }
+
+        /* Nordamerika - Primary Yellow */
+        .worldmap-cell:nth-child(19), .worldmap-cell:nth-child(20), .worldmap-cell:nth-child(21), .worldmap-cell:nth-child(73), .worldmap-cell:nth-child(74), .worldmap-cell:nth-child(75), .worldmap-cell:nth-child(76), .worldmap-cell:nth-child(77), .worldmap-cell:nth-child(123), .worldmap-cell:nth-child(124), .worldmap-cell:nth-child(127), .worldmap-cell:nth-child(128), .worldmap-cell:nth-child(129), .worldmap-cell:nth-child(130), .worldmap-cell:nth-child(131), .worldmap-cell:nth-child(132), .worldmap-cell:nth-child(177), .worldmap-cell:nth-child(178), .worldmap-cell:nth-child(179), .worldmap-cell:nth-child(181), .worldmap-cell:nth-child(182), .worldmap-cell:nth-child(183), .worldmap-cell:nth-child(184), .worldmap-cell:nth-child(185), .worldmap-cell:nth-child(186), .worldmap-cell:nth-child(187), .worldmap-cell:nth-child(188), .worldmap-cell:nth-child(228), .worldmap-cell:nth-child(229), .worldmap-cell:nth-child(230), .worldmap-cell:nth-child(231), .worldmap-cell:nth-child(232), .worldmap-cell:nth-child(233), .worldmap-cell:nth-child(234), .worldmap-cell:nth-child(237), .worldmap-cell:nth-child(238), .worldmap-cell:nth-child(239), .worldmap-cell:nth-child(240), .worldmap-cell:nth-child(241), .worldmap-cell:nth-child(242), .worldmap-cell:nth-child(243), .worldmap-cell:nth-child(283), .worldmap-cell:nth-child(284), .worldmap-cell:nth-child(285), .worldmap-cell:nth-child(286), .worldmap-cell:nth-child(287), .worldmap-cell:nth-child(288), .worldmap-cell:nth-child(289), .worldmap-cell:nth-child(293), .worldmap-cell:nth-child(294), .worldmap-cell:nth-child(295), .worldmap-cell:nth-child(296), .worldmap-cell:nth-child(297) {
+            background-color: var(--primary-yellow);
+            animation: northamerica-pulse 4s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 30ms);
+        }
+
+        /* Asien - Light Green */
+        .worldmap-cell:nth-child(154), .worldmap-cell:nth-child(208), .worldmap-cell:nth-child(209), .worldmap-cell:nth-child(210), .worldmap-cell:nth-child(262), .worldmap-cell:nth-child(263), .worldmap-cell:nth-child(264), .worldmap-cell:nth-child(265), .worldmap-cell:nth-child(314), .worldmap-cell:nth-child(315), .worldmap-cell:nth-child(316), .worldmap-cell:nth-child(317), .worldmap-cell:nth-child(318), .worldmap-cell:nth-child(319), .worldmap-cell:nth-child(320), .worldmap-cell:nth-child(321), .worldmap-cell:nth-child(322), .worldmap-cell:nth-child(323), .worldmap-cell:nth-child(325), .worldmap-cell:nth-child(326), .worldmap-cell:nth-child(369), .worldmap-cell:nth-child(370), .worldmap-cell:nth-child(371), .worldmap-cell:nth-child(372), .worldmap-cell:nth-child(373), .worldmap-cell:nth-child(374), .worldmap-cell:nth-child(375), .worldmap-cell:nth-child(376), .worldmap-cell:nth-child(377), .worldmap-cell:nth-child(378), .worldmap-cell:nth-child(379), .worldmap-cell:nth-child(380), .worldmap-cell:nth-child(381), .worldmap-cell:nth-child(382) {
+            background-color: var(--light-green);
+            animation: asia-pulse 5s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 40ms);
+        }
+
+        @keyframes europe-pulse {
+            0%, 100% {
+                background-color: var(--primary-green);
+                opacity: 1;
+            }
+            50% {
+                background-color: rgba(27, 94, 32, 0.3);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes northamerica-pulse {
+            0%, 100% {
+                background-color: var(--primary-yellow);
+                opacity: 1;
+            }
+            50% {
+                background-color: rgba(255, 214, 0, 0.3);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes asia-pulse {
+            0%, 100% {
+                background-color: var(--light-green);
+                opacity: 1;
+            }
+            50% {
+                background-color: rgba(76, 175, 80, 0.3);
+                opacity: 0.6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .worldmap-grid {
+                padding: 1rem;
+            }
+
+            .worldmap-title {
+                font-size: 1.2rem;
+            }
+        }
