@@ -289,7 +289,9 @@
           "title": "Direkter Kontakt",
           "description": "Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen."
         },
-        "alert": "Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen."
+        "alert": "Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.",
+        "success": "Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen.",
+        "error": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
       },
       "footer": {
         "company": "filo.cards",
@@ -594,7 +596,9 @@
           "title": "Direct contact",
           "description": "Our team is available for all questions regarding truck fuel cards. We are happy to advise you without obligation and find the best solution for your company."
         },
-        "alert": "Thank you for your inquiry! We will get back to you as soon as possible."
+        "alert": "Thank you for your inquiry! We will get back to you as soon as possible.",
+        "success": "Thank you for your inquiry! We will get back to you as soon as possible.",
+        "error": "Error sending message. Please try again later."
       },
       "footer": {
         "company": "filo.cards",
@@ -899,7 +903,9 @@
           "title": "Doğrudan iletişim",
           "description": "Ekibimiz kamyon yakıt kartlarıyla ilgili tüm sorularınız için hazırdır. Size yükümlülük olmaksızın danışmanlık vermekten ve şirketiniz için en iyi çözümü bulmaktan memnuniyet duyarız."
         },
-        "alert": "İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz."
+        "alert": "İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.",
+        "success": "İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.",
+        "error": "Mesaj gönderilirken hata oluştu. Lütfen daha sonra tekrar deneyin."
       },
       "footer": {
         "company": "filo.cards",
