@@ -8,7 +8,6 @@
   "translations": {
     "de": {
       "page": {
-        "lang": "de",
         "title": "Europäische Mobilitätslösungen | filo.cards",
         "description": "Tankkarte, Maut & Kreditkarte für Europa. Bargeldlos tanken, transparent abrechnen. Partner von RMC Service GmbH.",
         "keywords": "tankkarte europa, lkw tankkarte, mautlösungen, prepaid kreditkarte, flottenmanagement, RMC service, europäische mobilität"
@@ -306,7 +305,6 @@
     },
     "en": {
       "page": {
-        "lang": "en",
         "title": "European Mobility Solutions | filo.cards",
         "description": "Cashless fuel across Europe with our fuel card. Toll solutions for 17 countries. Prepaid credit card without credit check. All from one provider.",
         "keywords": "fuel card europe, truck fuel card, toll solutions, prepaid credit card, fleet management, RMC service, european mobility"
@@ -612,7 +610,6 @@
     },
     "tr": {
       "page": {
-        "lang": "tr",
         "title": "Avrupa Mobilite Çözümleri | filo.cards",
         "description": "Yakıt kartımızla Avrupa genelinde nakitsiz yakıt. 17 ülke için geçiş ücreti çözümleri. Kredi kontrolü olmadan ön ödemeli kredi kartı. Tek sağlayıcıdan hepsi.",
         "keywords": "avrupa yakıt kartı, kamyon yakıt kartı, geçiş ücreti çözümleri, ön ödemeli kredi kartı, filo yönetimi, RMC servis, avrupa mobilite, türkiye nakliye"
