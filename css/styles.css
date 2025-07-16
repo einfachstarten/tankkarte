@@ -1230,9 +1230,9 @@
         }
 .worldmap-section {
     margin: 0;
-    padding: 0;
+    padding: 3rem 0;
     text-align: center;
-    background: rgba(27, 94, 32, 0.05);
+    background: transparent;
 }
 
 .worldmap-container {
@@ -1241,9 +1241,8 @@
     grid-template-rows: repeat(35, 1fr);
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(27, 94, 32, 0.05);
-    padding: 1.5rem;
-    border-radius: 0;
+    background: transparent;
+    padding: 0;
     font-size: 12px;
     min-height: 200px;
 }
@@ -1264,98 +1263,111 @@
     background-color: transparent;
     border-radius: 50%;
     font-size: 0;
+    transition: all 0.3s ease;
 }
 
 /* Continent colors */
 .worldmap-cell.europe {
-    background-color: var(--primary-green);
+    background-color: var(--primary-green) !important;
     animation: europe-pulse 3s ease-in-out infinite;
 }
 .worldmap-cell.north-america {
-    background-color: var(--primary-yellow);
+    background-color: var(--primary-yellow) !important;
     animation: northamerica-pulse 4s ease-in-out infinite;
 }
 .worldmap-cell.asia {
-    background-color: var(--light-green);
+    background-color: var(--light-green) !important;
     animation: asia-pulse 5s ease-in-out infinite;
 }
 .worldmap-cell.south-america {
-    background-color: var(--dark-green);
+    background-color: var(--dark-green) !important;
     animation: southamerica-pulse 3s ease-in-out infinite;
 }
 .worldmap-cell.africa {
-    background-color: var(--medium-gray);
+    background-color: var(--medium-gray) !important;
     animation: africa-pulse 4s ease-in-out infinite;
 }
 .worldmap-cell.australia {
-    background-color: var(--dark-gray);
+    background-color: var(--dark-gray) !important;
     animation: australia-pulse 2s ease-in-out infinite;
 }
 
 
-        @keyframes europe-pulse {
-            0%, 100% {
-                background-color: var(--primary-green);
-                opacity: 1;
-            }
-            50% {
-                background-color: rgba(27, 94, 32, 0.3);
-                opacity: 0.6;
-            }
-        }
+@keyframes europe-pulse {
+    0%, 100% {
+        background-color: var(--primary-green) !important;
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        background-color: var(--light-green) !important;
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
 
-        @keyframes northamerica-pulse {
-            0%, 100% {
-                background-color: var(--primary-yellow);
-                opacity: 1;
-            }
-            50% {
-                background-color: rgba(255, 214, 0, 0.3);
-                opacity: 0.6;
-            }
-        }
+@keyframes northamerica-pulse {
+    0%, 100% {
+        background-color: var(--primary-yellow) !important;
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #FFE033 !important;
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
 
 @keyframes asia-pulse {
     0%, 100% {
-        background-color: var(--light-green);
+        background-color: var(--light-green) !important;
         opacity: 1;
+        transform: scale(1);
     }
     50% {
-        background-color: rgba(76, 175, 80, 0.3);
-        opacity: 0.6;
+        background-color: #81C784 !important;
+        opacity: 0.7;
+        transform: scale(1.2);
     }
 }
 
 @keyframes southamerica-pulse {
     0%, 100% {
-        background-color: var(--dark-green);
+        background-color: var(--dark-green) !important;
         opacity: 1;
+        transform: scale(1);
     }
     50% {
-        background-color: rgba(13, 47, 15, 0.3);
-        opacity: 0.6;
+        background-color: var(--primary-green) !important;
+        opacity: 0.7;
+        transform: scale(1.2);
     }
 }
 
 @keyframes africa-pulse {
     0%, 100% {
-        background-color: var(--medium-gray);
+        background-color: var(--medium-gray) !important;
         opacity: 1;
+        transform: scale(1);
     }
     50% {
-        background-color: rgba(108, 117, 125, 0.3);
-        opacity: 0.6;
+        background-color: #90A4AE !important;
+        opacity: 0.7;
+        transform: scale(1.2);
     }
 }
 
 @keyframes australia-pulse {
     0%, 100% {
-        background-color: var(--dark-gray);
+        background-color: var(--dark-gray) !important;
         opacity: 1;
+        transform: scale(1);
     }
     50% {
-        background-color: rgba(44, 62, 80, 0.3);
-        opacity: 0.6;
+        background-color: #546E7A !important;
+        opacity: 0.7;
+        transform: scale(1.2);
     }
 }
 

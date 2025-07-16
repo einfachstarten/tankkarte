@@ -360,22 +360,16 @@ document.addEventListener('DOMContentLoaded', function() {
         northAmerica.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'north-america 4s linear infinite';
+                cell.classList.add('north-america');
                 cell.style.animationDelay = `-${Math.random() * 4000}ms`;
             }
         });
 
-        // S\xC3\xBCdamerika - Light Green
+        // S\xC3\xBCdamerika - Dark Green
         southAmerica.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'south-america 3s linear infinite';
+                cell.classList.add('south-america');
                 cell.style.animationDelay = `-${Math.random() * 3000}ms`;
             }
         });
@@ -384,22 +378,16 @@ document.addEventListener('DOMContentLoaded', function() {
         europe.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'europe 3s linear infinite';
+                cell.classList.add('europe');
                 cell.style.animationDelay = `-${Math.random() * 3000}ms`;
             }
         });
 
-        // Afrika - Dark Green
+        // Afrika - Medium Gray
         africa.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'africa 4s linear infinite';
+                cell.classList.add('africa');
                 cell.style.animationDelay = `-${Math.random() * 4000}ms`;
             }
         });
@@ -408,22 +396,16 @@ document.addEventListener('DOMContentLoaded', function() {
         asia.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'asia 5s linear infinite';
+                cell.classList.add('asia');
                 cell.style.animationDelay = `-${Math.random() * 5000}ms`;
             }
         });
 
-        // Australien - Primary Yellow
+        // Australien - Dark Gray
         australia.forEach(index => {
             const cell = allCells[index - 1];
             if (cell) {
-                cell.style.backgroundColor = '#333';
-                cell.style.fontSize = '0.5em';
-                cell.style.borderRadius = '50%';
-                cell.style.animation = 'australia 2s linear infinite';
+                cell.classList.add('australia');
                 cell.style.animationDelay = `-${Math.random() * 2000}ms`;
             }
         });
