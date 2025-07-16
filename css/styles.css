@@ -1213,7 +1213,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    background: var(--light-gray);
+    background: rgba(27, 94, 32, 0.05);
 }
 
 .worldmap-container {
