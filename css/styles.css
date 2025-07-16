@@ -159,7 +159,15 @@
         }
 
         .section {
-            padding: clamp(4rem, 8vw, 8rem) 0;
+            padding: clamp(4rem, 8vw, 6rem) 0;
+        }
+
+        .section .container > *:first-child {
+            margin-top: 0;
+        }
+
+        .section .container > *:last-child {
+            margin-bottom: 0;
         }
 
         /* Hero Section */
@@ -377,9 +385,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin: 2rem 0;
         }
 
         .benefit-card {
+            margin-bottom: 0;
             background: var(--white);
             background-size: cover;
             background-position: center center;
@@ -904,10 +914,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin: 2rem 0;
         }
 
         .service-card {
+            margin-bottom: 0;
             background: var(--white);
             padding: 2rem;
             border-radius: var(--border-radius);
@@ -958,11 +969,20 @@
             background-position: center;
         }
 
+        .countries-section {
+            margin: 3rem 0;
+        }
+
+        .countries-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
         .countries-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 0.5rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0 2rem 0;
         }
 
         .country-item {
@@ -989,22 +1009,29 @@
             border-radius: var(--border-radius);
             text-align: center;
             font-weight: 700;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         /* Target Groups */
         .target-groups {
-            margin-top: 4rem;
+            margin: 4rem 0 3rem 0;
         }
 
         .target-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
+        }
+
+        .benefits-section,
+        .usage-section,
+        .advantages-section {
+            margin: 3rem 0;
         }
 
         .target-card {
+            margin-bottom: 0;
             background: var(--white);
             padding: 2rem;
             border-radius: var(--border-radius);
@@ -1038,10 +1065,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
 
         .usage-card {
+            margin-bottom: 0;
             background: var(--white);
             padding: 1.5rem;
             border-radius: var(--border-radius);
