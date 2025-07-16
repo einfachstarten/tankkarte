@@ -59,7 +59,7 @@ if (!empty($errors)) {
 }
 
 // Prepare email
-$to = 'marcusbraun@outlook.com';
+$to = 'o.gokceviran@rmc-service.com';
 $subject = '[Filo Cards] Neue Anfrage von ' . $company . ' (' . $name . ')';
 
 $email_body = "NEUE KONTAKTANFRAGE VON FILO.CARDS\n";
