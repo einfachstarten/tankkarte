@@ -38,9 +38,9 @@
                 
                 <ul class="nav-links">
                     <li><a href="#start" data-translate="navigation.home">Loading...</a></li>
-                    <li><a href="#services" data-translate="navigation.services">Loading...</a></li>
-                    <li><a href="#kontakt" data-translate="navigation.contact">Loading...</a></li>
-                    <li><a href="#faq" data-translate="navigation.faq">Loading...</a></li>
+                    <li><a href="#fuel-solutions" data-translate="navigation.services">Fuel Solutions</a></li>
+                    <li><a href="#payment-mobility">Payment & Mobility</a></li>
+                    <li><a href="#support" data-translate="navigation.faq">Support</a></li>
                 </ul>
                 
                 <div class="nav-right">
@@ -74,7 +74,7 @@
                         <li data-translate="hero.benefit4">Loading...</li>
                     </ul>
 
-                    <a href="#kontakt" class="btn" data-translate="hero.cta">Loading...</a>
+                    <a href="#support" class="btn" data-translate="hero.cta">Loading...</a>
                 </div>
             </div>
         </section>
@@ -128,10 +128,15 @@
                 </div>
             </div>
         </section>
-
-        <!-- Fuel Card Section -->
-        <section id="tankkarte" class="section vorteile">
+        <!-- 🚛 FUEL SOLUTIONS - Fuel Card + Charging zusammen -->
+        <section id="fuel-solutions" class="section vorteile">
             <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">🚛 Fuel Solutions</h2>
+                    <p class="section-subtitle">Tanken und Laden - europaweit und unkompliziert</p>
+                </div>
+
+                <!-- Fuel Card -->
                 <h2 class="section-title" data-translate="fuelcard.title">Loading...</h2>
                 <p class="section-subtitle" data-translate="fuelcard.subtitle">Loading...</p>
                 
@@ -195,18 +200,31 @@
                 <!-- Countries -->
                 <div class="countries-section">
                     <h3 data-translate="fuelcard.countries.title">Loading...</h3>
-                    <div class="countries-grid" data-translate-list="fuelcard.countries.list">
+                    <div class="countries-list" data-translate-list="fuelcard.countries.list">
                         <!-- Countries werden dynamisch geladen -->
                     </div>
                     <div class="austria-special" data-translate="fuelcard.countries.austriaSpecial">Loading...</div>
                 </div>
+
+                <!-- Charging Card Content -->
+                <h2 class="section-title" data-translate="charging.title">Loading...</h2>
+                <p class="section-subtitle" data-translate="charging.subtitle">Loading...</p>
+                
+                <div class="charging-content" data-translate-paragraphs="charging.description">
+                    <!-- Paragraphs werden dynamisch geladen -->
+                </div>
             </div>
         </section>
 
-        <!-- Credit Card Section -->
-        <section id="kreditkarte" class="section">
+        <!-- 💳 PAYMENT & MOBILITY - Credit Card + Toll zusammen -->
+        <section id="payment-mobility" class="section">
             <div class="container">
-                <h2 class="section-title" data-translate="creditcard.title">Loading...</h2>
+                <div class="section-header">
+                    <h2 class="section-title">💳 Payment & Mobility</h2>
+                    <p class="section-subtitle">Bezahlen und Maut - flexibel und transparent</p>
+                </div>
+
+                <!-- Credit Card Content -->
                 <p class="section-subtitle" data-translate="creditcard.subtitle">Loading...</p>
                 
                 <!-- Usage Grid -->
@@ -263,14 +281,8 @@
                             <p data-translate="creditcard.benefits.transparency.description">Loading...</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Toll Section -->
-        <section id="maut" class="section maut-bg">
-            <div class="container">
-                <h2 class="section-title" data-translate="toll.title">Loading...</h2>
+                <!-- Toll Content -->
                 <p class="section-subtitle" data-translate="toll.subtitle">Loading...</p>
                 
                 <!-- Advantages -->
@@ -299,7 +311,7 @@
                 <!-- Countries -->
                 <div class="countries-section">
                     <h3 data-translate="toll.countries.title">Loading...</h3>
-                    <div class="countries-grid" data-translate-list="toll.countries.list">
+                    <div class="countries-list" data-translate-list="toll.countries.list">
                         <!-- Countries werden dynamisch geladen -->
                     </div>
                 </div>
@@ -313,20 +325,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Charging Section -->
-        <section id="ladekarte" class="section">
-            <div class="container">
-                <h2 class="section-title" data-translate="charging.title">Loading...</h2>
-                <p class="section-subtitle" data-translate="charging.subtitle">Loading...</p>
-                
-                <div class="charging-content" data-translate-paragraphs="charging.description">
-                    <!-- Paragraphs werden dynamisch geladen -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Services -->
+<!-- Additional Services -->
         <section id="zusatzservices" class="section additional-services">
             <div class="container">
                 <h2 class="section-title" data-translate="additional.title">Loading...</h2>
@@ -355,9 +354,12 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="section">
+        <section id="support" class="section">
             <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Support & Services</h2>
+                </div>
+
                 <h2 class="section-title" data-translate="faq.title">Loading...</h2>
                 
                 <div class="faq-item">
@@ -418,12 +420,7 @@
                 
                 <!-- Sprachspezifische FAQs werden dynamisch hinzugefügt -->
                 <div id="language-specific-faqs"></div>
-            </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="kontakt" class="section kontakt">
-            <div class="container">
                 <h2 class="section-title" data-translate="contact.title">Loading...</h2>
                 <div class="contact-subtitle" data-translate="contact.subtitle" style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Loading...</div>
                 
@@ -467,8 +464,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Footer -->
         <footer id="footer" class="footer">
             <div class="container">
                 <div class="footer-content">

@@ -958,27 +958,28 @@
             background-position: center;
         }
 
-        .countries-grid {
+        .countries-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.5rem;
             margin: 2rem 0;
         }
 
-        .country-badge {
-            background: var(--primary-green);
-            color: var(--white);
-            padding: 0.75rem 1rem;
-            border-radius: var(--border-radius);
+        .country-item {
+            background: rgba(27, 94, 32, 0.05);
+            color: var(--dark-gray);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
             text-align: center;
-            font-weight: 600;
             font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(27, 94, 32, 0.1);
             transition: var(--transition);
         }
 
-        .country-badge:hover {
-            background: var(--light-green);
-            transform: translateY(-2px);
+        .country-item:hover {
+            background: rgba(27, 94, 32, 0.08);
+            transform: none;
         }
 
         .austria-special {
