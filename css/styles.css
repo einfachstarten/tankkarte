@@ -432,7 +432,21 @@
         }
 
         .benefit-card .benefit-icon {
-            display: none !important;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            opacity: 0.8;
+            z-index: 3;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         .benefit-card h3 {
