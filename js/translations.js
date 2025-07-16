@@ -10,7 +10,10 @@ class TranslationLoader {
     async loadTranslations() {
         try {
             console.log('Loading translations...');
-            const response = await fetch('data/translations.json');
+
+            // Cache-Busting für JSON-Datei
+            const cacheVersion = window.CACHE_VERSION || Date.now();
+            const response = await fetch(`data/translations.json?v=${cacheVersion}`);
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

@@ -39,12 +39,20 @@ structure is preserved and that `index.html` is served from the root of your dom
 The file `index.template.html` contains the main HTML markup. A deployment webhook
 generates `index.html` from this template after running `git pull`. The script
 adds the modification timestamps of `css/styles.css`, `js/translations.js` and
-`js/main.js` as query parameters so browsers always fetch the latest assets. The
-generated `index.html` is ignored by Git.
+`js/main.js` as query parameters so browsers always fetch the latest assets. It
+also injects a version string into the `data-version` attribute of the `<html>`
+tag which can be used for JSON cache busting. Optionally the webhook can purge
+the Cloudflare cache after deployment. The generated `index.html` is ignored by
+Git.
 
-The relevant PHP snippet for the webhook looks like this:
+The relevant PHP snippet for the webhook now looks like this:
 
 ```php
+// Erweiterte Cache-Busting-Funktionalität
+$deploymentTime = time();
+$gitHash = substr(exec('git rev-parse HEAD'), 0, 8);
+$version = $deploymentTime . '-' . $gitHash;
+
 // Cache-Busting: Generate index.html with timestamps
 $cssTime = filemtime("$repoDir/css/styles.css");
 $jsTransTime = filemtime("$repoDir/js/translations.js");
@@ -53,23 +61,45 @@ $jsMainTime = filemtime("$repoDir/js/main.js");
 // Read template
 $template = file_get_contents("$repoDir/index.template.html");
 
-// Replace with timestamps
+// Replace with enhanced timestamps
 $html = str_replace(
     [
         'href="css/styles.css"',
         'src="js/translations.js"',
-        'src="js/main.js"'
+        'src="js/main.js"',
+        'data-version=""'
     ],
     [
         'href="css/styles.css?v=' . $cssTime . '"',
         'src="js/translations.js?v=' . $jsTransTime . '"',
-        'src="js/main.js?v=' . $jsMainTime . '"'
+        'src="js/main.js?v=' . $jsMainTime . '"',
+        'data-version="' . $version . '"'
     ],
     $template
 );
 
 // Write index.html
 file_put_contents("$repoDir/index.html", $html);
+
+// Cloudflare Cache Purge (falls API verfügbar)
+if (defined('CLOUDFLARE_API_TOKEN')) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+        'files' => [
+            'https://www.filo.cards/',
+            'https://www.filo.cards/index.html'
+        ]
+    ]));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Authorization: Bearer ' . CLOUDFLARE_API_TOKEN,
+        'Content-Type: application/json'
+    ]);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_exec($ch);
+    curl_close($ch);
+}
 ```
 
 ## License
