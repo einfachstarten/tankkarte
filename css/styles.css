@@ -1125,3 +1125,21 @@
                 scroll-behavior: smooth;
             }
         }
+
+        @media (min-width: 769px) {
+            .benefit-card {
+                background-position: center 25%;
+                min-height: 250px;
+            }
+            
+            .benefit-card:hover {
+                background-size: 105%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefit-card {
+                background-position: center center;
+                min-height: 280px;
+            }
+        }
