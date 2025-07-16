@@ -66,6 +66,9 @@ function updatePageMeta(lang) {
 
     document.title = title;
 
+    // Update HTML lang attribute manually
+    document.documentElement.lang = lang;
+
     // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -145,6 +148,10 @@ function updateFuelCardText(lang) {
 function handleSpecialTranslations(lang) {
     // Add language-specific FAQs
     const languageSpecificFaqs = document.getElementById('language-specific-faqs');
+    if (!languageSpecificFaqs) {
+        console.warn('language-specific-faqs element not found');
+        return;
+    }
     languageSpecificFaqs.innerHTML = '';
 
     if (lang === 'en') {
