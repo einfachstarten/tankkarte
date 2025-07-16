@@ -624,8 +624,88 @@
             align-items: center;
         }
 
-        .faq-question:hover {
+.faq-question:hover {
             background: var(--light-gray);
+        }
+
+        /* Credit Card Benefits - same styling as fuel card benefits */
+        .benefits-section .benefit-card {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .benefits-section .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                rgba(27, 94, 32, 0.6) 0%,
+                rgba(76, 175, 80, 0.5) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .benefits-section .benefit-card:hover::before {
+            background: linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.4) 100%
+            );
+        }
+
+        .benefits-section .benefit-card > * {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+        }
+
+        .benefits-section .benefit-card h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .benefits-section .benefit-card p {
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.5;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .benefits-section .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background-size: 110%;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-section .benefit-card {
+                background-position: center center;
+                min-height: 280px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .benefits-section .benefit-card {
+                background-position: center 25%;
+                min-height: 250px;
+            }
+            .benefits-section .benefit-card:hover {
+                background-size: 105%;
+            }
         }
 
 
