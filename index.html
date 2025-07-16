@@ -8,12 +8,26 @@
     <title data-translate="page.title">Loading...</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>">
     
-    <!-- JSON und JavaScript laden mit Cache-Busting -->
+    <!-- CSS und JavaScript mit Cache-Busting laden -->
     <script>
         const timestamp = Date.now();
-        document.write('<link rel="stylesheet" href="css/styles.css?v=' + timestamp + '">');
-        document.write('<script src="js/translations.js?v=' + timestamp + '" defer><\\/script>');
-        document.write('<script src="js/main.js?v=' + timestamp + '" defer><\\/script>');
+
+        // CSS
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = 'css/styles.css?v=' + timestamp;
+        document.head.appendChild(cssLink);
+
+        // JavaScript files
+        const translationsScript = document.createElement('script');
+        translationsScript.src = 'js/translations.js?v=' + timestamp;
+        translationsScript.defer = true;
+        document.head.appendChild(translationsScript);
+
+        const mainScript = document.createElement('script');
+        mainScript.src = 'js/main.js?v=' + timestamp;
+        mainScript.defer = true;
+        document.head.appendChild(mainScript);
     </script>
 
     <!-- Hreflang dynamisch setzen -->
