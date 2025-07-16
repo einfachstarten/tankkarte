@@ -8,17 +8,19 @@
     <title data-translate="page.title">Loading...</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>">
     
-    <!-- JSON und JavaScript laden -->
-    <script src="js/translations.js" defer></script>
-    <script src="js/main.js" defer></script>
-    
+    <!-- JSON und JavaScript laden mit Cache-Busting -->
+    <script>
+        const timestamp = Date.now();
+        document.write('<link rel="stylesheet" href="css/styles.css?v=' + timestamp + '">');
+        document.write('<script src="js/translations.js?v=' + timestamp + '" defer><\\/script>');
+        document.write('<script src="js/main.js?v=' + timestamp + '" defer><\\/script>');
+    </script>
+
     <!-- Hreflang dynamisch setzen -->
     <link rel="alternate" hreflang="de" href="https://www.filo.cards/">
     <link rel="alternate" hreflang="tr" href="https://www.filo.cards/">
     <link rel="alternate" hreflang="x-default" href="https://www.filo.cards/">
     
-    <!-- Bestehende CSS -->
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Loading Spinner während JSON lädt -->
