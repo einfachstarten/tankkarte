@@ -1317,27 +1317,27 @@
 /* Continent colors */
 .worldmap-cell.europe {
     background-color: var(--primary-green) !important;
-    animation: europe-pulse 3s ease-in-out infinite;
+    animation: europe-pulse 6s ease-in-out infinite;
 }
 .worldmap-cell.north-america {
     background-color: var(--primary-yellow) !important;
-    animation: northamerica-pulse 4s ease-in-out infinite;
+    animation: northamerica-pulse 7s ease-in-out infinite;
 }
 .worldmap-cell.asia {
     background-color: var(--light-green) !important;
-    animation: asia-pulse 5s ease-in-out infinite;
+    animation: asia-pulse 8s ease-in-out infinite;
 }
 .worldmap-cell.south-america {
     background-color: var(--dark-green) !important;
-    animation: southamerica-pulse 3s ease-in-out infinite;
+    animation: southamerica-pulse 6s ease-in-out infinite;
 }
 .worldmap-cell.africa {
     background-color: var(--medium-gray) !important;
-    animation: africa-pulse 4s ease-in-out infinite;
+    animation: africa-pulse 7s ease-in-out infinite;
 }
 .worldmap-cell.australia {
     background-color: var(--dark-gray) !important;
-    animation: australia-pulse 2s ease-in-out infinite;
+    animation: australia-pulse 5s ease-in-out infinite;
 }
 
 
@@ -1348,9 +1348,9 @@
         transform: scale(1);
     }
     50% {
-        background-color: var(--light-green) !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        background-color: var(--primary-yellow) !important;
+        opacity: 0.3;
+        transform: scale(1.8);
     }
 }
 
@@ -1362,8 +1362,8 @@
     }
     50% {
         background-color: #FFE033 !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        opacity: 0.2;
+        transform: scale(2.0);
     }
 }
 
@@ -1374,9 +1374,9 @@
         transform: scale(1);
     }
     50% {
-        background-color: #81C784 !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        background-color: var(--primary-green) !important;
+        opacity: 0.3;
+        transform: scale(1.6);
     }
 }
 
@@ -1387,9 +1387,9 @@
         transform: scale(1);
     }
     50% {
-        background-color: var(--primary-green) !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        background-color: var(--light-green) !important;
+        opacity: 0.2;
+        transform: scale(1.7);
     }
 }
 
@@ -1401,8 +1401,8 @@
     }
     50% {
         background-color: #90A4AE !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        opacity: 0.4;
+        transform: scale(1.5);
     }
 }
 
@@ -1413,9 +1413,9 @@
         transform: scale(1);
     }
     50% {
-        background-color: #546E7A !important;
-        opacity: 0.7;
-        transform: scale(1.2);
+        background-color: var(--medium-gray) !important;
+        opacity: 0.3;
+        transform: scale(1.6);
     }
 }
 
