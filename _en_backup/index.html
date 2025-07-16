@@ -428,9 +428,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .benefit-card::before {
@@ -440,11 +437,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(27, 94, 32, 0.7) 0%, 
-                rgba(76, 175, 80, 0.6) 50%, 
+            background: linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
                 rgba(255, 214, 0, 0.3) 100%
             );
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             z-index: 1;
         }
 
@@ -480,6 +480,46 @@
 
         .benefit-card p {
             color: rgba(255, 255, 255, 0.9);
+        }
+
+        .benefit-card[data-bg="europa"]::before {
+            background-image: url('../images/europa-karte.png'), linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
+        }
+
+        .benefit-card[data-bg="diesel"]::before {
+            background-image: url('../images/diesel-preise.png'), linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
+        }
+
+        .benefit-card[data-bg="sicherheit"]::before {
+            background-image: url('../images/sicherheit.png'), linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
+        }
+
+        .benefit-card[data-bg="abrechnung"]::before {
+            background-image: url('../images/abrechnung.png'), linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
+        }
+
+        .benefit-card[data-bg="service"]::before {
+            background-image: url('../images/service.png'), linear-gradient(135deg,
+                rgba(27, 94, 32, 0.7) 0%,
+                rgba(76, 175, 80, 0.6) 50%,
+                rgba(255, 214, 0, 0.3) 100%
+            );
         }
 
         /* Funktion Section */
@@ -1199,31 +1239,31 @@
             <h2 class="section-title" data-lang="benefits-title">Warum unsere Tankkarte?</h2>
             
             <div class="benefits-grid">
-                <div class="benefit-card scroll-reveal" style="background-image: url('../images/europa-karte.png');">
+                <div class="benefit-card scroll-reveal" data-bg="europa">
                     <img src='../images/europa-karte.png' class='benefit-icon' loading='lazy' alt='Europe-wide acceptance' data-lang-alt='benefit-1-title'>
                     <h3 data-lang="benefit-1-title">Europaweite Akzeptanz</h3>
                     <p data-lang="benefit-1-text">Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität.</p>
                 </div>
 
-                <div class="benefit-card scroll-reveal" style="background-image: url('../images/diesel-preise.png');">
+                <div class="benefit-card scroll-reveal" data-bg="diesel">
                     <img src='../images/diesel-preise.png' class='benefit-icon' loading='lazy' alt='Attractive diesel prices' data-lang-alt='benefit-2-title'>
                     <h3 data-lang="benefit-2-title">Attraktive Dieselpreise</h3>
                     <p data-lang="benefit-2-text">Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen.</p>
                 </div>
 
-                <div class="benefit-card scroll-reveal" style="background-image: url('../images/sicherheit.png');">
+                <div class="benefit-card scroll-reveal" data-bg="sicherheit">
                     <img src='../images/sicherheit.png' class='benefit-icon' loading='lazy' alt='Cashless and secure' data-lang-alt='benefit-3-title'>
                     <h3 data-lang="benefit-3-title">Bargeldlos und sicher</h3>
                     <p data-lang="benefit-3-text">PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle.</p>
                 </div>
 
-                <div class="benefit-card scroll-reveal" style="background-image: url('../images/abrechnung.png');">
+                <div class="benefit-card scroll-reveal" data-bg="abrechnung">
                     <img src='../images/abrechnung.png' class='benefit-icon' loading='lazy' alt='No paperwork' data-lang-alt='benefit-4-title'>
                     <h3 data-lang="benefit-4-title">Kein Papierkram</h3>
                     <p data-lang="benefit-4-text">Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge.</p>
                 </div>
 
-                <div class="benefit-card scroll-reveal" style="background-image: url('../images/service.png');">
+                <div class="benefit-card scroll-reveal" data-bg="service">
                     <img src='../images/service.png' class='benefit-icon' loading='lazy' alt='Personal service' data-lang-alt='benefit-5-title'>
                     <h3 data-lang="benefit-5-title">Persönlicher Service</h3>
                     <p data-lang="benefit-5-text">Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer.</p>
