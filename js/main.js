@@ -203,9 +203,36 @@ function handleSpecialTranslations(lang) {
             </button>
             <div class="faq-answer">${window.translationLoader.getTranslation('faq.q9.answer', lang)}</div>
         `;
-        languageSpecificFaqs.appendChild(tirFaq);
-    }
+  languageSpecificFaqs.appendChild(tirFaq);
+  }
 }
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('mobile-active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('.nav');
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (!nav.contains(event.target) && navLinks.classList.contains('mobile-active')) {
+        navLinks.classList.remove('mobile-active');
+    }
+});
+
+// Close mobile menu when clicking on nav links
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('mobile-active');
+        });
+    });
+});
 
 // FAQ Toggle Function
 function toggleFaq(button) {
@@ -294,6 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Make functions globally available
 window.switchLanguage = switchLanguage;
 window.toggleFaq = toggleFaq;
+window.toggleMobileMenu = toggleMobileMenu;
 
 // Debug function
 window.debugTranslations = function() {
