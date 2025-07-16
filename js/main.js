@@ -80,11 +80,13 @@ function translateAllElements() {
         const translation = window.translationLoader.getTranslation(key);
 
         if (translation && translation !== key) {
-            element.textContent = translation;
-
-            // Handle HTML content for subtitles with <br>
-            if (key.includes('subtitle') && translation.includes('<br>')) {
-                element.innerHTML = translation;
+            if (element.tagName === 'IMG') {
+                element.setAttribute('alt', translation);
+            } else {
+                element.textContent = translation;
+                if (key.includes('subtitle') && translation.includes('<br>')) {
+                    element.innerHTML = translation;
+                }
             }
         }
     });
