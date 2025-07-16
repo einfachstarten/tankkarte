@@ -60,22 +60,33 @@ if (!empty($errors)) {
 
 // Prepare email
 $to = 'marcusbraun@outlook.com';
-$subject = 'Neue Anfrage von filo.cards - ' . $company;
+$subject = '[Filo Cards] Neue Anfrage von ' . $company . ' (' . $name . ')';
 
-$email_body = "Neue Kontaktanfrage von der filo.cards Website\n\n";
+$email_body = "NEUE KONTAKTANFRAGE VON FILO.CARDS\n";
+$email_body .= "==========================================\n\n";
+$email_body .= "KUNDENDATEN:\n";
 $email_body .= "Name: " . $name . "\n";
 $email_body .= "Firma: " . $company . "\n";
 $email_body .= "E-Mail: " . $email . "\n";
 $email_body .= "Telefon: " . $phone . "\n";
-$email_body .= "Sprache: " . $language . "\n\n";
-$email_body .= "Nachricht:\n" . $message . "\n\n";
-$email_body .= "---\n";
+$email_body .= "Sprache: " . strtoupper($language) . "\n\n";
+
+if (!empty($message)) {
+    $email_body .= "NACHRICHT:\n";
+    $email_body .= "----------\n";
+    $email_body .= $message . "\n\n";
+}
+
+$email_body .= "SYSTEM-INFO:\n";
 $email_body .= "Gesendet am: " . date('d.m.Y H:i:s') . "\n";
 $email_body .= "IP-Adresse: " . $_SERVER['REMOTE_ADDR'] . "\n";
+$email_body .= "Website: https://www.filo.cards\n";
 
-$headers = "From: noreply@filo.cards\r\n";
+$headers = "From: Filo.Cards Kontaktformular <ftp7951508@www80.world4you.com>\r\n";
 $headers .= "Reply-To: " . $email . "\r\n";
+$headers .= "Return-Path: ftp7951508@www80.world4you.com\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "X-Mailer: Filo Cards Website\r\n";
 
 // Send email
 if (mail($to, $subject, $email_body, $headers)) {
