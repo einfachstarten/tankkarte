@@ -34,6 +34,44 @@ Deployment consists of copying the repository contents to your hosting provider.
 host such as GitHub Pages, Netlify or a traditional web server will work. Make sure the folder
 structure is preserved and that `index.html` is served from the root of your domain.
 
+### Cache busting via webhook
+
+The file `index.template.html` contains the main HTML markup. A deployment webhook
+generates `index.html` from this template after running `git pull`. The script
+adds the modification timestamps of `css/styles.css`, `js/translations.js` and
+`js/main.js` as query parameters so browsers always fetch the latest assets. The
+generated `index.html` is ignored by Git.
+
+The relevant PHP snippet for the webhook looks like this:
+
+```php
+// Cache-Busting: Generate index.html with timestamps
+$cssTime = filemtime("$repoDir/css/styles.css");
+$jsTransTime = filemtime("$repoDir/js/translations.js");
+$jsMainTime = filemtime("$repoDir/js/main.js");
+
+// Read template
+$template = file_get_contents("$repoDir/index.template.html");
+
+// Replace with timestamps
+$html = str_replace(
+    [
+        'href="css/styles.css"',
+        'src="js/translations.js"',
+        'src="js/main.js"'
+    ],
+    [
+        'href="css/styles.css?v=' . $cssTime . '"',
+        'src="js/translations.js?v=' . $jsTransTime . '"',
+        'src="js/main.js?v=' . $jsMainTime . '"'
+    ],
+    $template
+);
+
+// Write index.html
+file_put_contents("$repoDir/index.html", $html);
+```
+
 ## License
 
 This project is released under the [MIT License](LICENSE). You are free to use, modify and
