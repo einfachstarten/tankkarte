@@ -297,7 +297,13 @@
         "consultation": "Kostenlose Beratung anfragen",
         "fuel_card": "Jetzt Tankkarte anfragen",
         "credit_card": "Jetzt Kreditkarte beantragen",
-        "toll_solution": "Maut-Lösung anfragen"
+        "toll_solution": "Maut-Lösung anfragen",
+        "prefill": {
+          "fuel_card": "Ich interessiere mich für eine Tankkarte für mein Unternehmen.",
+          "credit_card": "Ich möchte eine Prepaid-Kreditkarte beantragen.",
+          "toll_solution": "Ich benötige eine Maut-Lösung für meine Fahrzeuge.",
+          "consultation": "Ich interessiere mich für Ihre Mobilitätslösungen."
+        }
       },
       "footer": {
         "company": "filo.cards",
@@ -610,7 +616,13 @@
         "consultation": "Request Free Consultation",
         "fuel_card": "Request Fuel Card Now",
         "credit_card": "Apply for Credit Card Now",
-        "toll_solution": "Request Toll Solution"
+        "toll_solution": "Request Toll Solution",
+        "prefill": {
+          "fuel_card": "I am interested in a fuel card for my company.",
+          "credit_card": "I would like to apply for a prepaid credit card.",
+          "toll_solution": "I need a toll solution for my vehicles.",
+          "consultation": "I am interested in your mobility solutions."
+        }
       },
       "footer": {
         "company": "filo.cards",
@@ -923,7 +935,13 @@
         "consultation": "Ücretsiz Danışmanlık Talep Edin",
         "fuel_card": "Şimdi Yakıt Kartı Talep Edin",
         "credit_card": "Şimdi Kredi Kartı Başvurusu Yapın",
-        "toll_solution": "Geçiş Ücreti Çözümü Talep Edin"
+        "toll_solution": "Geçiş Ücreti Çözümü Talep Edin",
+        "prefill": {
+          "fuel_card": "Şirketim için yakıt kartı ile ilgileniyorum.",
+          "credit_card": "Ön ödemeli kredi kartı başvurusu yapmak istiyorum.",
+          "toll_solution": "Araçlarım için geçiş ücreti çözümüne ihtiyacım var.",
+          "consultation": "Mobilite çözümlerinizle ilgileniyorum."
+        }
       },
       "footer": {
         "company": "filo.cards",
