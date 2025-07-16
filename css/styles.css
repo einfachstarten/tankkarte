@@ -387,7 +387,7 @@
             padding: 2.5rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            transition: var(--transition);
+            transition: all 0.3s ease;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -406,12 +406,13 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(135deg,
-                rgba(27, 94, 32, 0.5) 0%,
-                rgba(76, 175, 80, 0.4) 50%,
+                rgba(27, 94, 32, 0.6) 0%,
+                rgba(76, 175, 80, 0.5) 50%,
                 rgba(255, 214, 0, 0.3) 100%
             );
             z-index: 1;
-       }
+            transition: all 0.3s ease;
+        }
 
         .benefit-card:hover::before {
             background: linear-gradient(135deg,
@@ -430,6 +431,7 @@
         .benefit-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+            background-size: 110%;
         }
 
         .benefit-card h3 {
@@ -437,13 +439,17 @@
             font-weight: 700;
             color: var(--white);
             margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 2;
         }
 
         .benefit-card p {
             color: rgba(255, 255, 255, 0.95);
             line-height: 1.5;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 2;
         }
 
 
