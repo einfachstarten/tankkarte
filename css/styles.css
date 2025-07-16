@@ -381,6 +381,9 @@
 
         .benefit-card {
             background: var(--white);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 2.5rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
@@ -402,21 +405,18 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
+                rgba(27, 94, 32, 0.4) 0%,
+                rgba(76, 175, 80, 0.3) 50%,
+                rgba(255, 214, 0, 0.2) 100%
             );
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             z-index: 1;
        }
 
         .benefit-card:hover::before {
-            background: linear-gradient(135deg, 
-                rgba(27, 94, 32, 0.8) 0%, 
-                rgba(76, 175, 80, 0.7) 50%, 
-                rgba(255, 214, 0, 0.4) 100%
+            background: linear-gradient(135deg,
+                rgba(27, 94, 32, 0.6) 0%,
+                rgba(76, 175, 80, 0.5) 50%,
+                rgba(255, 214, 0, 0.3) 100%
             );
         }
 
@@ -460,45 +460,6 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        .benefit-card[data-bg="europa"]::before {
-            background-image: url('images/europa-karte.png'), linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
-            );
-        }
-
-        .benefit-card[data-bg="diesel"]::before {
-            background-image: url('images/diesel-preise.png'), linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
-            );
-        }
-
-        .benefit-card[data-bg="sicherheit"]::before {
-            background-image: url('images/sicherheit.png'), linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
-            );
-        }
-
-        .benefit-card[data-bg="abrechnung"]::before {
-            background-image: url('images/abrechnung.png'), linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
-            );
-        }
-
-        .benefit-card[data-bg="service"]::before {
-            background-image: url('images/service.png'), linear-gradient(135deg,
-                rgba(27, 94, 32, 0.7) 0%,
-                rgba(76, 175, 80, 0.6) 50%,
-                rgba(255, 214, 0, 0.3) 100%
-            );
-        }
 
         /* Funktion Section */
         .steps-container {
