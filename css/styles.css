@@ -162,6 +162,18 @@
             padding: clamp(4rem, 8vw, 6rem) 0;
         }
 
+        .section:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .section h2:not(:first-child) {
+            margin-top: 4rem;
+        }
+
+        .section h3:not(:first-child) {
+            margin-top: 3rem;
+        }
+
         .section .container > *:first-child {
             margin-top: 0;
         }
@@ -307,9 +319,13 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            text-align: center;
+            color: var(--medium-gray);
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 1rem auto 3rem auto;
+            max-width: 800px;
         }
 
         .benefits-list {
@@ -381,11 +397,25 @@
             margin-bottom: 4rem;
         }
 
+        .section-subtitle {
+            text-align: center;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: var(--medium-gray);
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 1rem auto 3rem auto;
+            max-width: 800px;
+        }
+
+        .services .section-subtitle {
+            margin-bottom: 2rem;
+        }
+
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .benefit-card {
@@ -914,7 +944,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .service-card {
@@ -974,22 +1004,27 @@
         }
 
         .countries-section h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            color: var(--primary-green);
         }
 
         .countries-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.5rem;
-            margin: 1.5rem 0 2rem 0;
+            gap: 0.75rem;
+            margin: 2rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .country-item {
-            background: rgba(27, 94, 32, 0.05);
+            background: rgba(27, 94, 32, 0.06);
             color: var(--dark-gray);
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
             text-align: center;
             font-size: 0.9rem;
             font-weight: 500;
@@ -998,30 +1033,32 @@
         }
 
         .country-item:hover {
-            background: rgba(27, 94, 32, 0.08);
+            background: rgba(27, 94, 32, 0.1);
             transform: none;
         }
 
         .austria-special {
             background: var(--primary-yellow);
             color: var(--primary-green);
-            padding: 1rem;
+            padding: 1.2rem;
             border-radius: var(--border-radius);
             text-align: center;
             font-weight: 700;
-            margin-top: 1.5rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            font-size: 1rem;
         }
 
         /* Target Groups */
         .target-groups {
-            margin: 4rem 0 3rem 0;
+            margin: 4rem 0;
         }
 
         .target-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .benefits-section,
@@ -1065,7 +1102,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .usage-card {
@@ -1093,7 +1130,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 3rem 0;
         }
 
         .advantage-card {
