@@ -293,6 +293,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// CTA Button tracking and form pre-fill
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Get CTA context from translation key
+            const translationKey = this.getAttribute('data-translate');
+            const ctaType = translationKey ? translationKey.split('.')[1] : 'general';
+
+            // Pre-fill form message based on CTA
+            setTimeout(() => {
+                const messageField = document.getElementById('message');
+                if (messageField && !messageField.value) {
+                    let preMessage = '';
+                    switch(ctaType) {
+                        case 'fuel_card':
+                            preMessage = 'Ich interessiere mich f\xC3\xBCr eine Tankkarte f\xC3\xBCr mein Unternehmen.';
+                            break;
+                        case 'credit_card':
+                            preMessage = 'Ich m\xC3\xB6chte eine Prepaid-Kreditkarte beantragen.';
+                            break;
+                        case 'toll_solution':
+                            preMessage = 'Ich ben\xC3\xB6tige eine Maut-L\xC3\xB6sung f\xC3\xBCr meine Fahrzeuge.';
+                            break;
+                        case 'consultation':
+                            preMessage = 'Ich interessiere mich f\xC3\xBCr Ihre Mobilit\xC3\xA4tsl\xC3\xB6sungen.';
+                            break;
+                    }
+
+                    if (preMessage && currentLanguage === 'de') {
+                        messageField.value = preMessage;
+                    }
+                }
+            }, 500);
+        });
+    });
+});
+
 // Scroll Effects
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.nav');
