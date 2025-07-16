@@ -100,10 +100,10 @@ function translateAllElements() {
         const listItems = window.translationLoader.getTranslation(key);
 
         if (Array.isArray(listItems)) {
-            if (element.classList.contains('countries-grid')) {
-                // Countries grid
-                element.innerHTML = listItems.map(country => 
-                    `<div class="country-badge">${country}</div>`
+            if (element.classList.contains('countries-list')) {
+                // Dezente Country-Liste
+                element.innerHTML = listItems.map(country =>
+                    `<div class="country-item">${country}</div>`
                 ).join('');
             } else if (element.classList.contains('target-features')) {
                 // Feature lists
