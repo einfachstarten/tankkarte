@@ -1,0 +1,917 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-16",
+    "languages": ["de", "en", "tr"],
+    "defaultLanguage": "de"
+  },
+  "translations": {
+    "de": {
+      "page": {
+        "title": "Europäische Mobilitätslösungen | filo.cards",
+        "description": "Tankkarte, Maut & Kreditkarte für Europa. Bargeldlos tanken, transparent abrechnen. Partner von RMC Service GmbH.",
+        "keywords": "tankkarte europa, lkw tankkarte, mautlösungen, prepaid kreditkarte, flottenmanagement, RMC service, europäische mobilität"
+      },
+      "navigation": {
+        "logo": "filo.cards",
+        "subtitle": "Ein Partner der RMC Service GmbH",
+        "home": "Start",
+        "services": "Services",
+        "fuelcard": "Tankkarte",
+        "toll": "Maut",
+        "creditcard": "Kreditkarte",
+        "contact": "Kontakt",
+        "faq": "FAQ"
+      },
+      "hero": {
+        "title": "Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte",
+        "subtitle": "Ihr Partner für europaweite Mobilität – von Tanken bis Maut",
+        "benefit1": "Tankkarte für 19 europäische Länder",
+        "benefit2": "Mautlösungen für 17 Länder aus einer Hand",
+        "benefit3": "Prepaid-Kreditkarte ohne Bonitätsprüfung",
+        "benefit4": "Transparente Abrechnung & volle Kostenkontrolle",
+        "cta": "Jetzt Tankkarte anfragen",
+        "cardText": "TANKKARTE EUROPA"
+      },
+      "services": {
+        "title": "Unsere Mobilitätslösungen",
+        "subtitle": "Alles aus einer Hand – von der Tankkarte bis zur Mautabrechnung",
+        "fuelcard": {
+          "title": "RMC Tankkarte",
+          "description": "Europaweit günstig tanken an über 10.000 Tankstellen. Keine Gebühren, attraktive Preise.",
+          "feature1": "19 Länder",
+          "feature2": "0€ Gebühren",
+          "feature3": "Österreich: -1,5ct/L"
+        },
+        "creditcard": {
+          "title": "RMC Kreditkarte",
+          "description": "Prepaid-Kreditkarte ohne Bonitätsprüfung. Volle Kontrolle über Ihre Ausgaben.",
+          "feature1": "Ohne Bonitätsprüfung",
+          "feature2": "Prepaid-System",
+          "feature3": "Volle Kontrolle"
+        },
+        "toll": {
+          "title": "Mautlösungen",
+          "description": "Ein Anbieter für 17 Länder. Automatische Abrechnung, keine Vielzahl an Verträgen.",
+          "feature1": "17 Länder",
+          "feature2": "EETS-System",
+          "feature3": "Ein Vertrag"
+        },
+        "charging": {
+          "title": "RMC Ladekarte",
+          "description": "Elektromobilität europaweit. Demnächst verfügbar.",
+          "badge": "Demnächst"
+        }
+      },
+      "fuelcard": {
+        "title": "RMC Tankkarte",
+        "subtitle": "Kostenlos, europaweit, transparent – die Tankkarte für Privat- und Geschäftskunden",
+        "benefit1": {
+          "title": "Europaweite Akzeptanz",
+          "description": "Über 10.000 Tankstellen in ganz Europa, inklusive freier Marken für maximale Flexibilität."
+        },
+        "benefit2": {
+          "title": "Attraktive Dieselpreise",
+          "description": "Profitieren Sie von exklusiven Flottenrabatten und günstigen Dieselpreisen für Ihr Unternehmen."
+        },
+        "benefit3": {
+          "title": "Bargeldlos und sicher",
+          "description": "PIN-Schutz und zentrale Abrechnung sorgen für maximale Sicherheit und Kontrolle."
+        },
+        "benefit4": {
+          "title": "Kein Papierkram",
+          "description": "Einfache Monatsabrechnung mit transparenter Aufstellung aller Tankvorgänge."
+        },
+        "benefit5": {
+          "title": "Persönlicher Service",
+          "description": "Direkte Ansprechpartner und persönliche Betreuung, auch für Einzelunternehmer."
+        },
+        "targets": {
+          "title": "Für jeden die richtige Lösung",
+          "private": {
+            "title": "Privatkunden",
+            "description": "Günstige Preise, bargeldloses Tanken, übersichtliche 14-tägige Abrechnung",
+            "features": [
+              "Tagesaktuelle Marktpreise",
+              "14-tägige Abrechnung",
+              "Keine versteckten Kosten",
+              "Online-Portal Zugang"
+            ]
+          },
+          "business": {
+            "title": "Unternehmen",
+            "description": "Flottenmanagement, Fixpreise, zentrale Abrechnung, Steuervorteile",
+            "features": [
+              "Europaweite Fixpreise",
+              "Monatliche Sammelabrechnung",
+              "Individuelle Kartenlimits",
+              "MwSt- & Mineralölsteuer-Rückerstattung"
+            ]
+          },
+          "fleet": {
+            "title": "Großflotten",
+            "description": "Telematik, erweiterte Services, europaweit alle Kraftstoffe",
+            "features": [
+              "KITIN Telematik-Integration",
+              "Alle Kraftstoffe (Diesel, Benzin, AdBlue, LNG)",
+              "Detaillierte Verbrauchsanalysen",
+              "Speditionslösungen"
+            ]
+          }
+        },
+        "countries": {
+          "title": "Verfügbar in 19 Ländern",
+          "list": [
+            "Österreich", "Deutschland", "Spanien", "Frankreich", "Belgien",
+            "Bulgarien", "Kroatien", "Griechenland", "Ungarn", "Italien",
+            "Luxemburg", "Niederlande", "Polen", "Rumänien", "Slowenien",
+            "Slowakei", "Georgien", "Aserbaidschan", "Kasachstan"
+          ],
+          "austriaSpecial": "Österreich: Garantiert 1,5 Cent Ersparnis pro Liter"
+        }
+      },
+      "creditcard": {
+        "title": "RMC Prepaid Kreditkarte",
+        "subtitle": "Maximale Flexibilität unterwegs – ohne Bonitätsprüfung",
+        "usage": {
+          "title": "Perfekt für unterwegs",
+          "workshop": {
+            "title": "Werkstattkosten & Reparaturen",
+            "description": "Spontane Reparaturen auch im Ausland flexibel bezahlen"
+          },
+          "hotels": {
+            "title": "Hotels & Unterkünfte",
+            "description": "Viele Hotels verlangen Kreditkarte bei Buchung oder Check-in"
+          },
+          "restaurants": {
+            "title": "Restaurants & Verpflegung",
+            "description": "Bequem in Restaurants, Supermärkten oder Raststätten zahlen"
+          },
+          "parking": {
+            "title": "Parkgebühren & Strafzahlungen",
+            "description": "Parktickets und Bußgelder direkt am Automaten begleichen"
+          },
+          "reservations": {
+            "title": "Reservierungen & Online-Buchungen",
+            "description": "Fähren, Mautstrecken oder Stellplätze sicher vorab buchen"
+          },
+          "emergencies": {
+            "title": "Notfälle & spontane Ausgaben",
+            "description": "Finanzielle Reserve für unerwartete Situationen"
+          }
+        },
+        "benefits": {
+          "title": "Ihre Vorteile",
+          "noCredit": {
+            "title": "Ohne Bonitätsprüfung",
+            "description": "Nur aufgeladenes Guthaben verwendbar – keine Verschuldung möglich"
+          },
+          "control": {
+            "title": "Maximale Kostenkontrolle",
+            "description": "Sie können nur über verfügbares Guthaben verfügen"
+          },
+          "transparency": {
+            "title": "Volle Transparenz",
+            "description": "Alle Zahlungen jederzeit online im Portal einsehbar"
+          }
+        }
+      },
+      "toll": {
+        "title": "Mautlösungen für Europa",
+        "subtitle": "Ein Anbieter für 17 Länder – einfach, zuverlässig, transparent",
+        "advantages": {
+          "title": "Ihre Vorteile",
+          "oneProvider": {
+            "title": "Ein Anbieter für alle Mautsysteme",
+            "description": "Keine Vielzahl an Verträgen mehr notwendig – alles aus einer Hand"
+          },
+          "eets": {
+            "title": "EETS-Integration",
+            "description": "Neue Länder können in wenigen Minuten hinzugefügt werden"
+          },
+          "billing": {
+            "title": "Kombinierte Abrechnung",
+            "description": "Maut und Tanken in einer Rechnung für maximale Effizienz"
+          },
+          "overview": {
+            "title": "Tägliche Übersicht",
+            "description": "Alle Mautgebühren transparent im RMC Service-Portal"
+          }
+        },
+        "countries": {
+          "title": "Verfügbar in 17 Ländern",
+          "list": [
+            "Österreich", "Deutschland", "Belgien", "Frankreich", "Spanien",
+            "Portugal", "Italien", "Ungarn", "Slowakei", "Slowenien",
+            "Kroatien", "Bulgarien", "Schweden", "Norwegen", "Dänemark",
+            "Polen", "Schweiz"
+          ]
+        },
+        "tunnel": {
+          "title": "Tunnelservice inklusive",
+          "description": "Automatische Abrechnung von Tunnelgebühren ohne Wartezeiten – alle Gebühren werden automatisch erfasst und transparent abgerechnet"
+        }
+      },
+      "charging": {
+        "title": "RMC Ladekarte",
+        "subtitle": "Der Schlüssel zur Elektromobilität – demnächst verfügbar",
+        "description": [
+          "Einfaches Laden an zahlreichen Ladestationen europaweit. Bargeldlos, transparent, zukunftssicher.",
+          "Die RMC Ladekarte wird in Kürze verfügbar sein und ermöglicht es, Elektrofahrzeuge bequem und unkompliziert an einem wachsenden Netzwerk von Ladestationen zu laden."
+        ]
+      },
+      "additional": {
+        "title": "Zusatzservices",
+        "vat": {
+          "title": "MwSt-Rückerstattung",
+          "description": "Umsatzsteuer aus dem europäischen Ausland zurückholen. Komplette Abwicklung durch unsere erfahrenen Partner."
+        },
+        "fuelTax": {
+          "title": "Mineralölsteuer-Erstattung",
+          "description": "Einsparpotenziale bei der Mineralölsteuer nutzen. In vielen EU-Ländern möglich."
+        },
+        "prepay": {
+          "title": "Prepay-Guthabenkonto",
+          "description": "Volle Ausgabenkontrolle ohne Bonitätsprüfung. Maximale Transparenz und Planungssicherheit."
+        },
+        "breakdown": {
+          "title": "24/7 Pannendienst",
+          "description": "Europaweit rund um die Uhr Hilfe im Notfall. Hotline: +43 662 856 85990"
+        },
+        "telematics": {
+          "title": "KITIN Telematik",
+          "description": "Flottenmanagement der nächsten Generation. Echtzeit-Tracking und Optimierung."
+        }
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": {
+          "question": "Wo kann ich mit der Tankkarte tanken?",
+          "answer": "An tausenden Tankstellen in ganz Europa. Unsere Tankkarte wird an allen großen Tankstellenketten sowie vielen freien Tankstellen akzeptiert."
+        },
+        "q2": {
+          "question": "Welche Fahrzeuge sind zugelassen?",
+          "answer": "Unsere Karten sind speziell für LKW, Zugmaschinen und Nutzfahrzeuge gedacht. Alle gängigen Nutzfahrzeuge können mit unserer Tankkarte betankt werden."
+        },
+        "q3": {
+          "question": "Ist die Karte auch für kleine Unternehmen geeignet?",
+          "answer": "Ja – egal ob Einzelunternehmer oder große Spedition. Wir bieten maßgeschneiderte Lösungen für Unternehmen jeder Größe an."
+        },
+        "q4": {
+          "question": "Wie erfolgt die Abrechnung?",
+          "answer": "Sie erhalten eine übersichtliche Monatsabrechnung mit allen Tankvorgängen. Die Zahlung erfolgt bequem per Lastschrift oder Überweisung."
+        },
+        "q5": {
+          "question": "Wie funktioniert die Prepaid-Kreditkarte?",
+          "answer": "Sie laden Guthaben auf die Karte und können nur über dieses verfügen. Keine Bonitätsprüfung erforderlich."
+        },
+        "q6": {
+          "question": "In welchen Ländern funktioniert die Mautlösung?",
+          "answer": "Aktuell in 17 europäischen Ländern, von Österreich und Deutschland bis Schweden und Kroatien."
+        },
+        "q7": {
+          "question": "Was ist der Unterschied zwischen Privat- und Firmenkunden?",
+          "answer": "Privatkunden erhalten 14-tägige Abrechnung, Firmenkunden monatliche Abrechnung mit Fixpreisen und erweiterten Services."
+        }
+      },
+      "contact": {
+        "title": "LKW-Tankkarte beantragen",
+        "subtitle": "Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!",
+        "form": {
+          "name": "Name *",
+          "company": "Firma *",
+          "email": "E-Mail *",
+          "phone": "Telefonnummer *",
+          "message": "Nachricht (optional)",
+          "submit": "Jetzt kostenlos beraten lassen"
+        },
+        "direct": {
+          "title": "Direkter Kontakt",
+          "description": "Unser Team steht Ihnen für alle Fragen rund um LKW-Tankkarten zur Verfügung. Wir beraten Sie gerne unverbindlich und finden die beste Lösung für Ihr Unternehmen."
+        },
+        "alert": "Vielen Dank für Ihre Anfrage! Wir melden uns schnellstmöglich bei Ihnen."
+      },
+      "footer": {
+        "company": "filo.cards",
+        "subtitle": "Ein Partner der RMC Service GmbH",
+        "description": "Ihr Partner für europäische Mobilitätslösungen",
+        "contact": "Kontakt",
+        "legal": "Rechtliches",
+        "imprint": "Impressum",
+        "privacy": "Datenschutz",
+        "terms": "AGB",
+        "copyright": "© 2025 filo.cards - Ein Partner der RMC Service GmbH. Alle Rechte vorbehalten."
+      }
+    },
+    "en": {
+      "page": {
+        "title": "European Mobility Solutions | filo.cards",
+        "description": "Cashless fuel across Europe with our fuel card. Toll solutions for 17 countries. Prepaid credit card without credit check. All from one provider.",
+        "keywords": "fuel card europe, truck fuel card, toll solutions, prepaid credit card, fleet management, RMC service, european mobility"
+      },
+      "navigation": {
+        "logo": "filo.cards",
+        "subtitle": "A partner of RMC Service GmbH",
+        "home": "Home",
+        "services": "Services",
+        "fuelcard": "Fuel Card",
+        "toll": "Toll",
+        "creditcard": "Credit Card",
+        "contact": "Contact",
+        "faq": "FAQ"
+      },
+      "hero": {
+        "title": "European Mobility Solutions | Fuel Card, Toll & Credit Card",
+        "subtitle": "Your partner for Europe-wide mobility – from fuel to tolls",
+        "benefit1": "Fuel card for 19 European countries",
+        "benefit2": "Toll solutions for 17 countries from one provider",
+        "benefit3": "Prepaid credit card without credit check",
+        "benefit4": "Transparent billing & full cost control",
+        "cta": "Request fuel card now",
+        "cardText": "FUEL CARD EUROPE"
+      },
+      "services": {
+        "title": "Our Mobility Solutions",
+        "subtitle": "Everything from one source – from fuel cards to toll billing",
+        "fuelcard": {
+          "title": "RMC Fuel Card",
+          "description": "Refuel cheaply across Europe at over 10,000 gas stations. No fees, attractive prices.",
+          "feature1": "19 Countries",
+          "feature2": "€0 Fees",
+          "feature3": "Austria: -1.5ct/L"
+        },
+        "creditcard": {
+          "title": "RMC Credit Card",
+          "description": "Prepaid credit card without credit check. Full control over your expenses.",
+          "feature1": "No Credit Check",
+          "feature2": "Prepaid System",
+          "feature3": "Full Control"
+        },
+        "toll": {
+          "title": "Toll Solutions",
+          "description": "One provider for 17 countries. Automatic billing, no multiple contracts.",
+          "feature1": "17 Countries",
+          "feature2": "EETS System",
+          "feature3": "One Contract"
+        },
+        "charging": {
+          "title": "RMC Charging Card",
+          "description": "Electromobility across Europe. Available soon.",
+          "badge": "Coming Soon"
+        }
+      },
+      "fuelcard": {
+        "title": "RMC Fuel Card",
+        "subtitle": "Free, Europe-wide, transparent – the fuel card for private and business customers",
+        "benefit1": {
+          "title": "Europe-wide acceptance",
+          "description": "Over 10,000 gas stations across Europe, including independent brands for maximum flexibility."
+        },
+        "benefit2": {
+          "title": "Attractive diesel prices",
+          "description": "Benefit from exclusive fleet discounts and favorable diesel prices for your company."
+        },
+        "benefit3": {
+          "title": "Cashless and secure",
+          "description": "PIN protection and central billing ensure maximum security and control."
+        },
+        "benefit4": {
+          "title": "No paperwork",
+          "description": "Simple monthly billing with transparent listing of all refueling transactions."
+        },
+        "benefit5": {
+          "title": "Personal service",
+          "description": "Direct contacts and personal support, also for individual entrepreneurs."
+        },
+        "targets": {
+          "title": "The right solution for everyone",
+          "private": {
+            "title": "Private Customers",
+            "description": "Cheap prices, cashless refueling, clear bi-weekly billing",
+            "features": [
+              "Daily market prices",
+              "Bi-weekly billing",
+              "No hidden costs",
+              "Online portal access"
+            ]
+          },
+          "business": {
+            "title": "Companies",
+            "description": "Fleet management, fixed prices, central billing, tax benefits",
+            "features": [
+              "Europe-wide fixed prices",
+              "Monthly collective billing",
+              "Individual card limits",
+              "VAT & fuel tax refunds"
+            ]
+          },
+          "fleet": {
+            "title": "Large Fleets",
+            "description": "Telematics, extended services, all fuels Europe-wide",
+            "features": [
+              "KITIN telematics integration",
+              "All fuels (Diesel, Petrol, AdBlue, LNG)",
+              "Detailed consumption analysis",
+              "Transport solutions"
+            ]
+          }
+        },
+        "countries": {
+          "title": "Available in 19 countries",
+          "list": [
+            "Austria", "Germany", "Spain", "France", "Belgium",
+            "Bulgaria", "Croatia", "Greece", "Hungary", "Italy",
+            "Luxembourg", "Netherlands", "Poland", "Romania", "Slovenia",
+            "Slovakia", "Georgia", "Azerbaijan", "Kazakhstan"
+          ],
+          "austriaSpecial": "Austria: Guaranteed 1.5 cents savings per liter"
+        }
+      },
+      "creditcard": {
+        "title": "RMC Prepaid Credit Card",
+        "subtitle": "Maximum flexibility on the road – without credit check",
+        "usage": {
+          "title": "Perfect for travel",
+          "workshop": {
+            "title": "Workshop costs & repairs",
+            "description": "Pay for spontaneous repairs flexibly, even abroad"
+          },
+          "hotels": {
+            "title": "Hotels & accommodations",
+            "description": "Many hotels require a credit card when booking or checking in"
+          },
+          "restaurants": {
+            "title": "Restaurants & food",
+            "description": "Pay conveniently in restaurants, supermarkets or service stations"
+          },
+          "parking": {
+            "title": "Parking fees & fines",
+            "description": "Pay parking tickets and fines directly at the machine"
+          },
+          "reservations": {
+            "title": "Reservations & online bookings",
+            "description": "Book ferries, toll routes or parking spaces securely in advance"
+          },
+          "emergencies": {
+            "title": "Emergencies & spontaneous expenses",
+            "description": "Financial reserve for unexpected situations"
+          }
+        },
+        "benefits": {
+          "title": "Your benefits",
+          "noCredit": {
+            "title": "Without credit check",
+            "description": "Only loaded credit can be used – no debt possible"
+          },
+          "control": {
+            "title": "Maximum cost control",
+            "description": "You can only spend available credit"
+          },
+          "transparency": {
+            "title": "Full transparency",
+            "description": "All payments visible online in the portal at any time"
+          }
+        }
+      },
+      "toll": {
+        "title": "Toll Solutions for Europe",
+        "subtitle": "One provider for 17 countries – simple, reliable, transparent",
+        "advantages": {
+          "title": "Your advantages",
+          "oneProvider": {
+            "title": "One provider for all toll systems",
+            "description": "No need for multiple contracts anymore – everything from one source"
+          },
+          "eets": {
+            "title": "EETS integration",
+            "description": "New countries can be added in minutes"
+          },
+          "billing": {
+            "title": "Combined billing",
+            "description": "Toll and fuel in one invoice for maximum efficiency"
+          },
+          "overview": {
+            "title": "Daily overview",
+            "description": "All toll fees transparent in the RMC Service portal"
+          }
+        },
+        "countries": {
+          "title": "Available in 17 countries",
+          "list": [
+            "Austria", "Germany", "Belgium", "France", "Spain",
+            "Portugal", "Italy", "Hungary", "Slovakia", "Slovenia",
+            "Croatia", "Bulgaria", "Sweden", "Norway", "Denmark",
+            "Poland", "Switzerland"
+          ]
+        },
+        "tunnel": {
+          "title": "Tunnel service included",
+          "description": "Automatic billing of tunnel fees without waiting times – all fees are automatically recorded and billed transparently"
+        }
+      },
+      "charging": {
+        "title": "RMC Charging Card",
+        "subtitle": "The key to electromobility – available soon",
+        "description": [
+          "Easy charging at numerous charging stations across Europe. Cashless, transparent, future-proof.",
+          "The RMC Charging Card will be available soon and enables electric vehicles to be charged conveniently and easily at a growing network of charging stations."
+        ]
+      },
+      "additional": {
+        "title": "Additional Services",
+        "vat": {
+          "title": "VAT Refund",
+          "description": "Recover VAT from European countries. Complete processing through our experienced partners."
+        },
+        "fuelTax": {
+          "title": "Fuel Tax Refund",
+          "description": "Utilize fuel tax savings potential. Possible in many EU countries."
+        },
+        "prepay": {
+          "title": "Prepay Credit Account",
+          "description": "Full expense control without credit check. Maximum transparency and planning security."
+        },
+        "breakdown": {
+          "title": "24/7 Breakdown Service",
+          "description": "Help around the clock across Europe in emergencies. Hotline: +43 662 856 85990"
+        },
+        "telematics": {
+          "title": "KITIN Telematics",
+          "description": "Next generation fleet management. Real-time tracking and optimization."
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": {
+          "question": "Where can I refuel with the fuel card?",
+          "answer": "At thousands of gas stations across Europe. Our fuel card is accepted at all major gas station chains as well as many independent stations."
+        },
+        "q2": {
+          "question": "Which vehicles are authorized?",
+          "answer": "Our cards are specifically designed for trucks, tractors and commercial vehicles. All common commercial vehicles can be refueled with our fuel card."
+        },
+        "q3": {
+          "question": "Is the card also suitable for small companies?",
+          "answer": "Yes – whether individual entrepreneur or large transport company. We offer customized solutions for companies of all sizes."
+        },
+        "q4": {
+          "question": "How does billing work?",
+          "answer": "You receive a clear monthly statement with all refueling transactions. Payment is conveniently made by direct debit or bank transfer."
+        },
+        "q5": {
+          "question": "How does the prepaid credit card work?",
+          "answer": "You load credit onto the card and can only spend what you have loaded. No credit check required."
+        },
+        "q6": {
+          "question": "In which countries does the toll solution work?",
+          "answer": "Currently in 17 European countries, from Austria and Germany to Sweden and Croatia."
+        },
+        "q7": {
+          "question": "What is the difference between private and business customers?",
+          "answer": "Private customers receive bi-weekly billing, business customers monthly billing with fixed prices and extended services."
+        },
+        "q8": {
+          "question": "Does the fuel card work in the UK after Brexit?",
+          "answer": "Currently, our services focus on EU countries and selected partners. For UK availability, please contact our customer service."
+        },
+        "q9": {
+          "question": "What is KITIN telematics and how does it work?",
+          "answer": "KITIN is our advanced fleet management system that provides real-time tracking, route optimization, and detailed analytics for your vehicles across Europe."
+        }
+      },
+      "contact": {
+        "title": "Apply for truck fuel card",
+        "subtitle": "Would you like to apply for a fuel card for your truck fleet?<br>Contact us – we advise you personally and free of charge!",
+        "form": {
+          "name": "Name *",
+          "company": "Company *",
+          "email": "E-Mail *",
+          "phone": "Phone number *",
+          "message": "Message (optional)",
+          "submit": "Get free consultation now"
+        },
+        "direct": {
+          "title": "Direct contact",
+          "description": "Our team is available for all questions regarding truck fuel cards. We are happy to advise you without obligation and find the best solution for your company."
+        },
+        "alert": "Thank you for your inquiry! We will get back to you as soon as possible."
+      },
+      "footer": {
+        "company": "filo.cards",
+        "subtitle": "A partner of RMC Service GmbH",
+        "description": "Your partner for European mobility solutions",
+        "contact": "Contact",
+        "legal": "Legal",
+        "imprint": "Imprint",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "copyright": "© 2025 filo.cards - A partner of RMC Service GmbH. All rights reserved."
+      }
+    },
+    "tr": {
+      "page": {
+        "title": "Avrupa Mobilite Çözümleri | filo.cards",
+        "description": "Yakıt kartımızla Avrupa genelinde nakitsiz yakıt. 17 ülke için geçiş ücreti çözümleri. Kredi kontrolü olmadan ön ödemeli kredi kartı. Tek sağlayıcıdan hepsi.",
+        "keywords": "avrupa yakıt kartı, kamyon yakıt kartı, geçiş ücreti çözümleri, ön ödemeli kredi kartı, filo yönetimi, RMC servis, avrupa mobilite, türkiye nakliye"
+      },
+      "navigation": {
+        "logo": "filo.cards",
+        "subtitle": "RMC Service GmbH ortağı",
+        "home": "Ana Sayfa",
+        "services": "Hizmetler",
+        "fuelcard": "Yakıt Kartı",
+        "toll": "Geçiş Ücreti",
+        "creditcard": "Kredi Kartı",
+        "contact": "İletişim",
+        "faq": "SSS"
+      },
+      "hero": {
+        "title": "Avrupa Mobilite Çözümleri | Yakıt Kartı, Geçiş Ücreti ve Kredi Kartı",
+        "subtitle": "Avrupa genelinde mobilite ortağınız – yakıttan geçiş ücretlerine",
+        "benefit1": "19 Avrupa ülkesinde yakıt kartı",
+        "benefit2": "Tek sağlayıcıdan 17 ülke için geçiş ücreti çözümleri",
+        "benefit3": "Kredi kontrolü olmadan ön ödemeli kredi kartı",
+        "benefit4": "Şeffaf faturalandırma ve tam maliyet kontrolü",
+        "cta": "Şimdi yakıt kartı talep edin",
+        "cardText": "YAKIT KARTI AVRUPA"
+      },
+      "services": {
+        "title": "Mobilite Çözümlerimiz",
+        "subtitle": "Tek kaynaktan her şey – yakıt kartından geçiş ücreti faturalandırmasına",
+        "fuelcard": {
+          "title": "RMC Yakıt Kartı",
+          "description": "Avrupa genelinde 10.000'den fazla benzin istasyonunda ucuz yakıt. Ücretsiz, cazip fiyatlar.",
+          "feature1": "19 Ülke",
+          "feature2": "0€ Ücret",
+          "feature3": "Avusturya: -1,5ct/L"
+        },
+        "creditcard": {
+          "title": "RMC Kredi Kartı",
+          "description": "Kredi kontrolü olmadan ön ödemeli kredi kartı. Harcamalarınızın tam kontrolü.",
+          "feature1": "Kredi Kontrolü Yok",
+          "feature2": "Ön Ödeme Sistemi",
+          "feature3": "Tam Kontrol"
+        },
+        "toll": {
+          "title": "Geçiş Ücreti Çözümleri",
+          "description": "17 ülke için tek sağlayıcı. Otomatik faturalandırma, çoklu sözleşme yok.",
+          "feature1": "17 Ülke",
+          "feature2": "EETS Sistemi",
+          "feature3": "Tek Sözleşme"
+        },
+        "charging": {
+          "title": "RMC Şarj Kartı",
+          "description": "Avrupa genelinde elektrikli mobilite. Yakında mevcut.",
+          "badge": "Yakında"
+        }
+      },
+      "fuelcard": {
+        "title": "RMC Yakıt Kartı",
+        "subtitle": "Ücretsiz, Avrupa genelinde, şeffaf – özel ve kurumsal müşteriler için yakıt kartı",
+        "benefit1": {
+          "title": "Avrupa genelinde kabul",
+          "description": "Avrupa genelinde 10.000'den fazla benzin istasyonu, maksimum esneklik için bağımsız markalar dahil."
+        },
+        "benefit2": {
+          "title": "Cazip mazot fiyatları",
+          "description": "Şirketiniz için özel filo indirimlerinden ve uygun mazot fiyatlarından yararlanın."
+        },
+        "benefit3": {
+          "title": "Nakitsiz ve güvenli",
+          "description": "PIN koruması ve merkezi faturalandırma maksimum güvenlik ve kontrol sağlar."
+        },
+        "benefit4": {
+          "title": "Evrak işi yok",
+          "description": "Tüm yakıt işlemlerinin şeffaf listesiyle basit aylık faturalandırma."
+        },
+        "benefit5": {
+          "title": "Kişisel hizmet",
+          "description": "Bireysel girişimciler için de doğrudan iletişim ve kişisel destek."
+        },
+        "targets": {
+          "title": "Herkes için doğru çözüm",
+          "private": {
+            "title": "Özel Müşteriler",
+            "description": "Ucuz fiyatlar, nakitsiz yakıt, açık iki haftalık faturalandırma",
+            "features": [
+              "Günlük piyasa fiyatları",
+              "İki haftalık faturalandırma",
+              "Gizli maliyet yok",
+              "Online portal erişimi"
+            ]
+          },
+          "business": {
+            "title": "Şirketler",
+            "description": "Filo yönetimi, sabit fiyatlar, merkezi faturalandırma, vergi avantajları",
+            "features": [
+              "Avrupa genelinde sabit fiyatlar",
+              "Aylık toplu faturalandırma",
+              "Bireysel kart limitleri",
+              "KDV ve yakıt vergisi iadeleri"
+            ]
+          },
+          "fleet": {
+            "title": "Büyük Filolar",
+            "description": "Telematik, genişletilmiş hizmetler, Avrupa genelinde tüm yakıtlar",
+            "features": [
+              "KITIN telematik entegrasyonu",
+              "Tüm yakıtlar (Dizel, Benzin, AdBlue, LNG)",
+              "Detaylı tüketim analizi",
+              "Nakliye çözümleri"
+            ]
+          }
+        },
+        "countries": {
+          "title": "19 ülkede mevcut",
+          "list": [
+            "Avusturya", "Almanya", "İspanya", "Fransa", "Belçika",
+            "Bulgaristan", "Hırvatistan", "Yunanistan", "Macaristan", "İtalya",
+            "Lüksemburg", "Hollanda", "Polonya", "Romanya", "Slovenya",
+            "Slovakya", "Gürcistan", "Azerbaycan", "Kazakistan"
+          ],
+          "austriaSpecial": "Avusturya: Litre başına garantili 1,5 sent tasarruf"
+        }
+      },
+      "creditcard": {
+        "title": "RMC Ön Ödemeli Kredi Kartı",
+        "subtitle": "Yolda maksimum esneklik – kredi kontrolü olmadan",
+        "usage": {
+          "title": "Seyahat için mükemmel",
+          "workshop": {
+            "title": "Atölye maliyetleri ve onarımlar",
+            "description": "Yurt dışında bile ani onarımları esnek şekilde ödeyin"
+          },
+          "hotels": {
+            "title": "Oteller ve konaklama",
+            "description": "Birçok otel rezervasyon veya check-in sırasında kredi kartı ister"
+          },
+          "restaurants": {
+            "title": "Restoranlar ve yemek",
+            "description": "Restoranlarda, süpermarketlerde veya benzin istasyonlarında rahatça ödeyin"
+          },
+          "parking": {
+            "title": "Park ücretleri ve cezalar",
+            "description": "Park biletlerini ve cezaları doğrudan makinede ödeyin"
+          },
+          "reservations": {
+            "title": "Rezervasyonlar ve online rezervasyonlar",
+            "description": "Feribotları, ücretli yolları veya park yerlerini güvenle önceden rezerve edin"
+          },
+          "emergencies": {
+            "title": "Acil durumlar ve ani harcamalar",
+            "description": "Beklenmedik durumlar için finansal rezerv"
+          }
+        },
+        "benefits": {
+          "title": "Avantajlarınız",
+          "noCredit": {
+            "title": "Kredi kontrolü olmadan",
+            "description": "Sadece yüklenen kredi kullanılabilir – borçlanma mümkün değil"
+          },
+          "control": {
+            "title": "Maksimum maliyet kontrolü",
+            "description": "Sadece mevcut kredinin üzerinde harcama yapabilirsiniz"
+          },
+          "transparency": {
+            "title": "Tam şeffaflık",
+            "description": "Tüm ödemeler her zaman portalda online görülebilir"
+          }
+        }
+      },
+      "toll": {
+        "title": "Avrupa için Geçiş Ücreti Çözümleri",
+        "subtitle": "17 ülke için tek sağlayıcı – basit, güvenilir, şeffaf",
+        "advantages": {
+          "title": "Avantajlarınız",
+          "oneProvider": {
+            "title": "Tüm geçiş ücreti sistemleri için tek sağlayıcı",
+            "description": "Artık çoklu sözleşmelere gerek yok – tek kaynaktan her şey"
+          },
+          "eets": {
+            "title": "EETS entegrasyonu",
+            "description": "Yeni ülkeler dakikalar içinde eklenebilir"
+          },
+          "billing": {
+            "title": "Birleşik faturalandırma",
+            "description": "Maksimum verimlilik için geçiş ücreti ve yakıt tek faturada"
+          },
+          "overview": {
+            "title": "Günlük genel bakış",
+            "description": "RMC Service portalında tüm geçiş ücretleri şeffaf"
+          }
+        },
+        "countries": {
+          "title": "17 ülkede mevcut",
+          "list": [
+            "Avusturya", "Almanya", "Belçika", "Fransa", "İspanya",
+            "Portekiz", "İtalya", "Macaristan", "Slovakya", "Slovenya",
+            "Hırvatistan", "Bulgaristan", "İsveç", "Norveç", "Danimarka",
+            "Polonya", "İsviçre"
+          ]
+        },
+        "tunnel": {
+          "title": "Tünel hizmeti dahil",
+          "description": "Bekleme süresi olmadan tünel ücretlerinin otomatik faturalandırması – tüm ücretler otomatik olarak kaydedilir ve şeffaf bir şekilde faturalandırılır"
+        }
+      },
+      "charging": {
+        "title": "RMC Şarj Kartı",
+        "subtitle": "Elektrikli mobilitenin anahtarı – yakında mevcut",
+        "description": [
+          "Avrupa genelinde çok sayıda şarj istasyonunda kolay şarj. Nakitsiz, şeffaf, geleceğe hazır.",
+          "RMC Şarj Kartı yakında mevcut olacak ve elektrikli araçların büyüyen bir şarj istasyonu ağında rahat ve kolay şarj edilmesini sağlar."
+        ]
+      },
+      "additional": {
+        "title": "Ek Hizmetler",
+        "vat": {
+          "title": "KDV İadesi",
+          "description": "Avrupa ülkelerinden KDV'yi geri alın. Deneyimli ortaklarımız aracılığıyla tam işlem."
+        },
+        "fuelTax": {
+          "title": "Akaryakıt Vergisi İadesi",
+          "description": "Akaryakıt vergisi tasarruf potansiyelinden yararlanın. Birçok AB ülkesinde mümkün."
+        },
+        "prepay": {
+          "title": "Ön Ödeme Kredi Hesabı",
+          "description": "Kredi kontrolü olmadan tam harcama kontrolü. Maksimum şeffaflık ve planlama güvenliği."
+        },
+        "breakdown": {
+          "title": "24/7 Arıza Hizmeti",
+          "description": "Acil durumlarda Avrupa genelinde günün her saati yardım. Hotline: +43 662 856 85990"
+        },
+        "telematics": {
+          "title": "KITIN Telematik",
+          "description": "Yeni nesil filo yönetimi. Gerçek zamanlı takip ve optimizasyon."
+        }
+      },
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "q1": {
+          "question": "Yakıt kartıyla nerede yakıt alabilirim?",
+          "answer": "Avrupa genelinde binlerce benzin istasyonunda. Yakıt kartımız tüm büyük benzin istasyonu zincirlerinde ve birçok bağımsız istasyonda kabul edilir."
+        },
+        "q2": {
+          "question": "Hangi araçlar yetkilendirilmiştir?",
+          "answer": "Kartlarımız özellikle kamyonlar, çekiciler ve ticari araçlar için tasarlanmıştır. Tüm yaygın ticari araçlar yakıt kartımızla yakıt alabilir."
+        },
+        "q3": {
+          "question": "Kart küçük şirketler için de uygun mu?",
+          "answer": "Evet – ister bireysel girişimci ister büyük nakliye şirketi olun. Her boyuttaki şirket için özelleştirilmiş çözümler sunuyoruz."
+        },
+        "q4": {
+          "question": "Faturalandırma nasıl çalışır?",
+          "answer": "Tüm yakıt işlemleriyle birlikte açık bir aylık ekstre alırsınız. Ödeme otomatik ödeme talimatı veya banka havalesi ile rahatlıkla yapılır."
+        },
+        "q5": {
+          "question": "Ön ödemeli kredi kartı nasıl çalışır?",
+          "answer": "Karta kredi yüklersiniz ve sadece yüklediğiniz kadar harcayabilirsiniz. Kredi kontrolü gerekmez."
+        },
+        "q6": {
+          "question": "Geçiş ücreti çözümü hangi ülkelerde çalışır?",
+          "answer": "Şu anda Avusturya ve Almanya'dan İsveç ve Hırvatistan'a 17 Avrupa ülkesinde."
+        },
+        "q7": {
+          "question": "Özel ve kurumsal müşteriler arasındaki fark nedir?",
+          "answer": "Özel müşteriler iki haftalık faturalandırma, kurumsal müşteriler sabit fiyatlar ve genişletilmiş hizmetlerle aylık faturalandırma alır."
+        },
+        "q8": {
+          "question": "Türkiye'de yakıt kartı kullanabiliyor muyum?",
+          "answer": "Şu anda hizmetlerimiz öncelikle Avrupa ülkelerini kapsamaktadır. Türkiye kullanılabilirliği için müşteri hizmetlerimizle iletişime geçin."
+        },
+        "q9": {
+          "question": "TIR şoförleri için özel avantajlar var mı?",
+          "answer": "Evet, uluslararası nakliye şirketleri için özel fiyatlandırma ve genişletilmiş servisler sunuyoruz. Detaylar için bizimle iletişime geçin."
+        }
+      },
+      "contact": {
+        "title": "Kamyon yakıt kartı başvurusu",
+        "subtitle": "Kamyon filonuz için bir yakıt kartı başvurusu yapmak mı istiyorsunuz?<br>Bizimle iletişime geçin – size kişisel ve ücretsiz danışmanlık veriyoruz!",
+        "form": {
+          "name": "İsim *",
+          "company": "Şirket *",
+          "email": "E-posta *",
+          "phone": "Telefon numarası *",
+          "message": "Mesaj (isteğe bağlı)",
+          "submit": "Şimdi ücretsiz danışmanlık alın"
+        },
+        "direct": {
+          "title": "Doğrudan iletişim",
+          "description": "Ekibimiz kamyon yakıt kartlarıyla ilgili tüm sorularınız için hazırdır. Size yükümlülük olmaksızın danışmanlık vermekten ve şirketiniz için en iyi çözümü bulmaktan memnuniyet duyarız."
+        },
+        "alert": "İlginiz için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz."
+      },
+      "footer": {
+        "company": "filo.cards",
+        "subtitle": "RMC Service GmbH ortağı",
+        "description": "Avrupa mobilite çözümleri için ortağınız",
+        "contact": "İletişim",
+        "legal": "Hukuki",
+        "imprint": "Künye",
+        "privacy": "Gizlilik",
+        "terms": "Şartlar",
+        "copyright": "© 2025 filo.cards - RMC Service GmbH ortağı. Tüm hakları saklıdır."
+      }
+    }
+  }
+}
