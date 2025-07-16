@@ -1,0 +1,6 @@
+# Protect log files from web access
+Order deny,allow
+Deny from all
+<Files ~ "\.log$">
+    Deny from all
+</Files>
