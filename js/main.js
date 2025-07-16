@@ -309,13 +309,12 @@ window.debugTranslations = function() {
 
 // Generate worldmap cells after DOM load
 document.addEventListener('DOMContentLoaded', function() {
-    const worldmapGrid = document.querySelector('.worldmap-grid');
-    if (worldmapGrid) {
-        for (let i = 0; i < 1925; i++) {
+    const container = document.querySelector('.worldmap-container');
+    if (container) {
+        for (let i = 0; i < 35 * 55; i++) {
             const cell = document.createElement('div');
             cell.className = 'worldmap-cell';
-            cell.style.setProperty('--i', i);
-            worldmapGrid.appendChild(cell);
+            container.appendChild(cell);
         }
     }
 });
