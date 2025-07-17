@@ -1305,31 +1305,45 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .finder-btn i {
-            font-size: 1rem;
-            width: 16px;
-            text-align: center;
+        /* Icons via pseudo-elements */
+        .station-finder-text h3::before {
+            content: '\f3c5'; /* fa-map-marker-alt */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 0.5rem;
+            color: var(--primary-yellow);
         }
 
-        /* Icon colors */
-        .finder-btn .fa-globe {
+        .finder-btn-web::before {
+            content: '\f0ac'; /* fa-globe */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 0.5rem;
             color: var(--primary-green);
         }
 
-        .finder-btn .fa-android {
+        .finder-btn-android::before {
+            content: '\f17b'; /* fa-android */
+            font-family: "Font Awesome 6 Brands";
+            font-weight: 400;
+            margin-right: 0.5rem;
             color: #3DDC84;
         }
 
-        .finder-btn .fa-apple {
+        .finder-btn-ios::before {
+            content: '\f179'; /* fa-apple */
+            font-family: "Font Awesome 6 Brands";
+            font-weight: 400;
+            margin-right: 0.5rem;
             color: #000000;
         }
 
-        .finder-btn .fa-info-circle {
+        .finder-btn-info::before {
+            content: '\f05a'; /* fa-info-circle */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 0.5rem;
             color: var(--white);
-        }
-
-        .finder-btn .fa-map-marker-alt {
-            color: var(--primary-yellow);
         }
 
         /* Special styling for info button */
