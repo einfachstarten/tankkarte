@@ -41,3 +41,18 @@
         Header set Cache-Control "public, max-age=3600"
     </FilesMatch>
 </IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # SEO-friendly URLs redirect to main page with anchors
+    RewriteRule ^tankkarte/?$ /#fuel-solutions [R=301,L]
+    RewriteRule ^kreditkarte/?$ /#payment-mobility [R=301,L]
+    RewriteRule ^maut/?$ /#payment-mobility [R=301,L]
+    RewriteRule ^kontakt/?$ /#support [R=301,L]
+
+    # Turkish URLs
+    RewriteRule ^tr/yakit-karti/?$ /tr/#fuel-solutions [R=301,L]
+    RewriteRule ^tr/kredi-karti/?$ /tr/#payment-mobility [R=301,L]
+    RewriteRule ^tr/gecis-ucreti/?$ /tr/#payment-mobility [R=301,L]
+</IfModule>
