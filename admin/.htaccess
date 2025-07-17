@@ -1,0 +1,11 @@
+# Protect admin directory
+AuthType Basic
+AuthName "Admin Area"
+AuthUserFile /home/.sites/689/site7951508/web/demos/tankkarte/admin/.htpasswd
+Require valid-user
+
+# Additional protection for PHP files
+<Files "*.php">
+    Order allow,deny
+    Allow from all
+</Files>
