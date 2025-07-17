@@ -1305,8 +1305,31 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .finder-btn span {
+        .finder-btn i {
             font-size: 1rem;
+            width: 16px;
+            text-align: center;
+        }
+
+        /* Icon colors */
+        .finder-btn .fa-globe {
+            color: var(--primary-green);
+        }
+
+        .finder-btn .fa-android {
+            color: #3DDC84;
+        }
+
+        .finder-btn .fa-apple {
+            color: #000000;
+        }
+
+        .finder-btn .fa-info-circle {
+            color: var(--white);
+        }
+
+        .finder-btn .fa-map-marker-alt {
+            color: var(--primary-yellow);
         }
 
         /* Special styling for info button */
