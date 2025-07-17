@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (window.featureFlags.isEnabled('whatsapp_integration')) {
             await window.chatIntegration.init();
         }
+
+        // Update content if content management is enabled
+        if (window.featureFlags.isEnabled('content_management')) {
+            updateContentFromConfig();
+        }
     } else {
         console.error('Failed to load translations');
         // Show error message or fallback content
@@ -63,7 +68,11 @@ async function switchLanguage(lang) {
     updateFuelCardText(lang);
 
     // Update station finder links
-    updateStationFinderLinks();
+    if (window.featureFlags.isEnabled('content_management')) {
+        updateStationFinderLinks(window.featureFlags.getConfig('content_management'));
+    } else {
+        updateStationFinderLinks();
+    }
 
     // Handle special cases
     handleSpecialTranslations(lang);
@@ -156,9 +165,60 @@ function updateFuelCardText(lang) {
     }
 }
 
-function updateStationFinderLinks() {
+function updateContentFromConfig() {
+    const config = window.featureFlags.getConfig('content_management');
+    if (!config) return;
+
+    const titleElements = {
+        'hero.title': config.titles.hero_main,
+        'services.title': config.titles.services_main,
+        'fuelcard.title': config.titles.fuelcard_main,
+        'creditcard.title': config.titles.creditcard_main,
+        'toll.title': config.titles.toll_main,
+        'contact.title': config.titles.contact_main
+    };
+
+    Object.entries(titleElements).forEach(([key, value]) => {
+        if (value) {
+            const elements = document.querySelectorAll(`[data-translate="${key}"]`);
+            elements.forEach(el => el.textContent = value);
+        }
+    });
+
+    const urlElements = {
+        '.finder-btn-web': config.external_urls.station_finder_web,
+        '.finder-btn-android': config.external_urls.station_finder_android,
+        '.finder-btn-ios': config.external_urls.station_finder_ios
+    };
+
+    Object.entries(urlElements).forEach(([selector, url]) => {
+        if (url) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => el.href = url);
+        }
+    });
+
+    updateStationFinderLinks(config);
+}
+
+function updateStationFinderLinks(config) {
     const infoLink = document.querySelector('.finder-btn-info');
-    if (infoLink) {
+    if (!infoLink) return;
+
+    if (config && config.external_urls) {
+        let url;
+        switch(currentLanguage) {
+            case 'en':
+                url = config.external_urls.rmc_info_en;
+                break;
+            case 'tr':
+                url = config.external_urls.rmc_info_tr;
+                break;
+            default:
+                url = config.external_urls.rmc_info_de;
+        }
+        if (url) infoLink.href = url;
+    } else {
         const baseUrl = 'https://www.rmc-service.com';
         let langPath = '/de/tankstellenfinder/tankstellennetz';
 
