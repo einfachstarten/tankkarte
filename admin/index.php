@@ -137,7 +137,7 @@ function mergeWithDefaults($currentConfig, $defaults) {
         if (!isset($currentConfig['features'][$feature])) {
             $currentConfig['features'][$feature] = $defaultConfig;
         } else {
-            $currentConfig['features'][$feature] = array_merge_recursive(
+            $currentConfig['features'][$feature] = array_merge(
                 $defaultConfig,
                 $currentConfig['features'][$feature]
             );
