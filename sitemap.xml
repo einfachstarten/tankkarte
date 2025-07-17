@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Pages -->
   <url>
     <loc>https://www.filo.cards/</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.filo.cards/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.filo.cards/tr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.filo.cards/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.filo.cards/" />
   </url>
+  
   <url>
     <loc>https://www.filo.cards/tr/</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.filo.cards/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.filo.cards/tr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.filo.cards/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.filo.cards/" />
   </url>
+
+  <url>
+    <loc>https://www.filo.cards/en/</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.filo.cards/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.filo.cards/tr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.filo.cards/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.filo.cards/" />
+  </url>
+
+  <!-- Service Pages (Virtual URLs for better SEO) -->
+  <url>
+    <loc>https://www.filo.cards/tankkarte</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.filo.cards/kreditkarte</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.filo.cards/maut</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.filo.cards/kontakt</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Turkish Service Pages -->
+  <url>
+    <loc>https://www.filo.cards/tr/yakit-karti</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.filo.cards/tr/kredi-karti</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.filo.cards/tr/gecis-ucreti</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
