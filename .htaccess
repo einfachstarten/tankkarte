@@ -51,8 +51,6 @@
     RewriteRule ^maut/?$ /#payment-mobility [R=301,L]
     RewriteRule ^kontakt/?$ /#support [R=301,L]
 
-    # Turkish URLs
-    RewriteRule ^tr/yakit-karti/?$ /tr/#fuel-solutions [R=301,L]
-    RewriteRule ^tr/kredi-karti/?$ /tr/#payment-mobility [R=301,L]
-    RewriteRule ^tr/gecis-ucreti/?$ /tr/#payment-mobility [R=301,L]
+    # Remove old Turkish URLs (redirect to main page)
+    RewriteRule ^tr/?$ / [R=301,L]
 </IfModule>
