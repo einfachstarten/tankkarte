@@ -171,6 +171,80 @@ exit;
                 </div>
             </div>
 
+            <div class="card">
+                <h2>Content Management</h2>
+                <div class="feature-toggle">
+                    <div>
+                        <strong>Content Management</strong>
+                        <br><small>Titel und Links über Admin Panel verwalten</small>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="content_enabled" <?php echo $currentConfig['features']['content_management']['enabled'] ? 'checked' : ''; ?>>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="config-section">
+                    <h3>Kontakt</h3>
+                    <div class="form-group">
+                        <label>E-Mail-Adresse</label>
+                        <input type="email" id="contact_email" value="<?php echo $currentConfig['features']['content_management']['contact_email']; ?>">
+                    </div>
+
+                    <h3>Haupttitel</h3>
+                    <div class="form-group">
+                        <label>Hero Titel</label>
+                        <input type="text" id="hero_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['hero_main']); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Services Titel</label>
+                        <input type="text" id="services_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['services_main']); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Tankkarte Titel</label>
+                        <input type="text" id="fuelcard_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['fuelcard_main']); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Kreditkarte Titel</label>
+                        <input type="text" id="creditcard_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['creditcard_main']); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Maut Titel</label>
+                        <input type="text" id="toll_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['toll_main']); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Kontakt Titel</label>
+                        <input type="text" id="contact_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['contact_main']); ?>">
+                    </div>
+
+                    <h3>Externe Links</h3>
+                    <div class="form-group">
+                        <label>Station Finder Web</label>
+                        <input type="url" id="finder_web" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_web']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Android App</label>
+                        <input type="url" id="finder_android" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_android']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>iOS App</label>
+                        <input type="url" id="finder_ios" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_ios']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>RMC Info DE</label>
+                        <input type="url" id="rmc_info_de" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_de']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>RMC Info EN</label>
+                        <input type="url" id="rmc_info_en" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_en']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>RMC Info TR</label>
+                        <input type="url" id="rmc_info_tr" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_tr']; ?>">
+                    </div>
+                </div>
+            </div>
+
             <!-- Future Features -->
             <div class="card">
                 <h2>Zukünftige Features</h2>
@@ -208,6 +282,26 @@ exit;
                         enabled: document.getElementById('chat_widget_enabled').checked,
                         provider: "tawk",
                         widget_id: ""
+                    },
+                    content_management: {
+                        enabled: document.getElementById('content_enabled').checked,
+                        contact_email: document.getElementById('contact_email').value,
+                        titles: {
+                            hero_main: document.getElementById('hero_title').value,
+                            services_main: document.getElementById('services_title').value,
+                            fuelcard_main: document.getElementById('fuelcard_title').value,
+                            creditcard_main: document.getElementById('creditcard_title').value,
+                            toll_main: document.getElementById('toll_title').value,
+                            contact_main: document.getElementById('contact_title').value
+                        },
+                        external_urls: {
+                            station_finder_web: document.getElementById('finder_web').value,
+                            station_finder_android: document.getElementById('finder_android').value,
+                            station_finder_ios: document.getElementById('finder_ios').value,
+                            rmc_info_de: document.getElementById('rmc_info_de').value,
+                            rmc_info_en: document.getElementById('rmc_info_en').value,
+                            rmc_info_tr: document.getElementById('rmc_info_tr').value
+                        }
                     }
                 }
             };

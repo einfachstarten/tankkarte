@@ -51,6 +51,17 @@ function logSubmission($type, $data, $message = '') {
     }
 }
 
+// Load contact email from feature flags
+function getContactEmail() {
+    $flagsFile = __DIR__ . '/data/feature-flags.json';
+    if (file_exists($flagsFile)) {
+        $flags = json_decode(file_get_contents($flagsFile), true);
+        $email = $flags['features']['content_management']['contact_email'] ?? null;
+        if ($email) return $email;
+    }
+    return 'o.gokceviran@rmc-service.com';
+}
+
 // Start logging request
 $startTime = microtime(true);
 logSubmission('request', [
@@ -151,7 +162,7 @@ if (!empty($errors)) {
 }
 
 // Prepare email
-$to = 'o.gokceviran@rmc-service.com';
+$to = getContactEmail();
 $subject = '[Filo Cards] Neue Anfrage von ' . $company . ' (' . $name . ')';
 
 $email_body = "NEUE KONTAKTANFRAGE VON FILO.CARDS\n";
