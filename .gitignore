@@ -1,6 +1,7 @@
 # Ignoriere das Webhook-Skript
 webhook.php
 
-# Ignoriere die Log-Datei
+# Ignoriere Log-Dateien
 webhook.log
+logs/*.log
 index.html
