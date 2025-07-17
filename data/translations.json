@@ -275,7 +275,7 @@
         }
       },
       "contact": {
-        "title": "LKW-Tankkarte beantragen",
+        "title": "Kontaktieren Sie uns",
         "subtitle": "Sie möchten eine Dieselkarte für Ihre LKW-Flotte beantragen?<br>Kontaktieren Sie uns – wir beraten Sie persönlich und kostenlos!",
         "form": {
           "name": "Name *",
@@ -602,7 +602,7 @@
         }
       },
       "contact": {
-        "title": "Apply for truck fuel card",
+        "title": "Contact Us",
         "subtitle": "Would you like to apply for a fuel card for your truck fleet?<br>Contact us – we advise you personally and free of charge!",
         "form": {
           "name": "Name *",
@@ -929,7 +929,7 @@
         }
       },
       "contact": {
-        "title": "Kamyon yakıt kartı başvurusu",
+        "title": "Bizimle İletişime Geçin",
         "subtitle": "Kamyon filonuz için bir yakıt kartı başvurusu yapmak mı istiyorsunuz?<br>Bizimle iletişime geçin – size kişisel ve ücretsiz danışmanlık veriyoruz!",
         "form": {
           "name": "İsim *",
