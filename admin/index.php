@@ -41,6 +41,62 @@ if (isset($_POST['save_config']) && $_SESSION['admin_logged_in']) {
 // Load current config
 $currentConfig = json_decode(file_get_contents($configFile), true);
 
+// Fallback-Werte definieren (aktuelle Website-Inhalte)
+$defaultValues = [
+    'content_management' => [
+        'enabled' => false,
+        'contact_email' => 'o.gokceviran@rmc-service.com',
+        'titles' => [
+            'hero_main' => 'Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte',
+            'services_main' => 'Unsere Mobilitätslösungen',
+            'fuelcard_main' => 'RMC Tankkarte',
+            'creditcard_main' => 'RMC Prepaid Kreditkarte',
+            'toll_main' => 'Mautlösungen für Europa',
+            'contact_main' => 'Kontaktieren Sie uns'
+        ],
+        'external_urls' => [
+            'station_finder_web' => 'https://finder.rmc-service.com/rmc/map',
+            'station_finder_android' => 'https://play.google.com/store/apps/details?id=at.rmc.app',
+            'station_finder_ios' => 'https://apps.apple.com/at/app/rmc-finder/id6477531013',
+            'rmc_info_de' => 'https://www.rmc-service.com/de/tankstellenfinder/tankstellennetz',
+            'rmc_info_en' => 'https://www.rmc-service.com/en/station-finder/station-network',
+            'rmc_info_tr' => 'https://www.rmc-service.com/tr/istasyon-bulucu/istasyon-agi'
+        ]
+    ]
+];
+
+// Merge defaults mit aktueller Config
+function mergeWithDefaults($currentConfig, $defaults) {
+    foreach ($defaults as $feature => $defaultConfig) {
+        if (!isset($currentConfig['features'][$feature])) {
+            $currentConfig['features'][$feature] = $defaultConfig;
+        } else {
+            $currentConfig['features'][$feature] = array_merge_recursive(
+                $defaultConfig,
+                $currentConfig['features'][$feature]
+            );
+        }
+    }
+    return $currentConfig;
+}
+
+// Nach dem Config-Laden:
+$currentConfig = mergeWithDefaults($currentConfig, $defaultValues);
+
+// Helper function für sichere Werte
+function getConfigValue($config, $path, $default = '') {
+    $keys = explode('.', $path);
+    $value = $config;
+    foreach ($keys as $key) {
+        if (isset($value[$key])) {
+            $value = $value[$key];
+        } else {
+            return $default;
+        }
+    }
+    return $value;
+}
+
 if (!isset($_SESSION['admin_logged_in'])) {
 ?>
 <!DOCTYPE html>
@@ -188,59 +244,59 @@ exit;
                     <h3>Kontakt</h3>
                     <div class="form-group">
                         <label>E-Mail-Adresse</label>
-                        <input type="email" id="contact_email" value="<?php echo $currentConfig['features']['content_management']['contact_email']; ?>">
+                        <input type="email" id="contact_email" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.contact_email', 'o.gokceviran@rmc-service.com')); ?>">
                     </div>
 
                     <h3>Haupttitel</h3>
                     <div class="form-group">
                         <label>Hero Titel</label>
-                        <input type="text" id="hero_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['hero_main']); ?>">
+                        <input type="text" id="hero_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.hero_main', 'Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte')); ?>">
                     </div>
                     <div class="form-group">
                         <label>Services Titel</label>
-                        <input type="text" id="services_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['services_main']); ?>">
+                        <input type="text" id="services_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.services_main', 'Unsere Mobilitätslösungen')); ?>">
                     </div>
                     <div class="form-group">
                         <label>Tankkarte Titel</label>
-                        <input type="text" id="fuelcard_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['fuelcard_main']); ?>">
+                        <input type="text" id="fuelcard_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.fuelcard_main', 'RMC Tankkarte')); ?>">
                     </div>
                     <div class="form-group">
                         <label>Kreditkarte Titel</label>
-                        <input type="text" id="creditcard_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['creditcard_main']); ?>">
+                        <input type="text" id="creditcard_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.creditcard_main', 'RMC Prepaid Kreditkarte')); ?>">
                     </div>
                     <div class="form-group">
                         <label>Maut Titel</label>
-                        <input type="text" id="toll_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['toll_main']); ?>">
+                        <input type="text" id="toll_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.toll_main', 'Mautlösungen für Europa')); ?>">
                     </div>
                     <div class="form-group">
                         <label>Kontakt Titel</label>
-                        <input type="text" id="contact_title" value="<?php echo htmlspecialchars($currentConfig['features']['content_management']['titles']['contact_main']); ?>">
+                        <input type="text" id="contact_title" value="<?php echo htmlspecialchars(getConfigValue($currentConfig, 'features.content_management.titles.contact_main', 'Kontaktieren Sie uns')); ?>">
                     </div>
 
                     <h3>Externe Links</h3>
                     <div class="form-group">
                         <label>Station Finder Web</label>
-                        <input type="url" id="finder_web" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_web']; ?>">
+                        <input type="url" id="finder_web" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.station_finder_web', 'https://finder.rmc-service.com/rmc/map'); ?>">
                     </div>
                     <div class="form-group">
                         <label>Android App</label>
-                        <input type="url" id="finder_android" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_android']; ?>">
+                        <input type="url" id="finder_android" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.station_finder_android', 'https://play.google.com/store/apps/details?id=at.rmc.app'); ?>">
                     </div>
                     <div class="form-group">
                         <label>iOS App</label>
-                        <input type="url" id="finder_ios" value="<?php echo $currentConfig['features']['content_management']['external_urls']['station_finder_ios']; ?>">
+                        <input type="url" id="finder_ios" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.station_finder_ios', 'https://apps.apple.com/at/app/rmc-finder/id6477531013'); ?>">
                     </div>
                     <div class="form-group">
                         <label>RMC Info DE</label>
-                        <input type="url" id="rmc_info_de" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_de']; ?>">
+                        <input type="url" id="rmc_info_de" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.rmc_info_de', 'https://www.rmc-service.com/de/tankstellenfinder/tankstellennetz'); ?>">
                     </div>
                     <div class="form-group">
                         <label>RMC Info EN</label>
-                        <input type="url" id="rmc_info_en" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_en']; ?>">
+                        <input type="url" id="rmc_info_en" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.rmc_info_en', 'https://www.rmc-service.com/en/station-finder/station-network'); ?>">
                     </div>
                 <div class="form-group">
                         <label>RMC Info TR</label>
-                        <input type="url" id="rmc_info_tr" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_tr']; ?>">
+                        <input type="url" id="rmc_info_tr" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.rmc_info_tr', 'https://www.rmc-service.com/tr/istasyon-bulucu/istasyon-agi'); ?>">
                     </div>
                 </div>
             </div>
