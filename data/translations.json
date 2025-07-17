@@ -305,6 +305,12 @@
           "consultation": "Ich interessiere mich für Ihre Mobilitätslösungen."
         }
       },
+      "chat": {
+        "whatsapp_text": "WhatsApp",
+        "whatsapp_default_message": "Hallo! Ich interessiere mich für die Mobilitätslösungen von filo.cards.",
+        "notification_text": "Oder direkt per WhatsApp?",
+        "notification_button": "Jetzt chatten"
+      },
       "station_finder": {
         "title": "Tankstellen-Finder",
         "description": "Finden Sie die nächste RMC-Tankstelle",
@@ -632,6 +638,12 @@
           "consultation": "I am interested in your mobility solutions."
         }
       },
+      "chat": {
+        "whatsapp_text": "WhatsApp",
+        "whatsapp_default_message": "Hello! I'm interested in the mobility solutions from filo.cards.",
+        "notification_text": "Or directly via WhatsApp?",
+        "notification_button": "Chat now"
+      },
       "station_finder": {
         "title": "Station Finder",
         "description": "Find the nearest RMC station",
@@ -958,6 +970,12 @@
           "toll_solution": "Araçlarım için geçiş ücreti çözümüne ihtiyacım var.",
           "consultation": "Mobilite çözümlerinizle ilgileniyorum."
         }
+      },
+      "chat": {
+        "whatsapp_text": "WhatsApp",
+        "whatsapp_default_message": "Merhaba! filo.cards mobilite çözümleri ile ilgileniyorum.",
+        "notification_text": "Veya doğrudan WhatsApp ile?",
+        "notification_button": "Şimdi sohbet et"
       },
       "station_finder": {
         "title": "İstasyon Bulucu",
