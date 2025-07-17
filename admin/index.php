@@ -38,8 +38,17 @@ if (isset($_POST['save_config']) && $_SESSION['admin_logged_in']) {
     }
 }
 
-// Load current config
-$currentConfig = json_decode(file_get_contents($configFile), true);
+// Load current config safely
+$currentConfig = [];
+$rawConfig = @file_get_contents($configFile);
+if ($rawConfig !== false) {
+    $currentConfig = json_decode($rawConfig, true);
+    if (!is_array($currentConfig)) {
+        $currentConfig = [];
+    }
+} else {
+    $error = 'Konnte Konfigurationsdatei nicht laden';
+}
 
 // Fallback-Werte definieren (aktuelle Website-Inhalte)
 $defaultValues = [
