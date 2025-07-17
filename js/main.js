@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             await window.chatIntegration.init();
         }
 
+        // Nach Chat Integration hinzufügen:
+        // Initialize SEO Analytics if enabled
+        if (window.featureFlags.isEnabled('seo_analytics')) {
+            await window.seoAnalytics.init();
+            window.seoAnalytics.trackCTAClicks();
+        }
+
         // Update content if content management is enabled
         if (window.featureFlags.isEnabled('content_management')) {
             updateContentFromConfig();

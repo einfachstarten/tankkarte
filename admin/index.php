@@ -238,9 +238,86 @@ exit;
                         <label>RMC Info EN</label>
                         <input type="url" id="rmc_info_en" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_en']; ?>">
                     </div>
-                    <div class="form-group">
+                <div class="form-group">
                         <label>RMC Info TR</label>
                         <input type="url" id="rmc_info_tr" value="<?php echo $currentConfig['features']['content_management']['external_urls']['rmc_info_tr']; ?>">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO & Analytics Section -->
+            <div class="card">
+                <h2>SEO & Analytics</h2>
+                <div class="feature-toggle">
+                    <div>
+                        <strong>SEO & Analytics</strong>
+                        <br><small>Google Analytics, Structured Data, Social Media Optimization</small>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="seo_enabled" <?php echo $currentConfig['features']['seo_analytics']['enabled'] ? 'checked' : ''; ?> >
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="config-section">
+                    <h3>Google Analytics</h3>
+                    <div class="feature-toggle">
+                        <div>
+                            <strong>Google Analytics 4</strong>
+                            <br><small>Website Tracking und Conversion Measurement</small>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="ga_enabled" <?php echo $currentConfig['features']['seo_analytics']['google_analytics']['enabled'] ? 'checked' : ''; ?> >
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Google Analytics Tracking ID</label>
+                        <input type="text" id="ga_tracking_id" value="<?php echo $currentConfig['features']['seo_analytics']['google_analytics']['tracking_id']; ?>" placeholder="G-XXXXXXXXXX">
+                    </div>
+
+                    <h3>Structured Data</h3>
+                    <div class="feature-toggle">
+                        <div>
+                            <strong>Schema.org Markup</strong>
+                            <br><small>Bessere Google Search Results</small>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="structured_enabled" <?php echo $currentConfig['features']['seo_analytics']['structured_data']['enabled'] ? 'checked' : ''; ?> >
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Organisation Name</label>
+                        <input type="text" id="org_name" value="<?php echo $currentConfig['features']['seo_analytics']['structured_data']['organization_name']; ?>">
+                    </div>
+
+                    <h3>Social Media</h3>
+                    <div class="feature-toggle">
+                        <div>
+                            <strong>Open Graph & Twitter Cards</strong>
+                            <br><small>Bessere Social Media Previews</small>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="social_enabled" <?php echo $currentConfig['features']['seo_analytics']['social_media']['enabled'] ? 'checked' : ''; ?> >
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Open Graph Image</label>
+                        <input type="text" id="og_image" value="<?php echo $currentConfig['features']['seo_analytics']['social_media']['og_image']; ?>">
+                    </div>
+
+                    <h3>Performance</h3>
+                    <div class="feature-toggle">
+                        <div>
+                            <strong>Lazy Loading</strong>
+                            <br><small>Images on demand für bessere Performance</small>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="lazy_loading" <?php echo $currentConfig['features']['seo_analytics']['performance']['lazy_loading'] ? 'checked' : ''; ?> >
+                            <span class="slider"></span>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -301,6 +378,30 @@ exit;
                             rmc_info_de: document.getElementById('rmc_info_de').value,
                             rmc_info_en: document.getElementById('rmc_info_en').value,
                             rmc_info_tr: document.getElementById('rmc_info_tr').value
+                        }
+                    },
+                    seo_analytics: {
+                        enabled: document.getElementById('seo_enabled').checked,
+                        google_analytics: {
+                            enabled: document.getElementById('ga_enabled').checked,
+                            tracking_id: document.getElementById('ga_tracking_id').value,
+                            enhanced_ecommerce: false
+                        },
+                        structured_data: {
+                            enabled: document.getElementById('structured_enabled').checked,
+                            organization_name: document.getElementById('org_name').value,
+                            contact_phone: "+90 5530540989",
+                            service_area: ["Austria", "Germany", "Turkey", "Europe"]
+                        },
+                        social_media: {
+                            enabled: document.getElementById('social_enabled').checked,
+                            og_image: document.getElementById('og_image').value,
+                            twitter_handle: "@filocards"
+                        },
+                        performance: {
+                            lazy_loading: document.getElementById('lazy_loading').checked,
+                            critical_css: true,
+                            preload_fonts: true
                         }
                     }
                 }

@@ -32,6 +32,30 @@
                 "rmc_info_en": "https://www.rmc-service.com/en/station-finder/station-network",
                 "rmc_info_tr": "https://www.rmc-service.com/tr/istasyon-bulucu/istasyon-agi"
             }
+        },
+        "seo_analytics": {
+            "enabled": true,
+            "google_analytics": {
+                "enabled": true,
+                "tracking_id": "G-XXXXXXXXXX",
+                "enhanced_ecommerce": false
+            },
+            "structured_data": {
+                "enabled": true,
+                "organization_name": "RMC Service GmbH",
+                "contact_phone": "+90 5530540989",
+                "service_area": ["Austria", "Germany", "Turkey", "Europe"]
+            },
+            "social_media": {
+                "enabled": true,
+                "og_image": "images/filo-cards-og.jpg",
+                "twitter_handle": "@filocards"
+            },
+            "performance": {
+                "lazy_loading": true,
+                "critical_css": true,
+                "preload_fonts": true
+            }
         }
     }
 }
