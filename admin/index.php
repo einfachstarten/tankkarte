@@ -163,7 +163,7 @@ exit;
         .config-section { margin-top: 2rem; }
         .form-group { margin-bottom: 1rem; }
         label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
-        input[type="text"], input[type="tel"] { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
+        input[type="text"], input[type="tel"], input[type="email"], input[type="url"] { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
         select { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
     </style>
 </head>
@@ -294,7 +294,7 @@ exit;
                         <label>RMC Info EN</label>
                         <input type="url" id="rmc_info_en" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.rmc_info_en', 'https://www.rmc-service.com/en/station-finder/station-network'); ?>">
                     </div>
-                <div class="form-group">
+                    <div class="form-group">
                         <label>RMC Info TR</label>
                         <input type="url" id="rmc_info_tr" value="<?php echo getConfigValue($currentConfig, 'features.content_management.external_urls.rmc_info_tr', 'https://www.rmc-service.com/tr/istasyon-bulucu/istasyon-agi'); ?>">
                     </div>

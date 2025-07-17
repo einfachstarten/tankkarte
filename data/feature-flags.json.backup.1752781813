@@ -1,0 +1,37 @@
+{
+    "features": {
+        "whatsapp_integration": {
+            "enabled": true,
+            "phone_number": "+905530540989",
+            "display_name": "WhatsApp",
+            "position": "bottom-right",
+            "show_on_mobile": true,
+            "show_notifications": true
+        },
+        "chat_widget": {
+            "enabled": false,
+            "provider": "tawk",
+            "widget_id": ""
+        },
+        "content_management": {
+            "enabled": true,
+            "contact_email": "o.gokceviran@rmc-service.com",
+            "titles": {
+                "hero_main": "Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte",
+                "services_main": "Unsere Mobilitätslösungen",
+                "fuelcard_main": "RMC Tankkarte",
+                "creditcard_main": "RMC Prepaid Kreditkarte",
+                "toll_main": "Mautlösungen für Europa",
+                "contact_main": "Kontaktieren Sie uns"
+            },
+            "external_urls": {
+                "station_finder_web": "https://finder.rmc-service.com/rmc/map",
+                "station_finder_android": "https://play.google.com/store/apps/details?id=at.rmc.app",
+                "station_finder_ios": "https://apps.apple.com/at/app/rmc-finder/id6477531013",
+                "rmc_info_de": "https://www.rmc-service.com/de/tankstellenfinder/tankstellennetz",
+                "rmc_info_en": "https://www.rmc-service.com/en/station-finder/station-network",
+                "rmc_info_tr": "https://www.rmc-service.com/tr/istasyon-bulucu/istasyon-agi"
+            }
+        }
+    }
+}
