@@ -4,6 +4,19 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 
+// Temporary error handlers to surface fatal errors in HTML comments
+set_error_handler(function($severity, $message, $file, $line) {
+    echo "<!-- PHP ERROR: $message in $file on line $line -->\n";
+    return false;
+});
+
+register_shutdown_function(function() {
+    $error = error_get_last();
+    if ($error && $error['type'] === E_ERROR) {
+        echo "<!-- FATAL ERROR: {$error['message']} in {$error['file']} on line {$error['line']} -->\n";
+    }
+});
+
 // SAFE CONFIG LOADING
 function safeLoadConfig($configFile) {
     if (!file_exists($configFile)) {
@@ -297,9 +310,16 @@ exit;
                     <h3>Kontakt</h3>
                     <div class="form-group">
                         <label>E-Mail-Adresse</label>
-                        <?php echo "<!-- DEBUG: About to render contact_email input -->\n"; ?>
-                        <input type="email" id="contact_email" value="<?php echo htmlspecialchars(safeGetConfigValue($currentConfig, 'features.content_management.contact_email', 'o.gokceviran@rmc-service.com')); ?>">
-                        <?php echo "<!-- DEBUG: contact_email input rendered successfully -->\n"; ?>
+                        <!-- DEBUG: About to render contact_email input -->
+                        <?php
+                        echo "<!-- DEBUG: Step 1 - Before safeGetConfigValue call -->\n";
+                        $emailValue = safeGetConfigValue($currentConfig, 'features.content_management.contact_email', 'o.gokceviran@rmc-service.com');
+                        echo "<!-- DEBUG: Step 2 - safeGetConfigValue returned: " . $emailValue . " -->\n";
+                        $escapedValue = htmlspecialchars($emailValue);
+                        echo "<!-- DEBUG: Step 3 - htmlspecialchars completed -->\n";
+                        ?>
+                        <input type="email" id="contact_email" value="<?php echo $escapedValue; ?>">
+                        <?php echo "<!-- DEBUG: Step 4 - contact_email input rendered successfully -->\n"; ?>
                     </div>
 
                     <h3>Haupttitel</h3>
