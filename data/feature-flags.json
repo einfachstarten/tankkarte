@@ -14,7 +14,7 @@
             "widget_id": ""
         },
         "content_management": {
-            "enabled": true,
+            "enabled": false,
             "contact_email": "o.gokceviran@rmc-service.com",
             "titles": {
                 "hero_main": "Europäische Mobilitätslösungen | Tankkarte, Maut & Kreditkarte",

@@ -174,28 +174,33 @@ function updateFuelCardText(lang) {
 
 function updateContentFromConfig() {
     const config = window.featureFlags.getConfig('content_management');
-    if (!config) return;
+    if (!config || !config.enabled) return;
 
+    // Update titles nur wenn CMS aktiviert UND Werte existieren
     const titleElements = {
-        'hero.title': config.titles.hero_main,
-        'services.title': config.titles.services_main,
-        'fuelcard.title': config.titles.fuelcard_main,
-        'creditcard.title': config.titles.creditcard_main,
-        'toll.title': config.titles.toll_main,
-        'contact.title': config.titles.contact_main
+        'hero.title': config.titles?.hero_main,
+        'services.title': config.titles?.services_main,
+        'fuelcard.title': config.titles?.fuelcard_main,
+        'creditcard.title': config.titles?.creditcard_main,
+        'toll.title': config.titles?.toll_main,
+        'contact.title': config.titles?.contact_main
     };
 
     Object.entries(titleElements).forEach(([key, value]) => {
         if (value) {
             const elements = document.querySelectorAll(`[data-translate="${key}"]`);
-            elements.forEach(el => el.textContent = value);
+            elements.forEach(el => {
+                // Fallback auf Translation wenn CMS-Wert leer
+                el.textContent = value || window.translationLoader.getTranslation(key);
+            });
         }
     });
 
+    // Update URLs nur wenn CMS aktiviert UND Werte existieren
     const urlElements = {
-        '.finder-btn-web': config.external_urls.station_finder_web,
-        '.finder-btn-android': config.external_urls.station_finder_android,
-        '.finder-btn-ios': config.external_urls.station_finder_ios
+        '.finder-btn-web': config.external_urls?.station_finder_web,
+        '.finder-btn-android': config.external_urls?.station_finder_android,
+        '.finder-btn-ios': config.external_urls?.station_finder_ios
     };
 
     Object.entries(urlElements).forEach(([selector, url]) => {
@@ -205,7 +210,22 @@ function updateContentFromConfig() {
         }
     });
 
-    updateStationFinderLinks(config);
+    // Update contact email in forms
+    if (config.contact_email) {
+        updateContactEmail(config.contact_email);
+    }
+
+    console.log('Content updated from CMS config');
+}
+
+function updateContactEmail(email) {
+    // Update mailto links
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.href = `mailto:${email}`;
+        if (link.textContent.includes('@')) {
+            link.textContent = email;
+        }
+    });
 }
 
 function updateStationFinderLinks(config) {

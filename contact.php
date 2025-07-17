@@ -56,10 +56,16 @@ function getContactEmail() {
     $flagsFile = __DIR__ . '/data/feature-flags.json';
     if (file_exists($flagsFile)) {
         $flags = json_decode(file_get_contents($flagsFile), true);
-        $email = $flags['features']['content_management']['contact_email'] ?? null;
-        if ($email) return $email;
+        $cmsEnabled = $flags['features']['content_management']['enabled'] ?? false;
+
+        if ($cmsEnabled) {
+            $email = $flags['features']['content_management']['contact_email'] ?? null;
+            if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return $email;
+            }
+        }
     }
-    return 'o.gokceviran@rmc-service.com';
+    return 'o.gokceviran@rmc-service.com'; // Fallback
 }
 
 // Start logging request
