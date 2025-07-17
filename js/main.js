@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         document.getElementById('main-content').style.opacity = '1';
 
         console.log('Website fully loaded and translated');
+
+        // Load feature flags
+        await window.featureFlags.load();
+
+        // Initialize WhatsApp integration if enabled
+        if (window.featureFlags.isEnabled('whatsapp_integration')) {
+            await window.chatIntegration.init();
+        }
     } else {
         console.error('Failed to load translations');
         // Show error message or fallback content

@@ -57,6 +57,8 @@ $version = $deploymentTime . '-' . $gitHash;
 $cssTime = filemtime("$repoDir/css/styles.css");
 $jsTransTime = filemtime("$repoDir/js/translations.js");
 $jsMainTime = filemtime("$repoDir/js/main.js");
+$featureFlagsTime = filemtime("$repoDir/js/feature-flags.js");
+$chatIntegrationTime = filemtime("$repoDir/js/chat-integration.js");
 
 // Read template
 $template = file_get_contents("$repoDir/index.template.html");
@@ -67,12 +69,16 @@ $html = str_replace(
         'href="css/styles.css"',
         'src="js/translations.js"',
         'src="js/main.js"',
+        'src="js/feature-flags.js"',
+        'src="js/chat-integration.js"',
         'data-version=""'
     ],
     [
         'href="css/styles.css?v=' . $cssTime . '"',
         'src="js/translations.js?v=' . $jsTransTime . '"',
         'src="js/main.js?v=' . $jsMainTime . '"',
+        'src="js/feature-flags.js?v=' . $featureFlagsTime . '"',
+        'src="js/chat-integration.js?v=' . $chatIntegrationTime . '"',
         'data-version="' . $version . '"'
     ],
     $template

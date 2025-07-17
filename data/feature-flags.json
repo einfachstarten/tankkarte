@@ -1,0 +1,17 @@
+{
+  "features": {
+    "whatsapp_integration": {
+      "enabled": true,
+      "phone_number": "+905530540989",
+      "display_name": "WhatsApp",
+      "position": "bottom-right",
+      "show_on_mobile": true,
+      "show_notifications": true
+    },
+    "chat_widget": {
+      "enabled": false,
+      "provider": "tawk",
+      "widget_id": ""
+    }
+  }
+}
