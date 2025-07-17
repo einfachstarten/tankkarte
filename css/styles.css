@@ -1234,6 +1234,151 @@
             font-size: 1rem;
         }
 
+        /* RMC Station Finder */
+        .station-finder-section {
+            margin: 3rem 0;
+        }
+
+        .station-finder-bar {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .station-finder-bar:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .station-finder-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .station-finder-text {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .station-finder-text h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .station-finder-text p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        .station-finder-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .finder-btn {
+            background: var(--white);
+            color: var(--primary-green);
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+
+        .finder-btn:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .finder-btn span {
+            font-size: 1rem;
+        }
+
+        /* Special styling for info button */
+        .finder-btn-info {
+            background: var(--light-green);
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .finder-btn-info:hover {
+            background: var(--primary-yellow);
+            color: var(--primary-green);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1024px) {
+            .station-finder-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .station-finder-text {
+                text-align: left;
+                flex: 1;
+            }
+
+            .station-finder-buttons {
+                justify-content: flex-end;
+                flex: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .station-finder-bar {
+                padding: 1.5rem;
+            }
+
+            .station-finder-content {
+                gap: 1.5rem;
+            }
+
+            .station-finder-text h3 {
+                font-size: 1.3rem;
+            }
+
+            .station-finder-text p {
+                font-size: 0.9rem;
+            }
+
+            .finder-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .station-finder-buttons {
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .station-finder-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .finder-btn {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
         /* Target Groups */
         .target-groups {
             margin: 4rem 0;

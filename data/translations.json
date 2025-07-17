@@ -305,6 +305,14 @@
           "consultation": "Ich interessiere mich für Ihre Mobilitätslösungen."
         }
       },
+      "station_finder": {
+        "title": "🗺️ Tankstellen-Finder",
+        "description": "Finden Sie die nächste RMC-Tankstelle",
+        "web_app": "🌐 Web App",
+        "android": "📱 Android",
+        "ios": "🍎 iOS",
+        "more_info": "ℹ️ Mehr Infos"
+      },
       "footer": {
         "company": "filo.cards",
         "subtitle": "Ein Partner der RMC Service GmbH",
@@ -624,6 +632,14 @@
           "consultation": "I am interested in your mobility solutions."
         }
       },
+      "station_finder": {
+        "title": "🗺️ Station Finder",
+        "description": "Find the nearest RMC station",
+        "web_app": "🌐 Web App",
+        "android": "📱 Android",
+        "ios": "🍎 iOS",
+        "more_info": "ℹ️ More Info"
+      },
       "footer": {
         "company": "filo.cards",
         "subtitle": "A partner of RMC Service GmbH",
@@ -942,6 +958,14 @@
           "toll_solution": "Araçlarım için geçiş ücreti çözümüne ihtiyacım var.",
           "consultation": "Mobilite çözümlerinizle ilgileniyorum."
         }
+      },
+      "station_finder": {
+        "title": "🗺️ İstasyon Bulucu",
+        "description": "En yakın RMC istasyonunu bulun",
+        "web_app": "🌐 Web App",
+        "android": "📱 Android",
+        "ios": "🍎 iOS",
+        "more_info": "ℹ️ Daha Fazla Bilgi"
       },
       "footer": {
         "company": "filo.cards",

@@ -54,6 +54,9 @@ async function switchLanguage(lang) {
     // Update fuel card text
     updateFuelCardText(lang);
 
+    // Update station finder links
+    updateStationFinderLinks();
+
     // Handle special cases
     handleSpecialTranslations(lang);
 
@@ -142,6 +145,27 @@ function updateFuelCardText(lang) {
 
     if (cardElement && cardText) {
         cardElement.style.setProperty('--card-text', `"${cardText}"`);
+    }
+}
+
+function updateStationFinderLinks() {
+    const infoLink = document.querySelector('.finder-btn-info');
+    if (infoLink) {
+        const baseUrl = 'https://www.rmc-service.com';
+        let langPath = '/de/tankstellenfinder/tankstellennetz';
+
+        switch(currentLanguage) {
+            case 'en':
+                langPath = '/en/station-finder/station-network';
+                break;
+            case 'tr':
+                langPath = '/tr/istasyon-bulucu/istasyon-agi';
+                break;
+            default:
+                langPath = '/de/tankstellenfinder/tankstellennetz';
+        }
+
+        infoLink.href = baseUrl + langPath;
     }
 }
 
@@ -321,6 +345,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }, 500);
+        });
+    });
+});
+
+// Track Station Finder clicks
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.finder-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const btnType = this.classList.contains('finder-btn-web') ? 'web' :
+                           this.classList.contains('finder-btn-android') ? 'android' :
+                           this.classList.contains('finder-btn-ios') ? 'ios' : 'info';
+
+            // Log for debugging
+            console.log('Station Finder clicked:', btnType, this.href);
+
+            // Add analytics tracking here if needed
+            // gtag('event', 'station_finder_click', { button_type: btnType });
         });
     });
 });
