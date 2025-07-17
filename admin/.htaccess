@@ -1,11 +1,11 @@
-# Protect admin directory
-AuthType Basic
-AuthName "Admin Area"
-AuthUserFile /home/.sites/689/site7951508/web/demos/tankkarte/admin/.htpasswd
-Require valid-user
-
-# Additional protection for PHP files
+# Temporär ohne HTTP Basic Auth - nur PHP Session Auth
 <Files "*.php">
     Order allow,deny
     Allow from all
+</Files>
+
+# Verstecke .htpasswd trotzdem
+<Files ".htpasswd">
+    Order deny,allow
+    Deny from all
 </Files>
