@@ -306,12 +306,12 @@
         }
       },
       "station_finder": {
-        "title": "🗺️ Tankstellen-Finder",
+        "title": "Tankstellen-Finder",
         "description": "Finden Sie die nächste RMC-Tankstelle",
-        "web_app": "🌐 Web App",
-        "android": "📱 Android",
-        "ios": "🍎 iOS",
-        "more_info": "ℹ️ Mehr Infos"
+        "web": "Web",
+        "android": "Android",
+        "ios": "iOS",
+        "more_info": "Mehr Infos"
       },
       "footer": {
         "company": "filo.cards",
@@ -633,12 +633,12 @@
         }
       },
       "station_finder": {
-        "title": "🗺️ Station Finder",
+        "title": "Station Finder",
         "description": "Find the nearest RMC station",
-        "web_app": "🌐 Web App",
-        "android": "📱 Android",
-        "ios": "🍎 iOS",
-        "more_info": "ℹ️ More Info"
+        "web": "Web",
+        "android": "Android",
+        "ios": "iOS",
+        "more_info": "More Info"
       },
       "footer": {
         "company": "filo.cards",
@@ -960,12 +960,12 @@
         }
       },
       "station_finder": {
-        "title": "🗺️ İstasyon Bulucu",
+        "title": "İstasyon Bulucu",
         "description": "En yakın RMC istasyonunu bulun",
-        "web_app": "🌐 Web App",
-        "android": "📱 Android",
-        "ios": "🍎 iOS",
-        "more_info": "ℹ️ Daha Fazla Bilgi"
+        "web": "Web",
+        "android": "Android",
+        "ios": "iOS",
+        "more_info": "Daha Fazla Bilgi"
       },
       "footer": {
         "company": "filo.cards",
