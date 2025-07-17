@@ -1,0 +1,66 @@
+{
+    "features": {
+        "whatsapp_integration": {
+            "enabled": true,
+            "phone_number": "+905530540989",
+            "display_name": "WhatsApp",
+            "position": "bottom-right",
+            "show_on_mobile": true,
+            "show_notifications": true
+        },
+        "chat_widget": {
+            "enabled": false,
+            "provider": "tawk",
+            "widget_id": ""
+        },
+        "content_management": {
+            "enabled": true,
+            "contact_email": "o.gokceviran@rmc-service.com",
+            "titles": {
+                "hero_main": "Europ\u00e4ische Mobilit\u00e4tsl\u00f6sungen | Tankkarte, Maut & Kreditkarteeeee",
+                "services_main": "Unsere Mobilit\u00e4tsl\u00f6sungen",
+                "fuelcard_main": "RMC Tankkarte",
+                "creditcard_main": "RMC Prepaid Kreditkarte",
+                "toll_main": "Mautl\u00f6sungen f\u00fcr Europa",
+                "contact_main": "Kontaktieren Sie uns"
+            },
+            "external_urls": {
+                "station_finder_web": "https:\/\/finder.rmc-service.com\/rmc\/map",
+                "station_finder_android": "https:\/\/play.google.com\/store\/apps\/details?id=at.rmc.app",
+                "station_finder_ios": "https:\/\/apps.apple.com\/at\/app\/rmc-finder\/id6477531013",
+                "rmc_info_de": "https:\/\/www.rmc-service.com\/de\/tankstellenfinder\/tankstellennetz",
+                "rmc_info_en": "https:\/\/www.rmc-service.com\/en\/station-finder\/station-network",
+                "rmc_info_tr": "https:\/\/www.rmc-service.com\/tr\/istasyon-bulucu\/istasyon-agi"
+            }
+        },
+        "seo_analytics": {
+            "enabled": true,
+            "google_analytics": {
+                "enabled": true,
+                "tracking_id": "G-YEV8B4MH2S",
+                "enhanced_ecommerce": false
+            },
+            "structured_data": {
+                "enabled": true,
+                "organization_name": "Filo.cards \u00d6zkan G\u00f6kceviran",
+                "contact_phone": "+90 5530540989",
+                "service_area": [
+                    "Austria",
+                    "Germany",
+                    "Turkey",
+                    "Europe"
+                ]
+            },
+            "social_media": {
+                "enabled": true,
+                "og_image": "images\/filo-cards-og.jpg",
+                "twitter_handle": "@filocards"
+            },
+            "performance": {
+                "lazy_loading": true,
+                "critical_css": true,
+                "preload_fonts": true
+            }
+        }
+    }
+}
