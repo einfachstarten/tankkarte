@@ -1,114 +1,71 @@
-# Tankkarte
+# filo.cards - European Mobility Solutions
 
-A static multilingual website for the **Filo.cards** fuel card service. The project delivers
-content in German and Turkish using a small JavaScript based translation system. The site is
-primarily HTML, CSS and vanilla JavaScript so no heavy build process is required.
+A static multilingual website for the **filo.cards** mobility services. It serves content in German, Turkish and English using a lightweight JavaScript translation system. The project is entirely static and can be deployed on any web server without a build step.
 
-## Project Structure
+## Project Architecture
 
 ```
-css/            Stylesheets
-js/             JavaScript for translation and page logic
-images/         Graphics used by the site
-_en_backup/     Previous English version kept for reference
-tr/             Turkish version of the landing page
+css/                    Stylesheets with cache busting
+js/                     JavaScript modules (translations, features, chat, SEO)
+images/                 Graphics and assets
+data/                   JSON configuration files
+seo/                    Auto-generated SEO landing pages
+admin/                  Content management panel
+logs/                   Contact form and webhook logs
+tr/                     Legacy Turkish version (deprecated)
 ```
 
-All text translations live in `data/translations.json` and are loaded at runtime.
+Key files include `index.template.html` as the main HTML template, `generate-seo-pages.php` for SEO landing page generation and `contact.php` for form handling and logging. All text content lives in `data/translations.json`.
 
-## Building
+## Deployment System
 
-Because the project is purely static, there is no traditional build step. If you would like to
-work on the site locally, simply clone the repository and open `index.html` in your browser.
-Optionally you can use any static HTTP server to view the site, for example:
+The site uses a webhook-based deployment process which pulls from Git, regenerates `index.html` with cache busting, generates SEO landing pages and optionally purges the Cloudflare cache. The webhook script is not part of this repository.
+
+### Cache Busting
+
+Assets are referenced with their file modification timestamps to ensure browsers always load the latest versions:
+
+```
+css/styles.css?v={timestamp}
+js/main.js?v={timestamp}
+js/translations.js?v={timestamp}
+data/translations.json?v={timestamp-hash}
+```
+
+## SEO Landing Pages
+
+`generate-seo-pages.php` creates 12 landing pages (four keywords × three languages) along with `sitemap-seo.xml`. Each page contains a short redirect, structured data and the correct meta tags for search engines.
+
+## Feature Flags
+
+Configuration is stored in `data/feature-flags.json` and loaded at runtime. Flags can enable integrations such as WhatsApp chat, content management or analytics. Phone numbers and other details are configurable but not stored in this repository.
+
+## Admin Panel
+
+The `/admin/` directory provides a password-protected interface for managing feature flags, regenerating SEO pages and viewing logs. Credentials are configured outside of version control.
+
+## Translation System
+
+Translations are loaded from `data/translations.json` by `js/translations.js`. The JavaScript API exposes a `getTranslation` method to populate page content dynamically.
+
+## Contact Form
+
+`contact.php` processes multilingual form submissions, performs spam detection and writes detailed logs. Logs are stored under `logs/` and can be viewed through a dedicated interface protected with a password.
+
+## Development Workflow
+
+Because the site is purely static there is no build step. For local testing you can serve the directory with a simple HTTP server:
 
 ```bash
 npx http-server
 ```
 
-This command serves the directory on a local port so you can test the translation loader.
+Deployment is handled via the webhook which performs `git pull`, regenerates pages and purges caches.
 
-## Deployment
+## Security & Performance
 
-Deployment consists of copying the repository contents to your hosting provider. Any static file
-host such as GitHub Pages, Netlify or a traditional web server will work. Make sure the folder
-structure is preserved and that `index.html` is served from the root of your domain.
-
-### Cache busting via webhook
-
-The file `index.template.html` contains the main HTML markup. A deployment webhook
-generates `index.html` from this template after running `git pull`. The script
-adds the modification timestamps of `css/styles.css`, `js/translations.js` and
-`js/main.js` as query parameters so browsers always fetch the latest assets. It
-also injects a version string into the `data-version` attribute of the `<html>`
-tag which can be used for JSON cache busting. Optionally the webhook can purge
-the Cloudflare cache after deployment. The generated `index.html` is ignored by
-Git.
-
-The relevant PHP snippet for the webhook now looks like this:
-
-```php
-// Erweiterte Cache-Busting-Funktionalität
-$deploymentTime = time();
-$gitHash = substr(exec('git rev-parse HEAD'), 0, 8);
-$version = $deploymentTime . '-' . $gitHash;
-
-// Cache-Busting: Generate index.html with timestamps
-$cssTime = filemtime("$repoDir/css/styles.css");
-$jsTransTime = filemtime("$repoDir/js/translations.js");
-$jsMainTime = filemtime("$repoDir/js/main.js");
-$featureFlagsTime = filemtime("$repoDir/js/feature-flags.js");
-$chatIntegrationTime = filemtime("$repoDir/js/chat-integration.js");
-
-// Read template
-$template = file_get_contents("$repoDir/index.template.html");
-
-// Replace with enhanced timestamps
-$html = str_replace(
-    [
-        'href="css/styles.css"',
-        'src="js/translations.js"',
-        'src="js/main.js"',
-        'src="js/feature-flags.js"',
-        'src="js/chat-integration.js"',
-        'data-version=""'
-    ],
-    [
-        'href="css/styles.css?v=' . $cssTime . '"',
-        'src="js/translations.js?v=' . $jsTransTime . '"',
-        'src="js/main.js?v=' . $jsMainTime . '"',
-        'src="js/feature-flags.js?v=' . $featureFlagsTime . '"',
-        'src="js/chat-integration.js?v=' . $chatIntegrationTime . '"',
-        'data-version="' . $version . '"'
-    ],
-    $template
-);
-
-// Write index.html
-file_put_contents("$repoDir/index.html", $html);
-
-// Cloudflare Cache Purge (falls API verfügbar)
-if (defined('CLOUDFLARE_API_TOKEN')) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache");
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
-        'files' => [
-            'https://www.filo.cards/',
-            'https://www.filo.cards/index.html'
-        ]
-    ]));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Authorization: Bearer ' . CLOUDFLARE_API_TOKEN,
-        'Content-Type: application/json'
-    ]);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_exec($ch);
-    curl_close($ch);
-}
-```
+Sensitive files such as webhook scripts and Cloudflare credentials are kept out of the repository. The site uses cache busting, optimized images and optional Cloudflare CDN integration to ensure good performance.
 
 ## License
 
-This project is released under the [MIT License](LICENSE). You are free to use, modify and
-redistribute it under the terms of that license.
+This project is released under the [MIT License](LICENSE).
