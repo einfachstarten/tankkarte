@@ -265,7 +265,6 @@ function updateStationFinderLinks(config) {
 }
 
 function handleSpecialTranslations(lang) {
-    // Add language-specific FAQs
     const languageSpecificFaqs = document.getElementById('language-specific-faqs');
     if (!languageSpecificFaqs) {
         console.warn('language-specific-faqs element not found');
@@ -273,57 +272,27 @@ function handleSpecialTranslations(lang) {
     }
     languageSpecificFaqs.innerHTML = '';
 
-    if (lang === 'en') {
-        // Add Brexit FAQ for English
-        const brexitFaq = document.createElement('div');
-        brexitFaq.className = 'faq-item';
-        brexitFaq.innerHTML = `
-            <button class="faq-question" onclick="toggleFaq(this)">
-                <span>${window.translationLoader.getTranslation('faq.q8.question', lang)}</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">${window.translationLoader.getTranslation('faq.q8.answer', lang)}</div>
-        `;
-        languageSpecificFaqs.appendChild(brexitFaq);
+    // Add all new FAQs to main page
+    for (let i = 8; i <= 15; i++) {
+        const questionKey = `faq.q${i}.question`;
+        const answerKey = `faq.q${i}.answer`;
 
-        // Add Telematics FAQ
-        const telematicsFaq = document.createElement('div');
-        telematicsFaq.className = 'faq-item';
-        telematicsFaq.innerHTML = `
-            <button class="faq-question" onclick="toggleFaq(this)">
-                <span>${window.translationLoader.getTranslation('faq.q9.question', lang)}</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">${window.translationLoader.getTranslation('faq.q9.answer', lang)}</div>
-        `;
-        languageSpecificFaqs.appendChild(telematicsFaq);
+        const question = window.translationLoader.getTranslation(questionKey, lang);
+        const answer = window.translationLoader.getTranslation(answerKey, lang);
+
+        if (question && question !== questionKey) {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item';
+            faqItem.innerHTML = `
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>${question}</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">${answer}</div>
+            `;
+            languageSpecificFaqs.appendChild(faqItem);
+        }
     }
-
-    if (lang === 'tr') {
-        // Add Turkey-specific FAQs
-        const turkeyFaq = document.createElement('div');
-        turkeyFaq.className = 'faq-item';
-        turkeyFaq.innerHTML = `
-            <button class="faq-question" onclick="toggleFaq(this)">
-                <span>${window.translationLoader.getTranslation('faq.q8.question', lang)}</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">${window.translationLoader.getTranslation('faq.q8.answer', lang)}</div>
-        `;
-        languageSpecificFaqs.appendChild(turkeyFaq);
-
-        // Add TIR FAQ
-        const tirFaq = document.createElement('div');
-        tirFaq.className = 'faq-item';
-        tirFaq.innerHTML = `
-            <button class="faq-question" onclick="toggleFaq(this)">
-                <span>${window.translationLoader.getTranslation('faq.q9.question', lang)}</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">${window.translationLoader.getTranslation('faq.q9.answer', lang)}</div>
-        `;
-  languageSpecificFaqs.appendChild(tirFaq);
-  }
 }
 
 // Mobile Menu Toggle
