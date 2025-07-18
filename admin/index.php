@@ -504,9 +504,11 @@ exit;
                 .then(response => response.text())
                 .then(data => {
                     alert('SEO Pages wurden neu generiert!');
+                    console.log('SEO Generation Output:', data);
                 })
                 .catch(error => {
                     alert('Fehler: ' + error);
+                    console.error('SEO Generation Error:', error);
                 });
         }
     </script>
