@@ -1,15 +1,13 @@
 <?php
-// Robust SEO Pages Generator mit professionellem Fallback-System
-ini_set('display_errors', 0);
+// SEO Pages Generator using native JSON parsing
+ini_set('memory_limit', '256M');
 error_reporting(E_ERROR | E_PARSE);
-
-require_once 'json-parser-fallback.php';
+ini_set('display_errors', 0);
 
 class RobustSEOGenerator {
     private $translations;
     private $languages = ['de', 'tr', 'en'];
     private $outputDir = 'seo/';
-    private $fallbackMode = false;
 
     public function __construct() {
         try {
@@ -33,29 +31,15 @@ class RobustSEOGenerator {
             throw new Exception("Could not read translations file");
         }
 
-        $decoded = null;
-
-        if (function_exists('json_decode')) {
-            $decoded = json_decode($jsonContent, true);
-            if ($decoded !== null) {
-                echo "Using native json_decode\n";
-            }
-        }
+        $decoded = json_decode($jsonContent, true);
 
         if ($decoded === null) {
-            echo "Native JSON failed, trying fallback parser\n";
-            $decoded = JSONParserFallback::decode($jsonContent, true);
-            $this->fallbackMode = true;
+            $error = json_last_error_msg();
+            throw new Exception("JSON decode failed: $error");
         }
 
-        if ($decoded === null) {
-            echo "JSON parsing failed, trying PHP include method\n";
-            $decoded = $this->loadTranslationsAsPHP();
-            $this->fallbackMode = true;
-        }
-
-        if ($decoded === null || !isset($decoded['translations'])) {
-            throw new Exception("Could not parse translations data");
+        if (!isset($decoded['translations'])) {
+            throw new Exception("Invalid translations structure");
         }
 
         $this->translations = $decoded['translations'];
@@ -65,41 +49,10 @@ class RobustSEOGenerator {
                 throw new Exception("Could not create output directory: $this->outputDir");
             }
         }
+
+        echo "Translations loaded successfully (native JSON)\n";
     }
 
-    private function loadTranslationsAsPHP() {
-        $phpFile = 'data/translations.php';
-
-        if (!file_exists($phpFile)) {
-            $this->createPHPTranslationFile();
-        }
-
-        if (file_exists($phpFile)) {
-            return include $phpFile;
-        }
-
-        return null;
-    }
-
-    private function createPHPTranslationFile() {
-        $jsonContent = file_get_contents('data/translations.json');
-        $phpContent = "<?php\nreturn " . $this->jsonToPHPArrayString($jsonContent) . ";\n";
-        file_put_contents('data/translations.php', $phpContent);
-        echo "Created emergency PHP translations file\n";
-    }
-
-    private function jsonToPHPArrayString($json) {
-        $php = $json;
-        $php = preg_replace('/:\s*true\b/', ' => true', $php);
-        $php = preg_replace('/:\s*false\b/', ' => false', $php);
-        $php = preg_replace('/:\s*null\b/', ' => null', $php);
-        $php = str_replace('{', 'array(', $php);
-        $php = str_replace('}', ')', $php);
-        $php = str_replace('[', 'array(', $php);
-        $php = str_replace(']', ')', $php);
-        $php = preg_replace('/"([^"]+)"\s*:/', '"$1" =>', $php);
-        return $php;
-    }
 
     public function generateAllPages() {
         try {
@@ -116,7 +69,7 @@ class RobustSEOGenerator {
 
             $this->generateSitemap();
 
-            echo "Successfully generated $generatedCount SEO pages" . ($this->fallbackMode ? ' (fallback mode)' : '') . "\n";
+            echo "Successfully generated $generatedCount SEO pages\n";
             return true;
 
         } catch (Exception $e) {
