@@ -53,4 +53,19 @@
 
     # Remove old Turkish URLs (redirect to main page)
     RewriteRule ^tr/?$ / [R=301,L]
+
+    # SEO Landing Pages Redirects
+    RewriteRule ^tankkarte-europa/?$ seo/tankkarte-europa-de.html [L]
+    RewriteRule ^fuel-card-europe/?$ seo/tankkarte-europa-en.html [L]
+    RewriteRule ^yakit-karti-avrupa/?$ seo/tankkarte-europa-tr.html [L]
+
+    RewriteRule ^maut-europa/?$ seo/maut-europa-lkw-de.html [L]
+    RewriteRule ^toll-europe/?$ seo/maut-europa-lkw-en.html [L]
+    RewriteRule ^gecis-ucreti-avrupa/?$ seo/maut-europa-lkw-tr.html [L]
+
+    RewriteRule ^fleet-credit-card/?$ seo/prepaid-kreditkarte-flotte-en.html [L]
+    RewriteRule ^filo-kredi-karti/?$ seo/prepaid-kreditkarte-flotte-tr.html [L]
+
+    # Sitemap Integration
+    RewriteRule ^sitemap-seo\.xml$ seo/sitemap-seo.xml [L]
 </IfModule>

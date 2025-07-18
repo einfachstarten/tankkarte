@@ -268,3 +268,31 @@ class SEOAnalytics {
 }
 
 window.seoAnalytics = new SEOAnalytics();
+
+// SEO Landing Page Tracking
+function trackSEOLandingPage() {
+    const currentUrl = window.location.href;
+
+    if (currentUrl.includes('/seo/') && window.gtag) {
+        const pageName = currentUrl.split('/').pop().replace('.html', '');
+
+        gtag('event', 'seo_landing_page_view', {
+            event_category: 'SEO',
+            event_label: pageName,
+            value: 1
+        });
+
+        // Track redirect
+        setTimeout(() => {
+            gtag('event', 'seo_page_redirect', {
+                event_category: 'SEO',
+                event_label: pageName
+            });
+        }, 3000);
+    }
+}
+
+// Initialize on SEO pages
+if (window.location.href.includes('/seo/')) {
+    trackSEOLandingPage();
+}
