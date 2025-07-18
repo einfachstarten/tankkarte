@@ -689,7 +689,7 @@
         .faq-item {
             background: var(--white);
             border-radius: var(--border-radius);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             box-shadow: var(--shadow);
             overflow: hidden;
             border-left: 4px solid var(--primary-yellow);
@@ -711,8 +711,18 @@
             align-items: center;
         }
 
-.faq-question:hover {
+        .faq-question:hover {
             background: var(--light-gray);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
         }
 
         /* Credit Card Benefits - same styling as fuel card benefits */
@@ -1537,13 +1547,14 @@
 
         /* FAQ Answer fix */
         .faq-answer {
-            font-size: 1rem;
-            line-height: 1.7;
-            padding: 1.5rem;
             max-height: 0;
             overflow: hidden;
+            padding: 0 1.5rem;
             color: var(--medium-gray);
-            transition: max-height 0.3s ease;
+            line-height: 1.7;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--white);
         }
 
         .faq-answer strong {
@@ -1552,7 +1563,8 @@
         }
 
         .faq-answer.open {
-            padding-bottom: 1.5rem;
+            max-height: 1000px;
+            padding: 1.5rem;
         }
 
         .parallax-element {

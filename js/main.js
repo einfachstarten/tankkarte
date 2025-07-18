@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         // Set default language
         await switchLanguage('de');
+        initializeFAQs();
 
         // Hide loading spinner and show content
         document.getElementById('loading-spinner').style.display = 'none';
@@ -83,6 +84,7 @@ async function switchLanguage(lang) {
 
     // Handle special cases
     handleSpecialTranslations(lang);
+    initializeFAQs();
 
     console.log(`Language switched to: ${lang}`);
 }
@@ -266,13 +268,10 @@ function updateStationFinderLinks(config) {
 
 function handleSpecialTranslations(lang) {
     const languageSpecificFaqs = document.getElementById('language-specific-faqs');
-    if (!languageSpecificFaqs) {
-        console.warn('language-specific-faqs element not found');
-        return;
+    if (languageSpecificFaqs) {
+        languageSpecificFaqs.innerHTML = '';
     }
-    languageSpecificFaqs.innerHTML = '';
 
-    // Add all new FAQs to main page
     for (let i = 8; i <= 15; i++) {
         const questionKey = `faq.q${i}.question`;
         const answerKey = `faq.q${i}.answer`;
@@ -290,9 +289,30 @@ function handleSpecialTranslations(lang) {
                 </button>
                 <div class="faq-answer">${answer}</div>
             `;
-            languageSpecificFaqs.appendChild(faqItem);
+
+            const faqContainer = document.querySelector('#language-specific-faqs') ||
+                               document.querySelector('.faq-section') ||
+                               document.querySelector('#support .container');
+
+            if (faqContainer) {
+                faqContainer.appendChild(faqItem);
+            }
         }
     }
+}
+
+// Initialize all FAQ items to be closed by default
+function initializeFAQs() {
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.classList.remove('open');
+        answer.style.maxHeight = null;
+    });
+
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.classList.remove('active');
+        const icon = button.querySelector('.faq-icon');
+        if (icon) icon.textContent = '+';
+    });
 }
 
 // Mobile Menu Toggle
@@ -328,14 +348,30 @@ function toggleFaq(button) {
     const icon = button.querySelector('.faq-icon');
     const isOpen = answer.classList.contains('open');
 
+    // Close all other FAQs first (optional - for accordion behavior)
+    document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+        if (openAnswer !== answer) {
+            openAnswer.classList.remove('open');
+            openAnswer.style.maxHeight = null;
+            const otherButton = openAnswer.previousElementSibling;
+            const otherIcon = otherButton.querySelector('.faq-icon');
+            otherButton.classList.remove('active');
+            if (otherIcon) otherIcon.textContent = '+';
+        }
+    });
+
     if (isOpen) {
+        // Close this FAQ
         answer.style.maxHeight = null;
         answer.classList.remove('open');
-        icon.textContent = '+';
+        button.classList.remove('active');
+        if (icon) icon.textContent = '+';
     } else {
+        // Open this FAQ
         answer.classList.add('open');
         answer.style.maxHeight = answer.scrollHeight + 'px';
-        icon.textContent = '−';
+        button.classList.add('active');
+        if (icon) icon.textContent = '−';
     }
 }
 
