@@ -1,29 +1,80 @@
 <?php
-// SEO Pages Generator für filo.cards
+// SEO Pages Generator für filo.cards - Server Error Resilient Version
+ini_set('display_errors', 0);  // Suppress display of warnings
+error_reporting(E_ERROR | E_PARSE);  // Only fatal errors, ignore warnings
+@ini_set('imagick.skip_version_check', 1);
+
 require_once 'translations-loader.php';
 
 class SEOPageGenerator {
     private $translations;
     private $languages = ['de', 'tr', 'en'];
     private $outputDir = 'seo/';
+    private $errors = [];
     
     public function __construct() {
-        $this->translations = json_decode(file_get_contents('data/translations.json'), true)['translations'];
-        if (!is_dir($this->outputDir)) {
-            mkdir($this->outputDir, 0755, true);
+        try {
+            // Suppress any ImageMagick startup warnings
+            @ini_set('display_errors', 0);
+
+            $translationsFile = 'data/translations.json';
+            if (!file_exists($translationsFile)) {
+                throw new Exception("Translations file not found: $translationsFile");
+            }
+
+            $jsonContent = file_get_contents($translationsFile);
+            if ($jsonContent === false) {
+                throw new Exception("Could not read translations file");
+            }
+
+            $decodedJson = json_decode($jsonContent, true);
+            if ($decodedJson === null) {
+                throw new Exception("Invalid JSON in translations file");
+            }
+
+            $this->translations = $decodedJson['translations'];
+
+            if (!is_dir($this->outputDir)) {
+                if (!mkdir($this->outputDir, 0755, true)) {
+                    throw new Exception("Could not create output directory: $this->outputDir");
+                }
+            }
+
+            echo "SEO Generator initialized successfully\n";
+
+        } catch (Exception $e) {
+            $this->errors[] = "Initialization failed: " . $e->getMessage();
+            echo "ERROR: " . $e->getMessage() . "\n";
         }
     }
     
     public function generateAllPages() {
-        $keywords = $this->getKeywordMapping();
-        
-        foreach ($keywords as $keyword => $config) {
-            foreach ($this->languages as $lang) {
-                $this->generatePage($keyword, $lang, $config);
-            }
+        if (!empty($this->errors)) {
+            echo "Cannot generate pages due to initialization errors\n";
+            return false;
         }
-        
-        $this->generateSitemap();
+
+        try {
+            $keywords = $this->getKeywordMapping();
+            $generatedCount = 0;
+
+            foreach ($keywords as $keyword => $config) {
+                foreach ($this->languages as $lang) {
+                    if ($this->generatePage($keyword, $lang, $config)) {
+                        $generatedCount++;
+                    }
+                }
+            }
+
+            $this->generateSitemap();
+
+            echo "Successfully generated $generatedCount SEO pages\n";
+            return true;
+
+        } catch (Exception $e) {
+            echo "ERROR: Failed to generate pages: " . $e->getMessage() . "\n";
+            return false;
+        }
     }
     
     private function getKeywordMapping() {
@@ -52,12 +103,23 @@ class SEOPageGenerator {
     }
     
     private function generatePage($keyword, $lang, $config) {
-        $filename = "{$this->outputDir}{$keyword}-{$lang}.html";
-        $pageConfig = $config[$lang];
-        $content = $this->buildPageContent($keyword, $lang, $pageConfig);
-        
-        file_put_contents($filename, $content);
-        echo "Generated: $filename\n";
+        try {
+            $filename = "{$this->outputDir}{$keyword}-{$lang}.html";
+            $pageConfig = $config[$lang];
+            $content = $this->buildPageContent($keyword, $lang, $pageConfig);
+
+            $writeResult = file_put_contents($filename, $content);
+            if ($writeResult === false) {
+                throw new Exception("Could not write file: $filename");
+            }
+
+            echo "Generated: $filename\n";
+            return true;
+
+        } catch (Exception $e) {
+            echo "ERROR generating $keyword-$lang: " . $e->getMessage() . "\n";
+            return false;
+        }
     }
     
     private function buildPageContent($keyword, $lang, $config) {
@@ -349,7 +411,22 @@ JSON;
 }
 
 // Generator ausführen
-$generator = new SEOPageGenerator();
-$generator->generateAllPages();
-echo "SEO Pages generated successfully!\n";
+$generator = null;
+
+try {
+    $generator = new SEOPageGenerator();
+    $success = $generator->generateAllPages();
+
+    if ($success) {
+        echo "SEO Pages generated successfully!\n";
+        exit(0);  // Success exit code
+    } else {
+        echo "SEO Page generation completed with errors!\n";
+        exit(1);  // Error exit code
+    }
+
+} catch (Throwable $e) {
+    echo "FATAL ERROR: " . $e->getMessage() . "\n";
+    exit(1);
+}
 ?>
