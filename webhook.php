@@ -49,24 +49,33 @@ file_put_contents("$repoDir/index.html", $html);
 logMessage('index.html regenerated');
 
 // SEO Landing Pages Generation with Fallback
+// SEO Landing Pages Generation - Robust Approach
 logMessage('Generating SEO landing pages...');
-if (file_exists("$repoDir/generate-seo-pages.php")) {
-    exec("cd $repoDir && php -d display_errors=0 generate-seo-pages.php 2>&1", $seoOutput, $seoReturn);
-    if ($seoReturn === 0) {
-        logMessage('SEO pages generated successfully: ' . implode(' | ', $seoOutput));
+
+// Try diagnosis first if debug mode
+if (file_exists("$repoDir/diagnose-server.php") && isset($_GET['debug'])) {
+    exec("cd $repoDir && php diagnose-server.php 2>&1", $diagOutput, $diagReturn);
+    logMessage('Server diagnosis: ' . implode(' | ', $diagOutput));
+}
+
+// Try robust generator first
+if (file_exists("$repoDir/generate-seo-pages-robust.php")) {
+    exec("cd $repoDir && php generate-seo-pages-robust.php 2>&1", $robustOutput, $robustReturn);
+
+    if ($robustReturn === 0) {
+        logMessage('Robust SEO pages generated: ' . implode(' | ', $robustOutput));
     } else {
-        logMessage('Primary SEO generator failed, trying simple fallback...');
+        logMessage('Robust SEO generator failed: ' . implode(' | ', $robustOutput));
+
+        // Fallback to simple generator
         if (file_exists("$repoDir/generate-seo-simple.php")) {
             exec("cd $repoDir && php generate-seo-simple.php 2>&1", $fallbackOutput, $fallbackReturn);
             if ($fallbackReturn === 0) {
                 logMessage('Fallback SEO pages generated: ' . implode(' | ', $fallbackOutput));
-            } else {
-                logMessage('Both SEO generators failed: ' . implode(' | ', $fallbackOutput));
             }
         }
-        logMessage('Deployment continues despite SEO generation issues');
     }
 } else {
-    logMessage('generate-seo-pages.php not found, skipping SEO generation');
+    logMessage('Robust SEO generator not found, skipping SEO generation');
 }
 ?>
