@@ -1,67 +1,72 @@
 <?php
-// Professional JSON Parser Fallback
+// Memory-optimized JSON Parser Fallback - only used when native JSON unavailable
+
+// Early exit if native JSON functions exist
+if (function_exists('json_decode') && function_exists('json_encode')) {
+    return; // Don't load fallback at all
+}
+
 class JSONParserFallback {
     public static function decode($json, $assoc = false) {
+        // Use native if available (double-check)
         if (function_exists('json_decode')) {
             return json_decode($json, $assoc);
         }
-        return self::parseJSON($json, $assoc);
-    }
-
-    public static function encode($value, $options = 0) {
-        if (function_exists('json_encode')) {
-            return json_encode($value, $options);
-        }
-        return self::arrayToPHPJSON($value);
-    }
-
-    private static function parseJSON($json, $assoc = false) {
+        
+        // Memory-efficient simple fallback for basic cases only
         $json = trim($json);
         if (empty($json)) {
             return null;
         }
-        if (self::isValidJSONStructure($json)) {
-            $phpCode = self::jsonToPHPArray($json);
+        
+        // Only handle simple objects/arrays to avoid memory issues
+        if (strlen($json) > 1000000) { // 1MB limit
+            trigger_error('JSON too large for fallback parser', E_USER_WARNING);
+            return null;
+        }
+        
+        return self::simpleJSONDecode($json, $assoc);
+    }
+    
+    public static function encode($value, $options = 0) {
+        // Use native if available
+        if (function_exists('json_encode')) {
+            return json_encode($value, $options);
+        }
+        
+        return self::simpleJSONEncode($value);
+    }
+    
+    private static function simpleJSONDecode($json, $assoc = false) {
+        // Basic eval-based approach for emergency cases only
+        $json = trim($json);
+        if (substr($json, 0, 1) === '{' && substr($json, -1) === '}') {
+            // Simple object conversion
+            $php = str_replace(['{', '}', ':', 'true', 'false', 'null'], 
+                              ['array(', ')', '=>', 'true', 'false', 'null'], $json);
+            $php = preg_replace('/"([^"\\]+)"\s*=>/', '"$1" =>', $php);
+            
             $result = null;
-            eval('$result = ' . $phpCode . ';');
-            return $assoc ? $result : (object)$result;
+            @eval('$result = ' . $php . ';');
+            return $result;
         }
         return null;
     }
-
-    private static function isValidJSONStructure($json) {
-        $json = trim($json);
-        return (
-            (substr($json, 0, 1) === '{' && substr($json, -1) === '}') ||
-            (substr($json, 0, 1) === '[' && substr($json, -1) === ']')
-        );
-    }
-
-    private static function jsonToPHPArray($json) {
-        $php = $json;
-        $php = preg_replace('/:\s*true\b/', ': true', $php);
-        $php = preg_replace('/:\s*false\b/', ': false', $php);
-        $php = preg_replace('/:\s*null\b/', ': null', $php);
-        $php = str_replace('{', 'array(', $php);
-        $php = str_replace('}', ')', $php);
-        $php = str_replace('[', 'array(', $php);
-        $php = str_replace(']', ')', $php);
-        $php = preg_replace('/"([^"]+)"\s*:/', '"$1" =>', $php);
-        return $php;
-    }
-
-    private static function arrayToPHPJSON($value) {
-        if (is_array($value)) {
-            if (self::isAssociativeArray($value)) {
+    
+    private static function simpleJSONEncode($value) {
+        if (is_array($value) && count($value) < 100) { // Limit array size
+            $isAssoc = (array_keys($value) !== range(0, count($value) - 1));
+            
+            if ($isAssoc) {
                 $items = [];
                 foreach ($value as $key => $val) {
-                    $items[] = '"' . addslashes($key) . '":' . self::arrayToPHPJSON($val);
+                    $items[] = '"' . addslashes($key) . '":' . self::simpleJSONEncode($val);
                 }
                 return '{' . implode(',', $items) . '}';
             } else {
                 $items = [];
                 foreach ($value as $val) {
-                    $items[] = self::arrayToPHPJSON($val);
+                    $items[] = self::simpleJSONEncode($val);
                 }
                 return '[' . implode(',', $items) . ']';
             }
@@ -76,14 +81,9 @@ class JSONParserFallback {
         }
         return 'null';
     }
-
-    private static function isAssociativeArray($array) {
-        if (!is_array($array)) return false;
-        return array_keys($array) !== range(0, count($array) - 1);
-    }
 }
 
-// Test the fallback
+// Only register fallback functions if native ones don't exist
 if (!function_exists('json_decode')) {
     function json_decode($json, $assoc = false) {
         return JSONParserFallback::decode($json, $assoc);
