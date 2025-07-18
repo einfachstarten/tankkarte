@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /seo/
+
 Sitemap: https://www.filo.cards/sitemap.xml
+Sitemap: https://www.filo.cards/sitemap-seo.xml

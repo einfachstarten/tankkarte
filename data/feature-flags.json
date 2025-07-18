@@ -56,6 +56,12 @@
                 "critical_css": true,
                 "preload_fonts": true
             }
+        },
+        "seo_landing_pages": {
+            "enabled": true,
+            "auto_generate": true,
+            "redirect_delay": 3,
+            "track_visits": true
         }
     }
 }

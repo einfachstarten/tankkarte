@@ -383,6 +383,28 @@ exit;
                 </div>
             </div>
 
+            <!-- SEO Landing Pages Section -->
+            <div class="card">
+                <h2>SEO Landing Pages</h2>
+                <div class="feature-toggle">
+                    <div>
+                        <strong>SEO Landing Pages</strong>
+                        <br><small>Statische SEO-optimierte Seiten mit Redirects</small>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="seo_landing_enabled" <?php echo $currentConfig['features']['seo_landing_pages']['enabled'] ? 'checked' : ''; ?>>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>Redirect Delay (Sekunden)</label>
+                    <input type="number" id="redirect_delay" value="<?php echo $currentConfig['features']['seo_landing_pages']['redirect_delay'] ?? 3; ?>" min="0" max="10">
+                </div>
+                
+                <button type="button" class="btn" onclick="regenerateSEOPages()">SEO Pages neu generieren</button>
+            </div>
+
             <!-- Future Features -->
             <div class="card">
                 <h2>Zukünftige Features</h2>
@@ -464,12 +486,29 @@ exit;
                             critical_css: true,
                             preload_fonts: true
                         }
+                    },
+                    seo_landing_pages: {
+                        enabled: document.getElementById('seo_landing_enabled').checked,
+                        auto_generate: true,
+                        redirect_delay: parseInt(document.getElementById('redirect_delay').value, 10) || 3,
+                        track_visits: true
                     }
                 }
             };
-            
+
             document.getElementById('configData').value = JSON.stringify(config);
         });
+
+        function regenerateSEOPages() {
+            fetch('generate-seo-pages.php')
+                .then(response => response.text())
+                .then(data => {
+                    alert('SEO Pages wurden neu generiert!');
+                })
+                .catch(error => {
+                    alert('Fehler: ' + error);
+                });
+        }
     </script>
 </body>
 </html>
